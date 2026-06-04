@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@source "../src";
+
+@theme {
+  --color-brand-blue: #0f2c59;
+  --color-brand-blueDark: #0c2347;
+  --color-brand-gold: #e5ba73;
+  --color-brand-goldHover: #cfa45a;
+}
+
+/* Hardcoded fallback utilities to bypass compiler caching issues */
+@utility text-brand-blue { color: #0f2c59; }
+@utility text-brand-gold { color: #e5ba73; }
+@utility bg-brand-blue { background-color: #0f2c59; }
+@utility bg-brand-blueDark { background-color: #0c2347; }
+@utility bg-brand-gold { background-color: #e5ba73; }
+@utility bg-brand-goldHover { background-color: #cfa45a; }
+@utility border-brand-gold { border-color: #e5ba73; }
+
+html {
+  scroll-behavior: smooth;
+}
