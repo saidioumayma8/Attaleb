@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import { 
   Globe, GraduationCap, BookOpen, CheckCircle2, 
-  ArrowRight, Search, Send, MapPin, Award
-} from 'lucide-react';
+  ArrowRight, Search, Send, MapPin, Award, Mail, Phone
+} from 'lucide-react'; 
+import franceFlag from '../assets/france-flag-8x5.gif';
+import spainFlag from '../assets/spainflag.png';
+import romaniaFlag from '../assets/Flag_of_Romania.svg.png'
+import canadaFlag from '../assets/Flag-Canada.webp'
+import germanyFlag from '../assets/germany-flag-png-large.png'
+import royaumeFlag from '../assets/Flag_of_Romania.svg.png'
+
+;
+
+
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -68,7 +78,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             <div>
-              <div className="text-2xl md:text-3xl font-black text-brand-gold">500+</div>
+              <div className="text-2xl md:text-3xl font-black text-brand-gold">800+</div>
               <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Étudiants Accompagnés</div>
             </div>
             <div className="pt-4 md:pt-0">
@@ -76,7 +86,7 @@ export default function Home() {
               <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Taux de Réussite</div>
             </div>
             <div className="pt-4 md:pt-0">
-              <div className="text-2xl md:text-3xl font-black text-brand-gold">10+</div>
+              <div className="text-2xl md:text-3xl font-black text-brand-gold">12+</div>
               <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Pays de Destination</div>
             </div>
             <div className="pt-4 md:pt-0">
@@ -151,7 +161,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/*VOS DESTINATIONS RÊVÉES (WITH FLAGS) */}
+   {/* ==========================================
+          4. VOS DESTINATIONS RÊVÉES (HOVER INTERACTIVE)
+         ========================================== */}
       <section className="py-16 bg-slate-50 px-4 border-t border-b border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -167,54 +179,69 @@ export default function Home() {
               { 
                 name: "FRANCE", 
                 desc: "La destination numéro 1 des étudiants marocains.",
-                flag: "https://flagcdn.com/w80/fr.png"
+                flag: franceFlag,
+                capitalImg: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" 
               },
               { 
                 name: "ESPAGNE", 
                 desc: "La porte d'entrée idéale des étudiants marocains en Europe.",
-                flag: "https://flagcdn.com/w80/es.png"
+                flag: spainFlag,
+                capitalImg: "https://cms-images.oliverstravels.com/app/uploads/2023/10/04080649/Barcelona.jpg" 
               },
               { 
                 name: "ROUMANIE", 
                 desc: "Le leader européen de la formation médicale d'excellence.",
-                flag: "https://flagcdn.com/w80/ro.png"
+                flag: romaniaFlag,
+                capitalImg: "https://moreconsulting.eu/wp-content/uploads/2021/09/logoi-roumania-idrusi-etaireias-hero.jpg" 
               },
               { 
                 name: "ROYAUME-UNI", 
                 desc: "Oxford, Cambridge et les universités les plus prestigieuses du monde.",
-                flag: "https://flagcdn.com/w80/gb.png"
+                flag: royaumeFlag,
+                capitalImg: "https://www.epaillote.com/project/resources/img/original/angleterre.jpg" 
               },
               { 
                 name: "ALLEMAGNE", 
                 desc: "Le leader européen de l'ingénierie avec des frais de scolarité quasi nuls.",
-                flag: "https://flagcdn.com/w80/de.png"
+                flag: germanyFlag,
+                capitalImg: "https://mandstravelmoney.com/media/obzfp5gn/adobestock_84153835.jpeg?width=1100&height=720&v=1db4ca2374567f0" 
               },
               { 
                 name: "CANADA", 
                 desc: "Études, bourses d'intégration : Cap sur le rêve.",
-                flag: "https://flagcdn.com/w80/ca.png"
+                flag: canadaFlag,
+                capitalImg: "https://imgproxy.natucate.com/ORD7pMTP40pEDZwb4SvL0hpEJO0NjAv3zoQrDEtXi0o/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvZTFhY2RhNjMtYzY2Ny00MWUwLWIyZWMtZjlkODcyZGYyNTMwLzI5ODg3Y2FlOTMtMTc2MTU4NjI5NS9uYXR1Y2F0ZS1yZWlzZXppZWwta2FuYWRhLWhlcm8uanBlZw" 
               }
             ].map((country, idx) => (
-              <div key={idx} className="relative rounded-xl overflow-hidden h-40 bg-gradient-to-br from-slate-400 to-brand-blue shadow-sm group cursor-pointer border border-slate-200/60 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-                {/* Background Shadow Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-blueDark/95 via-brand-blueDark/70 to-transparent"></div>
+              <div key={idx} className="relative rounded-xl overflow-hidden h-44 shadow-sm group cursor-pointer border border-slate-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 bg-brand-blueDark">
                 
-                {/* Content Container */}
-                <div className="absolute bottom-0 left-0 p-5 text-white w-full flex flex-col items-start space-y-2">
-                  {/* Flag Circular Badge */}
-                  <div className="w-7 h-7 rounded-full overflow-hidden border border-white/20 shadow-sm shrink-0 bg-slate-100">
-                    <img 
-                      src={country.flag} 
-                      alt={`Drapeau ${country.name}`} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-base font-black tracking-wide text-brand-gold uppercase">{country.name}</h3>
-                    <p className="text-[11px] text-slate-300 mt-0.5 font-light line-clamp-2 leading-relaxed">{country.desc}</p>
-                  </div>
+                {/* Image 1: Capital City Image (Hidden behind flag by default, shows on hover) */}
+                <img 
+                  src={country.capitalImg} 
+                  alt={country.name} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+                />
+
+                {/* Image 2: Country Flag Image (Visible by default, fades out on hover) */}
+                <img 
+                  src={country.flag} 
+                  alt={`Drapeau ${country.name}`} 
+                  className="absolute inset-0 w-full h-full object-cover object-center opacity-40 group-hover:opacity-0 transition-all duration-500 ease-in-out" 
+                />
+
+                {/* Dark Vignette Overlay to keep text readable on both states */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blueDark/100 via-brand-blueDark/40 to-transparent"></div>
+                
+                {/* Text Content */}
+                <div className="absolute bottom-0 left-0 p-5 text-white w-full z-10">
+                  <h3 className="text-base font-black tracking-wide text-brand-gold uppercase">
+                    {country.name}
+                  </h3>
+                  <p className="text-[11px] text-slate-300 mt-0.5 font-light line-clamp-2 leading-relaxed">
+                    {country.desc}
+                  </p>
                 </div>
+
               </div>
             ))}
           </div>
@@ -231,7 +258,6 @@ export default function Home() {
       <section className="py-20 px-4 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column Text */}
           <div className="lg:col-span-7 space-y-6">
             <div>
               <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
@@ -269,7 +295,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column Blue Card */}
           <div className="lg:col-span-5 bg-gradient-to-b from-brand-blue to-brand-blueDark p-8 rounded-3xl shadow-xl text-white border-b-4 border-brand-gold space-y-6">
             <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">ATTALEB.MA EN CHIFFRES</h3>
             
@@ -357,55 +382,108 @@ export default function Home() {
         </div>
       </section>
 
-      {/*PARLONS DE VOTRE AVENIR (FORM)*/}
-      <section id="contact-form" className="py-16 bg-brand-blue px-4 text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* --- RESTRUCTURED CONTACT ZONE WITH MAPS --- */}
+      <section id="contact-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
           
-          <div className="lg:col-span-6 space-y-4">
-            <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Contactez-nous</span>
-            <h2 className="text-3xl font-black uppercase tracking-tight">PARLONS DE<br />VOTRE AVENIR</h2>
-            <p className="text-xs text-slate-300 max-w-sm leading-relaxed font-light">
-              Un conseiller d'orientation vous répond dans les 24 heures pour une évaluation gratuite et sans engagement de votre profil.
+          {/* Left Column: Core Brand Info with Small Icons */}
+          <div className="space-y-6">
+            <div>
+              <span className="text-xs font-extrabold text-brand-gold uppercase tracking-widest block mb-2">
+                Contactez-nous
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-brand-blue tracking-tighter uppercase leading-none">
+                PARLONS DE<br />
+                <span className="text-slate-900">VOTRE AVENIR</span>
+              </h2>
+            </div>
+            
+            <p className="text-slate-600 text-sm font-medium max-w-md">
+              Notre équipe d'orientation est à votre entière disposition pour vous guider dans vos choix d'études et d'avenirs professionnels.
             </p>
+            
+            {/* Minimal Icon Details Block */}
+            <div className="space-y-4 pt-4 text-slate-700 font-semibold text-sm border-t border-slate-100">
+              <div className="flex items-center space-x-3.5">
+                <MapPin className="text-brand-gold flex-shrink-0" size={18} />
+                <span>Adresse de la ville 86, Casablanca, Morocco</span>
+              </div>
+              <div className="flex items-center space-x-3.5">
+                <Phone className="text-brand-gold flex-shrink-0" size={18} />
+                <span>+33 37 38 95 56</span>
+              </div>
+              <div className="flex items-center space-x-3.5">
+                <Mail className="text-brand-gold flex-shrink-0" size={18} />
+                <span>e.mail@attaleb.com</span>
+              </div>
+            </div>
           </div>
 
-          <div className="lg:col-span-6 bg-white rounded-2xl p-6 text-slate-800 shadow-xl">
-            <h3 className="font-black text-xs tracking-wider text-brand-blue uppercase mb-4 border-b border-slate-100 pb-2">
-              DEMANDE DE CONSULTATION
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Prénom</label>
-                  <input required type="text" value={formData.prenom} onChange={(e) => setFormData({...formData, prenom: e.target.value})} className="w-full p-2.5 border border-slate-200 rounded-lg text-xs bg-slate-50 focus:outline-none focus:border-brand-blue text-slate-800" placeholder="Votre prénom" />
-                </div>
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Nom</label>
-                  <input required type="text" value={formData.nom} onChange={(e) => setFormData({...formData, nom: e.target.value})} className="w-full p-2.5 border border-slate-200 rounded-lg text-xs bg-slate-50 focus:outline-none focus:border-brand-blue text-slate-800" placeholder="Votre nom" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Email</label>
-                  <input required type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full p-2.5 border border-slate-200 rounded-lg text-xs bg-slate-50 focus:outline-none focus:border-brand-blue text-slate-800" placeholder="exemple@mail.com" />
-                </div>
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Téléphone</label>
-                  <input required type="tel" value={formData.telephone} onChange={(e) => setFormData({...formData, telephone: e.target.value})} className="w-full p-2.5 border border-slate-200 rounded-lg text-xs bg-slate-50 focus:outline-none focus:border-brand-blue text-slate-800" placeholder="+212 600 000000" />
-                </div>
-              </div>
-
-              <button type="submit" className="w-full mt-2 bg-brand-gold hover:bg-brand-goldHover text-brand-blue font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2 text-xs uppercase tracking-wider cursor-pointer">
-                <Send size={12} /> Envoyer la demande
-              </button>
-            </form>
+          {/* Right Column: Google Maps Element Embedded Directly */}
+          <div className="w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-inner border border-slate-200 bg-slate-100 relative">
+            <iframe
+              title="Google Maps Location"
+              src="https://maps.google.com/maps?q=Marrakech&t=&z=13&ie=UTF-8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="absolute inset-0"
+            ></iframe>
           </div>
 
         </div>
       </section>
 
+      {/* --- BRAND FOOTER --- */}
+      <footer className="bg-brand-blue text-white border-t border-slate-800 pt-12 pb-6 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+          
+          {/* Col 1: Logo & Vision */}
+          <div className="space-y-3">
+            <h3 className="text-lg font-black tracking-wider">
+              ATTALEB<span className="text-brand-gold">.MA</span>
+            </h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-light max-w-xs">
+              Cabinet de consulting éducatif spécialisé dans l'orientation internationale, la préparation aux concours de grandes écoles et le soutien scolaire d'excellence.
+            </p>
+          </div>
+
+          {/* Col 2: Fast Navigation links */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold tracking-widest text-brand-gold uppercase">Nos Services</h4>
+            <div className="grid grid-cols-1 gap-2 text-[11px] text-slate-300">
+              <a href="#destinations-section" className="hover:text-brand-gold transition-colors">Études à l'étranger</a>
+              <a href="#services-section" className="hover:text-brand-gold transition-colors">Préparation concours</a>
+              <a href="#services-section" className="hover:text-brand-gold transition-colors">Soutien scolaire</a>
+            </div>
+          </div>
+
+          {/* Col 3: Quick Info */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold tracking-widest text-brand-gold uppercase">Horaires d'ouverture</h4>
+            <p className="text-[11px] text-slate-300 font-light">
+              Lundi — Samedi : 09:00 - 19:00<br />
+              Dimanche : Fermé
+            </p>
+          </div>
+
+        </div>
+
+        {/* Bottom copyright segment */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-500 font-light">
+          <p>© 2026 ATTALEB.MA. Tous droits réservés.</p>
+          <p className="mt-2 sm:mt-0">Filiale de MECC</p>
+        </div>
+      </footer>
+
     </div>
   );
 }
+
+
+
+
+
+
