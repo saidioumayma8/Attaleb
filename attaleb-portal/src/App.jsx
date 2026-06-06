@@ -1,5 +1,5 @@
 import React from 'react';
-// We only import Routes and Route now, NO extra Router wrapper!
+
 import { Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.jsx';
@@ -14,6 +14,7 @@ import CanadaDetail from './pages/CanadaDetail.jsx';
 import RoyaumeUniDetail from './pages/RoyaumeUniDetail.jsx';
 import PortugalDetail from './pages/PortugalDetail.jsx'; 
 import EmiratsDetail from './pages/EmiratsDetail.jsx'; 
+import RoumanieDetail from './pages/RoumanieDetail.jsx';
 
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/destinations/royaume-uni" element={<RoyaumeUniDetail />} />
           <Route path="/destinations/portugal" element={<PortugalDetail />} />
           <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
+          <Route path="/destinations/roumanie" element={<RoumanieDetail />} />
         </Routes>
       </main>
 
