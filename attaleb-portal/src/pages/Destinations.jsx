@@ -1,15 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Seul import local conservé pour l'image de fond de la bannière
 import destinationsBg from '../assets/image.png';
-
-import franceFlag from '../assets/france-flag-8x5.gif';
-import spainFlag from '../assets/spainflag.png';
-import romaniaFlag from '../assets/Flag_of_Romania.svg.png';
-import canadaFlag from '../assets/Flag-Canada.webp';
-import germanyFlag from '../assets/germany-flag-png-large.png';
-import royaumeFlag from 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc6vJQK23VxOMawqUp5N-M23abCoqvSDmPmg&s';
-
 
 export default function Destinations() {
 
@@ -18,21 +11,21 @@ export default function Destinations() {
       name: "FRANCE", 
       slug: "france", 
       desc: "La destination numéro 1 des étudiants marocains.",
-      flag: franceFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
       capitalImg: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" 
     },
     { 
       name: "ESPAGNE", 
       slug: "espagne",
       desc: "La porte d'entrée idéale des étudiants marocains en Europe.",
-      flag: spainFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
       capitalImg: "https://cms-images.oliverstravels.com/app/uploads/2023/10/04080649/Barcelona.jpg"
     },
     { 
       name: "ALLEMAGNE", 
       slug: "allemagne",
       desc: "Le leader européen de l'ingénierie avec des frais de scolarité quasi nuls.",
-      flag: germanyFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
       capitalImg: "https://mandstravelmoney.com/media/obzfp5gn/adobestock_84153835.jpeg?width=1100&height=720&v=1db4ca2374567f0" 
     },
     { 
@@ -60,14 +53,14 @@ export default function Destinations() {
       name: "CANADA", 
       slug: "canada",
       desc: "Études, bourses d'intégration : Cap sur le rêve américain.",
-      flag: canadaFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada.svg",
       capitalImg: "https://imgproxy.natucate.com/ORD7pMTP40pEDZwb4SvL0hpEJO0NjAv3zoQrDEtXi0o/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvZTFhY2RhNjMtYzY2Ny00MWUwLWIyZWMtZjlkODcyZGYyNTMwLzI5ODg3Y2FlOTMtMTc2MTU4NjI5NS9uYXR1Y2F0ZS1yZWlzZXppZWwta2FuYWRhLWhlcm8uanBlZw" 
     },
     { 
       name: "ROYAUME-UNI", 
       slug: "royaume-uni",
       desc: "Oxford, Cambridge et les universités les plus prestigieuses du monde.",
-      flag: royaumeFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg", 
       capitalImg: "https://www.epaillote.com/project/resources/img/original/angleterre.jpg" 
     },
     { 
@@ -78,9 +71,9 @@ export default function Destinations() {
       capitalImg: "https://www.weroad.fr/blog/wp-content/uploads/2023/10/Que-voir-au-Portugal.jpg" 
     },
     { 
-      name: "EMARATS ARABES UNIS", 
+      name: "EMIRATS ARABES UNIS", 
       slug: "emirats-arabes-unis",
-      desc: "Le parfait équiveau de l'Orient et l'Occident.", 
+      desc: "Le parfait équilibre de l'Orient et l'Occident.", 
       flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/1280px-Flag_of_the_United_Arab_Emirates.svg.png",
       capitalImg: "https://www.akshartours.com/storage/itinerary/itinerary_header_pic/Jmcq39SViFtB56kQ.jpg" 
     },
@@ -88,7 +81,7 @@ export default function Destinations() {
       name: "ROUMANIE", 
       slug: "roumanie",
       desc: "Le leader européen de la formation médicale d'excellence.",
-      flag: romaniaFlag,
+      flag: "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
       capitalImg: "https://moreconsulting.eu/wp-content/uploads/2021/09/logoi-roumania-idrusi-etaireias-hero.jpg" 
     },
     { 
@@ -128,7 +121,6 @@ export default function Destinations() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {allDestinations.map((country, idx) => (
             
-            /* Changed wrapper container to a React Router <Link> component */
             <Link 
               to={`/destinations/${country.slug}`}
               key={idx} 
