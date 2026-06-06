@@ -1,21 +1,47 @@
 import React from 'react';
+// We only import Routes and Route now, NO extra Router wrapper!
+import { Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.jsx';
+import Destinations from './pages/Destinations.jsx';
+import DestinationDetail from './pages/DestinationDetail';
+import SpainDetail from './pages/SpainDetail';
+import GermanyDetail from './pages/GermanyDetail';
+import BelgiumDetail from './pages/BelgiumDetail.jsx';
+import ItalyDetail from './pages/ItalyDetail.jsx';
+import USADetail from "./pages/USADetail.jsx";
+import CanadaDetail from './pages/CanadaDetail.jsx';
+
+
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 relative">
-      {/* Navigation Bar */}
+      {/* Navigation Bar stays visible on top */}
       <Navbar />
       
-      {/* Main Page Content */}
+      {/* Main Page Content switches dynamically based on the URL */}
       <main>
-        <Home />
+        <Routes>
+          {/* When path is "/" display the Home page */}
+          <Route path="/" element={<Home />} />
+          
+          {/* When path is "/destinations" display the Destinations page */}
+          <Route path="/destinations" element={<Destinations />} />
+          <Route path="/destinations/:countrySlug" element={<DestinationDetail />} />
+          <Route path="/destinations/espagne" element={<SpainDetail />} />
+          <Route path="/destinations/allemagne" element={<GermanyDetail />} />
+          <Route path="/destinations/belgique" element={<BelgiumDetail />} />
+          <Route path="/destinations/italie" element={<ItalyDetail />} />
+          <Route path="/destinations/etats-unis" element={<USADetail />} />
+          <Route path="/destinations/etats-unis" element={<USADetail />} />
+          <Route path="/destinations/canada" element={<CanadaDetail />} />
+        </Routes>
       </main>
 
       {/* Persistent WhatsApp Floating Button */}
       <a 
-        href="https://wa.me/212500000000" // Change this to your actual phone number
+        href="https://wa.me/212645212800" 
         target="_blank" 
         rel="noreferrer" 
         className="whatsapp-float"
