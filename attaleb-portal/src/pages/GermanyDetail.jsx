@@ -125,7 +125,7 @@ export default function GermanyDetail() {
               <p className="font-medium">Très fréquents en <strong>Économie</strong> et <strong>Sciences Sociales</strong>. Ils se développent également rapidement pour la Médecine, les Sciences Naturelles et l'Agriculture.</p>
             </div>
             <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 rounded-xl text-xs font-medium">
-              <strong>⚠️ Obligation linguistique :</strong> Pour être éligible à ces programmes en anglais, l'étudiant doit obligatoirement valider et fournir un certificat international officiel de type <strong>IELTS</strong> ou <strong>TOEFL</strong>.
+              <strong> Obligation linguistique :</strong> Pour être éligible à ces programmes en anglais, l'étudiant doit obligatoirement valider et fournir un certificat international officiel de type <strong>IELTS</strong> ou <strong>TOEFL</strong>.
             </div>
           </div>
 

@@ -130,7 +130,7 @@ export default function RoyaumeUniDetail() {
               ))}
             </div>
             <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 rounded-xl text-xs font-medium">
-              <strong>💡 Accompagnement Attaleb :</strong> L'équipe d'Attaleb.ma s'engage à orienter les étudiants marocains tout au long de ces procédures de choix et de dépôt de dossier.
+              <strong> Accompagnement Attaleb :</strong> L'équipe d'Attaleb.ma s'engage à orienter les étudiants marocains tout au long de ces procédures de choix et de dépôt de dossier.
             </div>
           </div>
 
@@ -216,7 +216,7 @@ export default function RoyaumeUniDetail() {
           {/* Tableau Top 10 permanent et scannable */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-4 border-b pb-2 flex items-center gap-1.5">
-              <span>🏛️</span> Top 10 Universités d'Élite
+              <span></span> Top 10 Universités d'Élite
             </h3>
             <ol className="space-y-2.5 text-[11px] text-slate-700 font-bold">
               {[
@@ -247,7 +247,7 @@ export default function RoyaumeUniDetail() {
           {/* Liste des meilleures bourses */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-3 border-b pb-2">
-              🎓 Top 6 Bourses Universitaires
+               Top 6 Bourses Universitaires
             </h3>
             <ul className="space-y-2 text-[11px] text-slate-600 font-medium">
               {[

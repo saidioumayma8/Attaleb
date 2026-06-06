@@ -76,7 +76,7 @@ export default function RoumanieDetail() {
               </div>
             </div>
             <div className="bg-white/10 p-3 rounded-xl border border-white/10 text-[11px] text-slate-200">
-              ⚠️ <strong>Admission Santé :</strong> Nécessite une sélection sur dossier validée par l'université d'accueil et le Ministère Roumain de l'Éducation, complétée par des tests d'aptitude spécifiques.
+               <strong>Admission Santé :</strong> Nécessite une sélection sur dossier validée par l'université d'accueil et le Ministère Roumain de l'Éducation, complétée par des tests d'aptitude spécifiques.
             </div>
           </div>
 
@@ -195,7 +195,7 @@ export default function RoumanieDetail() {
           {/* TOP 5 MEDECINE */}
           <div className="bg-brand-blue text-white p-5 rounded-2xl shadow-sm border border-slate-800">
             <h3 className="text-xs font-black text-brand-gold uppercase tracking-wider mb-3 pb-2 border-b border-white/10 flex items-center gap-1.5">
-              🩺 Top 5 Universités de Médecine
+              Top 5 Universités de Médecine
             </h3>
             <ol className="space-y-2 text-[11px] font-bold text-slate-100">
               {[
@@ -218,7 +218,7 @@ export default function RoumanieDetail() {
           {/* TOP 10 GENERAL */}
           <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-3 pb-2 border-b flex items-center gap-1.5">
-              🏛️ Top 10 Universités Générales
+               Top 10 Universités Générales
             </h3>
             <ol className="space-y-1.5 text-[10px] text-slate-700 font-bold">
               {[
@@ -245,7 +245,7 @@ export default function RoumanieDetail() {
 
           {/* Rappel Plateforme */}
           <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-5 rounded-2xl border border-slate-200 text-center space-y-2">
-            <span className="text-lg">🎯</span>
+            <span className="text-lg"></span>
             <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
               <strong>Attaleb.ma</strong> vous accompagne pas à pas pour structurer votre dossier de préinscription et sécuriser l'obtention de la lettre d'admission du Ministère roumain.
             </p>

@@ -161,7 +161,7 @@ export default function CanadaDetail() {
               Pour alléger le coût annuel, le site officiel <span className="text-brand-blue font-bold">educanada.ca</span> liste l'éventail des bourses accessibles.
             </p>
             <div className="p-4 bg-amber-50/60 rounded-xl border border-amber-100 text-xs text-slate-700 font-medium">
-              <strong className="text-amber-900 block mb-1">💡 Opportunité Spéciale Québec (Bourses d'Exemption) :</strong>
+              <strong className="text-amber-900 block mb-1"> Opportunité Spéciale Québec (Bourses d'Exemption) :</strong>
               Chaque année, le Québec propose aux étudiants marocains des bourses d'exemption des droits de scolarité supplémentaires pour la session d'automne. Les dossiers se déposent généralement avant la fin mai. Consultez la section « Bourses de coopération » sur <span className="underline font-bold text-brand-blue">dfc.gov.ma</span> dès le mois de janvier.
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function CanadaDetail() {
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
             <div>
               <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                <span>🍁</span> Top 10 des Universités (Canada)
+                <span></span> Top 10 des Universités (Canada)
               </h3>
               <p className="text-[10px] text-slate-500 font-medium leading-normal">
                 Les institutions d'excellence les plus reconnues au niveau national et international :

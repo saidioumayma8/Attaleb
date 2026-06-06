@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import essentiel pour la navigation sans rechargement
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
@@ -30,7 +31,8 @@ export default function Navbar() {
     { name: "CONCOURS MÉDECINE (FMP/FMD)", slug: "medecine" },
     { name: "CONCOURS INGÉNIERIE (ENSA/ENSAM)", slug: "ingenierie" },
     { name: "CONCOURS DE COMMERCE (ENCG/ISCAE)", slug: "commerce" },
-    { name: "CLASSES PRÉPARATOIRES (CPGE)", slug: "cpge" }
+    { name: "CLASSES PRÉPARATOIRES (CPGE)", slug: "cpge" },
+    { name: "AIX-MARSEILLE UNIVERSITÉ (AMU)", slug: "amu" }
   ];
 
   const languesList = [
@@ -43,7 +45,8 @@ export default function Navbar() {
   const soutienList = [
     { name: "SOUTIEN LYCÉE (BAC MAROCAIN)", slug: "lycee-marocain" },
     { name: "SOUTIEN MISSION (MISSION FRANÇAISE)", slug: "mission-francaise" },
-    { name: "SOUTIEN UNIVERSITAIRE", slug: "universitaire" }
+    { name: "SOUTIEN UNIVERSITAIRE", slug: "universitaire" },
+    { name: "AS AND A LEVEL (SYSTÈME BRITANNIQUE)", slug: "as-a-level" }
   ];
 
   return (
@@ -53,15 +56,16 @@ export default function Navbar() {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home-section" className="text-xl md:text-2xl font-black tracking-wider text-white">
-              ATTALEB<span className="text-brand-gold">.MA</span>
-            </a>
+            {/* Redirection vers la racine ou l'accueil propre */}
+            <Link to="/" className="text-xl md:text-2xl font-black tracking-wider text-white uppercase group-hover:text-brand-gold transition-colors">
+              Attaleb<span className="text-brand-gold">.net</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex space-x-3 xl:space-x-4 font-black text-[10px] xl:text-[11px] tracking-wider items-center">
             
-            <a href="#about-section" className="hover:text-brand-gold transition-colors text-slate-200">
+            <a href="/#about-section" className="hover:text-brand-gold transition-colors text-slate-200">
               À PROPOS
             </a>
 
@@ -79,13 +83,13 @@ export default function Navbar() {
               {isDestinationsOpen && (
                 <div className="absolute top-full left-0 mt-0 w-56 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
                   {destinations.map((dest, i) => (
-                    <a 
+                    <Link 
                       key={i}
-                      href={`/destinations/${dest.slug}`}
+                      to={`/destinations/${dest.slug}`}
                       className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
                     >
                       ÉTUDIER EN {dest.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -105,13 +109,13 @@ export default function Navbar() {
               {isConcoursOpen && (
                 <div className="absolute top-full left-0 mt-0 w-64 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
                   {concoursList.map((item, i) => (
-                    <a 
+                    <Link 
                       key={i}
-                      href={`/concours/${item.slug}`}
+                      to={`/concours/${item.slug}`}
                       className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -131,13 +135,13 @@ export default function Navbar() {
               {isLanguesOpen && (
                 <div className="absolute top-full left-0 mt-0 w-64 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
                   {languesList.map((item, i) => (
-                    <a 
+                    <Link 
                       key={i}
-                      href={`/langues/${item.slug}`}
+                      to={`/langues/${item.slug}`}
                       className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -157,25 +161,26 @@ export default function Navbar() {
               {isSoutienOpen && (
                 <div className="absolute top-full left-0 mt-0 w-60 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
                   {soutienList.map((item, i) => (
-                    <a 
+                    <Link 
                       key={i}
-                      href={`/soutien/${item.slug}`}
+                      to={`/soutien/${item.slug}`}
                       className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            <a href="#bourses-etudes" className="hover:text-brand-gold transition-colors text-slate-200">
+            <a href="/#bourses-etudes" className="hover:text-brand-gold transition-colors text-slate-200">
               BOURSES
             </a>
             
-            <a href="#contact-section" className="hover:text-brand-gold transition-colors text-white">
+            {/* CORRECTION DESKTOP : Modifié de href="#contact-section" à to="/contact" */}
+            <Link to="/contact" className="hover:text-brand-gold transition-colors text-white font-black">
               CONTACT
-            </a>
+            </Link>
 
           </div>
 
@@ -191,10 +196,10 @@ export default function Navbar() {
       {/* Mobile Sidebar Navigation */}
       {isOpen && (
         <div className="lg:hidden bg-brand-blueDark px-4 pt-2 pb-6 space-y-4 border-t border-slate-800 max-h-[85vh] overflow-y-auto">
-          <a href="#" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
+          <Link to="/" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
             ACCUEIL
-          </a>
-          <a href="#about-section" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
+          </Link>
+          <a href="/#about-section" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
             À PROPOS
           </a>
           
@@ -203,7 +208,7 @@ export default function Navbar() {
             <span className="block text-xs font-black text-brand-gold uppercase">ÉTUDIER À L'ÉTRANGER :</span>
             <div className="grid grid-cols-2 gap-1 pl-2">
               {destinations.map((dest, i) => (
-                <a key={i} href={`/destinations/${dest.slug}`} onClick={() => setIsOpen(false)} className="block py-0.5 text-[10px] font-bold text-slate-300">• {dest.name}</a>
+                <Link key={i} to={`/destinations/${dest.slug}`} onClick={() => setIsOpen(false)} className="block py-0.5 text-[10px] font-bold text-slate-300">• {dest.name}</Link>
               ))}
             </div>
           </div>
@@ -213,7 +218,7 @@ export default function Navbar() {
             <span className="block text-xs font-black text-brand-gold uppercase">PRÉPARATION CONCOURS :</span>
             <div className="space-y-1 pl-2">
               {concoursList.map((item, i) => (
-                <a key={i} href={`/concours/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</a>
+                <Link key={i} to={`/concours/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</Link>
               ))}
             </div>
           </div>
@@ -223,7 +228,7 @@ export default function Navbar() {
             <span className="block text-xs font-black text-brand-gold uppercase">CONCOURS DE LANGUES :</span>
             <div className="space-y-1 pl-2">
               {languesList.map((item, i) => (
-                <a key={i} href={`/langues/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</a>
+                <Link key={i} to={`/langues/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</Link>
               ))}
             </div>
           </div>
@@ -233,18 +238,20 @@ export default function Navbar() {
             <span className="block text-xs font-black text-brand-gold uppercase">SOUTIEN SCOLAIRE :</span>
             <div className="space-y-1 pl-2">
               {soutienList.map((item, i) => (
-                <a key={i} href={`/soutien/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</a>
+                <Link key={i} to={`/soutien/${item.slug}`} onClick={() => setIsOpen(false)} className="block text-[10px] font-bold text-slate-300">• {item.name}</Link>
               ))}
             </div>
           </div>
 
           <hr className="border-slate-800 my-1" />
-          <a href="#bourses-etudes" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-300 hover:text-brand-gold">
+          <a href="/#bourses-etudes" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-300 hover:text-brand-gold">
             BOURSES
           </a>
-          <a href="#contact-section" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
+          
+          {/* CORRECTION MOBILE : Remplacement propre de l'ancienne balise brisée par un vrai Link */}
+          <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
             CONTACT
-          </a>
+          </Link>
         </div>
       )}
     </nav>

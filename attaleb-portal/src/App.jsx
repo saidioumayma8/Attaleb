@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Destinations from './pages/Destinations.jsx';
 import DestinationDetail from './pages/DestinationDetail';
@@ -16,7 +17,10 @@ import PortugalDetail from './pages/PortugalDetail.jsx';
 import EmiratsDetail from './pages/EmiratsDetail.jsx'; 
 import RoumanieDetail from './pages/RoumanieDetail.jsx';
 import ChineDetail from './pages/ChineDetail.jsx';
-
+import Contact from './pages/Contact.jsx';
+import ConcoursPage from './pages/ConcoursPage.jsx';
+import LanguesPage from './pages/LanguesPage.jsx';
+import SoutienPage from './pages/SoutienPage.jsx';
 
 export default function App() {
   return (
@@ -44,9 +48,14 @@ export default function App() {
           <Route path="/destinations/portugal" element={<PortugalDetail />} />
           <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
           <Route path="/destinations/roumanie" element={<RoumanieDetail />} />
-          <Route path="/destinations/chine" element={<CanadaDetail />} />
+          <Route path="/destinations/chine" element={<ChineDetail />} />
+          <Route path="/concours/:slug" element={<ConcoursPage />} />
+          <Route path="/langues/:slug" element={<LanguesPage />} />
+          <Route path="/soutien/:slug" element={<SoutienPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
 
       {/* Persistent WhatsApp Floating Button */}
       <a 

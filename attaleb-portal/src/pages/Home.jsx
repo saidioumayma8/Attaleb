@@ -11,6 +11,7 @@ import germanyFlag from '../assets/germany-flag-png-large.png'
 import royaumeFlag from '../assets/Flag_of_Romania.svg.png'
 import heroBg from '../assets/image.png'
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 ;
 
@@ -517,48 +518,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      {/* --- BRAND FOOTER --- */}
-      <footer className="bg-brand-blue text-white border-t border-slate-800 pt-12 pb-6 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
-          
-          {/* Col 1: Logo & Vision */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-black tracking-wider">
-              ATTALEB<span className="text-brand-gold">.MA</span>
-            </h3>
-            <p className="text-[11px] text-slate-400 leading-relaxed font-light max-w-xs">
-              Cabinet de consulting éducatif spécialisé dans l'orientation internationale, la préparation aux concours de grandes écoles et le soutien scolaire d'excellence.
-            </p>
-          </div>
-
-          {/* Col 2: Fast Navigation links */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold tracking-widest text-brand-gold uppercase">Nos Services</h4>
-            <div className="grid grid-cols-1 gap-2 text-[11px] text-slate-300">
-              <a href="#destinations-section" className="hover:text-brand-gold transition-colors">Études à l'étranger</a>
-              <a href="#services-section" className="hover:text-brand-gold transition-colors">Préparation concours</a>
-              <a href="#services-section" className="hover:text-brand-gold transition-colors">Soutien scolaire</a>
-            </div>
-          </div>
-
-          {/* Col 3: Quick Info */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold tracking-widest text-brand-gold uppercase">Horaires d'ouverture</h4>
-            <p className="text-[11px] text-slate-300 font-light">
-              Lundi — Samedi : 09:00 - 19:00<br />
-              Dimanche : Fermé
-            </p>
-          </div>
-
-        </div>
-
-        {/* Bottom copyright segment */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-500 font-light">
-          <p>© 2026 ATTALEB.MA. Tous droits réservés.</p>
-          <p className="mt-2 sm:mt-0">Filiale de MECC</p>
-        </div>
-      </footer>
 
     </div>
   );

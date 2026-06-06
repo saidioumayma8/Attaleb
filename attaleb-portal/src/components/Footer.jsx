@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 text-white font-black text-xl mb-4">
             <GraduationCap className="text-brand-gold" />
-            <span>ATTALEB<span className="text-brand-gold">.MA</span></span>
+            <span>Attaleb<span className="text-brand-gold">.net</span></span>
           </div>
           <p className="text-sm text-slate-400 leading-relaxed">
             Votre passerelle de confiance vers le succès académique international. Nous vous guidons à chaque étape de votre projet d'études.
@@ -31,7 +31,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-slate-400">
-            <li>Email: contact@attaleb.ma</li>
+            <li>Email: contact@attaleb.net</li>
             <li>Marrakech, Maroc</li>
           </ul>
         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-        &copy; {new Date().getFullYear()} Attaleb.ma. Tous droits réservés.
+        &copy; {new Date().getFullYear()} Attaleb.net. Tous droits réservés.
       </div>
     </footer>
   );

@@ -92,7 +92,7 @@ export default function ChineDetail() {
 
             {/* Cadre Tests Linguistiques */}
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2 text-xs font-medium text-slate-700">
-              <span className="text-brand-blue font-extrabold block uppercase tracking-wider text-[11px]">📢 Exigences Linguistiques :</span>
+              <span className="text-brand-blue font-extrabold block uppercase tracking-wider text-[11px]"> Exigences Linguistiques :</span>
               <ul className="list-disc pl-4 space-y-1 text-slate-600">
                 <li><strong>Cursus en Mandarin :</strong> Soumission obligatoire des scores officiels du test <strong>HSK</strong>.</li>
                 <li><strong>Cursus en Anglais :</strong> Soumission des résultats du test <strong>IELTS ou TOEFL</strong>.</li>
@@ -130,7 +130,7 @@ export default function ChineDetail() {
               </div>
             </div>
             <div className="bg-amber-50 border border-amber-200 text-amber-900 p-3.5 rounded-xl text-xs font-medium">
-              💡 <strong>Conseil Logement :</strong> Pour réduire drastiquement vos dépenses mensuelles, il est fortement recommandé de loger au sein des résidences universitaires des campus. Le bureau des étudiants internationaux de votre université d'accueil vous accompagnera dans cette démarche.
+               <strong>Conseil Logement :</strong> Pour réduire drastiquement vos dépenses mensuelles, il est fortement recommandé de loger au sein des résidences universitaires des campus. Le bureau des étudiants internationaux de votre université d'accueil vous accompagnera dans cette démarche.
             </div>
           </div>
 
@@ -183,7 +183,7 @@ export default function ChineDetail() {
           {/* TOP 10 UNIVERSITES */}
           <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-3 pb-2 border-b flex items-center gap-1.5">
-              🏛️ Top 10 des Universités de Chine
+               Top 10 des Universités de Chine
             </h3>
             <ol className="space-y-2 text-[11px] text-slate-700 font-bold">
               {[
@@ -211,7 +211,7 @@ export default function ChineDetail() {
 
           {/* BOUTON BOURSES INFO */}
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 p-5 rounded-2xl border border-amber-200 space-y-2">
-            <span className="text-lg">🎓</span>
+            <span className="text-lg"></span>
             <strong className="text-xs font-black text-amber-950 block uppercase tracking-tight">Bourses du Gouvernement</strong>
             <p className="text-[11px] text-amber-900 font-medium leading-relaxed">
               Dans le cadre des accords de coopération culturelle Maroc-Chine, des bourses complètes (via le <strong>China Scholarship Council</strong>) sont proposées chaque année, principalement ciblées pour les profils postulant en <strong>Master et Doctorat</strong>.
@@ -220,7 +220,7 @@ export default function ChineDetail() {
 
           {/* Rappel Plateforme */}
           <div className="bg-slate-100 p-5 rounded-2xl border border-slate-200 text-center space-y-2">
-            <span className="text-lg">🎯</span>
+            <span className="text-lg"></span>
             <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
               <strong>Attaleb.ma</strong> prend en charge l'intégralité de vos démarches d'admission : de l'orientation initiale à la préparation de votre dossier consulaire X1.
             </p>

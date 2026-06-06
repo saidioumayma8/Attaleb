@@ -161,7 +161,7 @@ export default function EmiratsDetail() {
               </p>
               
               <div className="bg-brand-blue/5 border-l-4 border-brand-blue p-4 my-2 rounded-r-xl text-xs text-slate-700 font-medium">
-                <strong>💡 Sponsor Universitaire :</strong> Pour obtenir votre visa, vous devez disposer d'un garant aux Émirats. Si vous n'avez pas de proches sur place, **la majorité des universités émiraties se chargent de parrainer votre dossier de visa**.
+                <strong> Sponsor Universitaire :</strong> Pour obtenir votre visa, vous devez disposer d'un garant aux Émirats. Si vous n'avez pas de proches sur place, **la majorité des universités émiraties se chargent de parrainer votre dossier de visa**.
               </div>
 
               <div className="space-y-2.5">
@@ -217,7 +217,7 @@ export default function EmiratsDetail() {
           {/* Tableau Top 10 permanent */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-4 border-b pb-2 flex items-center gap-1.5">
-              <span>🏛️</span> Top 10 Universités aux EAU
+              <span></span> Top 10 Universités aux EAU
             </h3>
             <ol className="space-y-2.5 text-[11px] text-slate-700 font-bold">
               {[
@@ -244,7 +244,7 @@ export default function EmiratsDetail() {
 
           {/* Rappel Plateforme Attaleb */}
           <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-5 rounded-2xl border border-slate-200 text-center space-y-2">
-            <span className="text-lg">🎯</span>
+            <span className="text-lg"></span>
             <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
               <strong>Attaleb.ma</strong> sécurise votre avenir en vous offrant un panel diversifié d'universités émiraties partenaires afin de maximiser vos probabilités d'acceptation.
             </p>

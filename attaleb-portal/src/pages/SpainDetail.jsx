@@ -138,7 +138,7 @@ export default function SpainDetail() {
           {/* Liste des meilleures Universités */}
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
             <h3 className="text-xs font-black text-brand-blue uppercase tracking-wider mb-4 border-b pb-2 flex items-center gap-1.5">
-              <span>🏛️</span> Top Universités (QS)
+              <span></span> Top Universités (QS)
             </h3>
             <ol className="space-y-2.5 text-[11px] text-slate-700 font-bold">
               {[
