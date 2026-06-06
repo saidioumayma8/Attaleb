@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Seul import local conservé pour l'image de fond de la bannière
+
 import destinationsBg from '../assets/image.png';
 
 export default function Destinations() {

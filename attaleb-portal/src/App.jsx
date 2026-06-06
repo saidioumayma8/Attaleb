@@ -12,7 +12,8 @@ import ItalyDetail from './pages/ItalyDetail.jsx';
 import USADetail from "./pages/USADetail.jsx";
 import CanadaDetail from './pages/CanadaDetail.jsx';
 import RoyaumeUniDetail from './pages/RoyaumeUniDetail.jsx';
-import PortugalDetail from './pages/PortugalDetail.jsx';  
+import PortugalDetail from './pages/PortugalDetail.jsx'; 
+import EmiratsDetail from './pages/EmiratsDetail.jsx'; 
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/destinations/canada" element={<CanadaDetail />} />
           <Route path="/destinations/royaume-uni" element={<RoyaumeUniDetail />} />
           <Route path="/destinations/portugal" element={<PortugalDetail />} />
+          <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
         </Routes>
       </main>
 
