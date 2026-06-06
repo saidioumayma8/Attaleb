@@ -15,6 +15,7 @@ import RoyaumeUniDetail from './pages/RoyaumeUniDetail.jsx';
 import PortugalDetail from './pages/PortugalDetail.jsx'; 
 import EmiratsDetail from './pages/EmiratsDetail.jsx'; 
 import RoumanieDetail from './pages/RoumanieDetail.jsx';
+import ChineDetail from './pages/ChineDetail.jsx';
 
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/destinations/portugal" element={<PortugalDetail />} />
           <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
           <Route path="/destinations/roumanie" element={<RoumanieDetail />} />
+          <Route path="/destinations/chine" element={<CanadaDetail />} />
         </Routes>
       </main>
 
