@@ -21,6 +21,7 @@ import Contact from './pages/Contact.jsx';
 import ConcoursPage from './pages/ConcoursPage.jsx';
 import LanguesPage from './pages/LanguesPage.jsx';
 import SoutienPage from './pages/SoutienPage.jsx';
+import Apropos from './pages/Apropos.jsx';
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/langues/:slug" element={<LanguesPage />} />
           <Route path="/soutien/:slug" element={<SoutienPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/a-propos" element={<Apropos />} />
         </Routes>
       </main>
       <Footer />

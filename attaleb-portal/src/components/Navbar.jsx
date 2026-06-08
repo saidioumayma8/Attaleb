@@ -65,9 +65,9 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex space-x-3 xl:space-x-4 font-black text-[10px] xl:text-[11px] tracking-wider items-center">
             
-            <a href="/#about-section" className="hover:text-brand-gold transition-colors text-slate-200">
+            <Link to="/a-propos" className="hover:text-brand-gold transition-colors text-slate-200">
               À PROPOS
-            </a>
+            </Link>
 
             {/* 1. DROPDOWN: ÉTUDIER À L'ÉTRANGER */}
             <div 
@@ -199,9 +199,9 @@ export default function Navbar() {
           <Link to="/" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
             ACCUEIL
           </Link>
-          <a href="/#about-section" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
+          <Link to="/a-propos" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-200 hover:text-brand-gold">
             À PROPOS
-          </a>
+          </Link>
           
           {/* Mobile Section 1 */}
           <div className="border-l-2 border-slate-700 pl-2 space-y-1">
