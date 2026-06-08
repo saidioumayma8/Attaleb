@@ -21,9 +21,9 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-brand-gold transition-colors">Accueil</a></li>
-            <li><a href="#" className="hover:text-brand-gold transition-colors">À Propos</a></li>
-            <li><a href="#" className="hover:text-brand-gold transition-colors">Étudier à l'étranger</a></li>
+            <li><a href="#accueil" className="hover:text-brand-gold transition-colors">Accueil</a></li>
+            <li><a href="#propos" className="hover:text-brand-gold transition-colors">À Propos</a></li>
+            <li><a href="#destinations" className="hover:text-brand-gold transition-colors">Étudier à l'étranger</a></li>
           </ul>
         </div>
 

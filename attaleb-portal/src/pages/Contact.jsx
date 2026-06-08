@@ -190,7 +190,7 @@ export default function Contact() {
                 <Phone size={16} className="text-brand-gold shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase">Téléphone Consultant</span>
-                  <a href="tel:0631550128" className="hover:text-brand-gold font-bold tracking-wide">06 31 55 01 28</a>
+                  <a href="tel:0631550128" className="hover:text-brand-gold font-bold tracking-wide">06 45 21 28 00</a>
                 </div>
               </div>
 
