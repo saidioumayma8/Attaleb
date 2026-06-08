@@ -5,17 +5,12 @@ import {
 } from 'lucide-react'; 
 import franceFlag from '../assets/france-flag-8x5.gif';
 import spainFlag from '../assets/spainflag.png';
-import romaniaFlag from '../assets/Flag_of_Romania.svg.png'
-import canadaFlag from '../assets/Flag-Canada.webp'
-import germanyFlag from '../assets/germany-flag-png-large.png'
-import royaumeFlag from '../assets/Flag_of_Romania.svg.png'
-import heroBg from '../assets/image.png'
+import romaniaFlag from '../assets/Flag_of_Romania.svg.png';
+import canadaFlag from '../assets/Flag-Canada.webp';
+import germanyFlag from '../assets/germany-flag-png-large.png';
+import heroBg from '../assets/image.png';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
-
-;
-
-
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -43,7 +38,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto w-full flex flex-col items-center text-white space-y-6 relative z-10">
           
           <span className="text-brand-gold text-xs font-bold tracking-widest uppercase bg-brand-gold/10 px-3 py-1.5 rounded border border-brand-gold/20">
-            Filiale de MECC - Marrakech | Depuis 2018
+            Filiale de MICC - Depuis 2016
           </span>
           
           <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-tight max-w-3xl">
@@ -56,17 +51,8 @@ export default function Home() {
           </p>
           
           <p className="text-xs text-brand-gold font-semibold tracking-wide uppercase">
-            Rejoignez des milliers d'étudiants qui ont réalisé leur rêve
+            Rejoignez des milliers d'étudiants qui ont réalisé leurs rêves
           </p>
-
-          {/* Centered Badges */}
-          <div className="flex flex-wrap justify-center gap-2 pt-2 max-w-2xl">
-            {["DELF", "TCF", "IELTS", "TOEFL", "Médecine", "Pharmacie", "CPGE", "ENSA", "ENCG"].map((tag, idx) => (
-              <span key={idx} className="bg-white/10 text-[11px] font-medium px-2.5 py-1 rounded tracking-wide border border-white/5">
-                {tag}
-              </span>
-            ))}
-          </div>
 
           {/* Centered Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full sm:w-auto">
@@ -81,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*KEY FIGURES RIBBON*/}
+      {/* KEY FIGURES RIBBON */}
       <section className="bg-brand-blue text-white py-6 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -108,7 +94,7 @@ export default function Home() {
       {/* ==========================================
           UN ACCOMPAGNEMENT COMPLET (6 SERVICES)
          ========================================== */}
-      <section className="py-20 px-4 max-w-7xl mx-auto bg-white">
+      <section id="services-section" className="py-20 px-4 max-w-7xl mx-auto bg-white">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">Nos Services</h2>
           <p className="text-xs text-slate-500 mt-2 max-w-md mx-auto leading-relaxed">
@@ -116,7 +102,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Responsive Grid: 1 column on mobile, 2 on tablets, 3 on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Études à l'Étranger */}
@@ -236,8 +221,8 @@ export default function Home() {
         </div>
       </section>
 
-   {/* ==========================================
-          4. VOS DESTINATIONS RÊVÉES (HOVER INTERACTIVE)
+      {/* ==========================================
+          4. VOS DESTINATIONS RÊVÉES
          ========================================== */}
       <section id="destinations-section" className="py-16 bg-slate-50 px-4 border-t border-b border-slate-100">
         <div className="max-w-7xl mx-auto">
@@ -245,7 +230,7 @@ export default function Home() {
             <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Études à l'Étranger</span>
             <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">VOS DESTINATIONS RÊVÉES</h2>
             <p className="text-xs text-slate-500 mt-2 max-w-md mx-auto leading-relaxed">
-              Attaleb.ma vous accompagne vers les universités et grandes écoles de ces pays, avec un dossier solide et un suivi jusqu'à l'admission.
+              attaleb.net vous accompagne vers les universités et grandes écoles de ces pays, avec un dossier solide et un suivi jusqu'à l'admission.
             </p>
           </div>
 
@@ -285,29 +270,21 @@ export default function Home() {
                 name: "CANADA", 
                 desc: "Études, bourses d'intégration : Cap sur le rêve.",
                 flag: canadaFlag,
-                capitalImg: "https://imgproxy.natucate.com/ORD7pMTP40pEDZwb4SvL0hpEJO0NjAv3zoQrDEtXi0o/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvZTFhY2RhNjMtYzY2Ny00MWUwLWIyZWMtZjlkODcyZGYyNTMwLzI5ODg3Y2FlOTMtMTc2MTU4NjI5NS9uYXR1Y2F0ZS1yZWlzZXppZWwta2FuYWRhLWhlcm8uanBlZw" 
+                capitalImg: "https://imgproxy.natucate.com/ORD7pMTP40pEDZwb4SvL0hpEJO0NjAv3zoQrDEtXi0o/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdEUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvZTFhY2RhNjMtYzY2Ny00MWUwLWIyZWMtZjlkODcyZGYyNTMwLzI5ODg3Y2FlOTMtMTc2MTU4NjI5NS9uYXR1Y2F0ZS1yZWlzZXppZWwta2FuYWRhLWhlcm8uanBlZw" 
               }
             ].map((country, idx) => (
               <div key={idx} className="relative rounded-xl overflow-hidden h-44 shadow-sm group cursor-pointer border border-slate-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 bg-brand-blueDark">
-                
-                {/* Image 1: Capital City Image (Hidden behind flag by default, shows on hover) */}
                 <img 
                   src={country.capitalImg} 
                   alt={country.name} 
                   className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out" 
                 />
-
-                {/* Image 2: Country Flag Image (Visible by default, fades out on hover) */}
                 <img 
                   src={country.flag} 
                   alt={`Drapeau ${country.name}`} 
                   className="absolute inset-0 w-full h-full object-cover object-center opacity-40 group-hover:opacity-0 transition-all duration-500 ease-in-out" 
                 />
-
-                {/* Dark Vignette Overlay to keep text readable on both states */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-blueDark/100 via-brand-blueDark/40 to-transparent"></div>
-                
-                {/* Text Content */}
                 <div className="absolute bottom-0 left-0 p-5 text-white w-full z-10">
                   <h3 className="text-base font-black tracking-wide text-brand-gold uppercase">
                     {country.name}
@@ -316,22 +293,19 @@ export default function Home() {
                     {country.desc}
                   </p>
                 </div>
-
               </div>
             ))}
           </div>
           
           <div className="text-center mt-10">
-            <div className="text-center mt-10">
-  <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold hover:underline uppercase tracking-widest">
-    Voir toutes nos destinations (12 pays) →
-  </Link>
-</div>
+            <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold hover:underline uppercase tracking-widest">
+              Voir toutes nos destinations (12 pays) →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/*POURQUOI CHOISIR ATTALEB.MA ?*/}
+      {/* POURQUOI CHOISIR ATTALEB.MA ? */}
       <section className="py-20 px-4 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -340,7 +314,7 @@ export default function Home() {
               <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
               <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />ATTALEB.MA ?</h2>
               <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                Filiale de MECC, Attaleb.ma est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
+                Filiale de MECC, attaleb.net est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
               </p>
             </div>
 
@@ -373,7 +347,7 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-5 bg-gradient-to-b from-brand-blue to-brand-blueDark p-8 rounded-3xl shadow-xl text-white border-b-4 border-brand-gold space-y-6">
-            <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">ATTALEB.MA EN CHIFFRES</h3>
+            <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">attaleb.net EN CHIFFRES</h3>
             
             <div className="space-y-4">
               <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
@@ -385,7 +359,7 @@ export default function Home() {
                 <span className="text-[11px] font-light text-slate-300">Taux d'admission dès la 1ère candidature</span>
               </div>
               <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
-                <span className="text-xl font-black text-brand-gold">10+</span>
+                <span className="text-xl font-black text-brand-gold">12+</span>
                 <span className="text-[11px] font-light text-slate-300">Pays de destination pris en charge</span>
               </div>
               <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
@@ -398,7 +372,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*NOTRE PROCESSUS*/}
+      {/* NOTRE PROCESSUS */}
       <section className="py-16 bg-slate-50 border-t border-b border-slate-100 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -408,9 +382,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { num: "01", title: "CONSULTATION INITIALE", desc: "Entretien gratuit de votre profil de projet d'étude." },
-              { num: "02", title: "PLAN PERSONNALISÉ", desc: "Stratégie sur mesure sélections établissements, pays." },
-              { num: "03", title: "PRÉPARATION DOSSIER", desc: "Constitution rigoureuse optimisation de vos documents." },
+              { num: "01", title: "CONSULTATION INITIALE", desc: "Entretien gratuit de votre profil de projet d'études." },
+              { num: "02", title: "PLAN PERSONNALISÉ", desc: "Stratégie sur mesure pour la sélection des établissements, pays." },
+              { num: "03", title: "PRÉPARATION DOSSIER", desc: "Constitution rigoureuse et optimisation de vos documents." },
               { num: "04", title: "ADMISSION & SUIVI", desc: "Accompagnement complet jusqu'à la confirmation d'inscription." }
             ].map((step, idx) => (
               <div key={idx} className="bg-white border border-slate-200/60 p-6 rounded-2xl text-center shadow-sm relative group">
@@ -425,7 +399,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*CE QUE DISENT NOS ÉTUDIANTS*/}
+      {/* CE QUE DISENT NOS ÉTUDIANTS */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -463,10 +437,9 @@ export default function Home() {
           8. RESTRUCTURED CONTACT ZONE (TEXT OVER MAP)
          ========================================== */}
       <section id="contact-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
-        {/* Main Wrapper: Sets up the full card container with the Map running end-to-end behind everything */}
         <div className="relative w-full h-[500px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100 flex items-center p-6 md:p-12">
           
-          {/* 1. The Google Map Layer (Takes up 100% width and height in the background) */}
+          {/* Google Map Layer */}
           <div className="absolute inset-0 w-full h-full z-0">
             <iframe
               title="Google Maps Location"
@@ -480,10 +453,10 @@ export default function Home() {
             ></iframe>
           </div>
 
-          {/* 2. Dark/Translucent overlay coat to ensure the map doesn't make reading the text difficult */}
+          {/* Translucent overlay */}
           <div className="absolute inset-0 bg-brand-blueDark/40 pointer-events-none z-10"></div>
 
-          {/* 3. The Content Box: Floating securely ON TOP of the map layout */}
+          {/* Floating Content Box */}
           <div className="relative z-20 max-w-md w-full bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-white/20 space-y-6">
             <div>
               <span className="text-xs font-extrabold text-brand-gold uppercase tracking-widest block mb-1">
@@ -496,22 +469,24 @@ export default function Home() {
             </div>
             
             <p className="text-slate-600 text-xs font-medium leading-relaxed">
-              Notre équipe d'orientation est à votre entière disposition pour vous guider dans vos choix d'études et d'avenirs professionnels.
+              Notre équipe d'orientation est à votre entière disposition pour vous guider dans vos choix d'études et d'avenir professionnel.
             </p>
             
-            {/* Contact Details List */}
-            <div className="space-y-3.5 pt-4 text-slate-700 font-bold text-xs border-t border-slate-100">
-              <div className="flex items-center space-x-3.5">
-                <MapPin className="text-brand-gold flex-shrink-0" size={16} />
-                <span>Filiale de MECC, Marrakech, Maroc</span>
-              </div>
-              <div className="flex items-center space-x-3.5">
-                <Phone className="text-brand-gold flex-shrink-0" size={16} />
-                <span>+212 524 XX XX XX</span>
-              </div>
-              <div className="flex items-center space-x-3.5">
-                <Mail className="text-brand-gold flex-shrink-0" size={16} />
-                <span>contact@attaleb.ma</span>
+            {/* Contact Card */}
+            <div className="bg-amber-100/90 p-5 rounded-2xl border border-amber-200/60 space-y-3 text-center">
+              <h4 className="font-black text-xs uppercase tracking-wide text-brand-blue">
+                Besoin d'accompagnement ?
+              </h4>
+              <p className="text-[11px] text-slate-700 leading-relaxed font-medium">
+                Appelez-nous directement pour fixer un rendez-vous avec l'un de nos conseillers.
+              </p>
+              <div className="pt-1">
+                <a 
+                  href="tel:0645212800" 
+                  className="inline-block w-full text-center bg-brand-blue text-white text-xs font-bold py-2.5 rounded-xl hover:bg-brand-blue/90 transition-all uppercase tracking-wide shadow-sm"
+                >
+                  06 45 21 28 00
+                </a>
               </div>
             </div>
           </div>
@@ -522,9 +497,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-
-
