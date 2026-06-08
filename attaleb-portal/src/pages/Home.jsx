@@ -312,7 +312,7 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
-              <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />ATTALEB.MA ?</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />attaleb.net ?</h2>
               <p className="text-xs text-slate-500 mt-3 leading-relaxed">
                 Filiale de MECC, attaleb.net est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
               </p>
