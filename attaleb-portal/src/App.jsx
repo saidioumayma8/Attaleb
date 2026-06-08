@@ -50,9 +50,9 @@ export default function App() {
           <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
           <Route path="/destinations/roumanie" element={<RoumanieDetail />} />
           <Route path="/destinations/chine" element={<ChineDetail />} />
-          <Route path="/concours/:slug" element={<ConcoursPage />} />
-          <Route path="/langues/:slug" element={<LanguesPage />} />
-          <Route path="/soutien/:slug" element={<SoutienPage />} />
+          <Route path="/concours" element={<ConcoursPage />} />
+          <Route path="/langues" element={<LanguesPage />} />
+          <Route path="/soutien" element={<SoutienPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/a-propos" element={<Apropos />} />
         </Routes>

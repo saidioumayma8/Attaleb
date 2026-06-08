@@ -69,114 +69,29 @@ export default function Navbar() {
               À PROPOS
             </Link>
 
-            {/* 1. DROPDOWN: ÉTUDIER À L'ÉTRANGER */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIsDestinationsOpen(true)}
-              onMouseLeave={() => setIsDestinationsOpen(false)}
-            >
-              <button className="hover:text-brand-gold transition-colors text-slate-200 flex items-center gap-1 font-black text-[10px] xl:text-[11px] tracking-wider focus:outline-none uppercase cursor-pointer">
-                <span>ÉTUDIER À L'ÉTRANGER</span>
-                <ChevronDown size={11} className={`transition-transform duration-200 ${isDestinationsOpen ? 'rotate-180 text-brand-gold' : ''}`} />
-              </button>
+            <Link to="/destinations" className="hover:text-brand-gold transition-colors text-slate-200">
+              ÉTUDIER À L'ÉTRANGER
+            </Link>
 
-              {isDestinationsOpen && (
-                <div className="absolute top-full left-0 mt-0 w-56 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
-                  {destinations.map((dest, i) => (
-                    <Link 
-                      key={i}
-                      to={`/destinations/${dest.slug}`}
-                      className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
-                    >
-                      ÉTUDIER EN {dest.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
 
-            {/* 2. DROPDOWN: PRÉPARATION CONCOURS */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIsConcoursOpen(true)}
-              onMouseLeave={() => setIsConcoursOpen(false)}
-            >
-              <button className="hover:text-brand-gold transition-colors text-slate-200 flex items-center gap-1 font-black text-[10px] xl:text-[11px] tracking-wider focus:outline-none uppercase cursor-pointer">
-                <span>PRÉPARATION CONCOURS</span>
-                <ChevronDown size={11} className={`transition-transform duration-200 ${isConcoursOpen ? 'rotate-180 text-brand-gold' : ''}`} />
-              </button>
+            <Link to="/concours" className="hover:text-brand-gold transition-colors text-slate-200">
+              PRÉPARATION CONCOURS
+            </Link>
+           
+           <Link to="/langues" className="hover:text-brand-gold transition-colors text-slate-200">
+              CONCOURS DE LANGUES
+            </Link>
 
-              {isConcoursOpen && (
-                <div className="absolute top-full left-0 mt-0 w-64 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
-                  {concoursList.map((item, i) => (
-                    <Link 
-                      key={i}
-                      to={`/concours/${item.slug}`}
-                      className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link to="/soutien" className="hover:text-brand-gold transition-colors text-slate-200">
+              SOUTIEN SCOLAIRE
+            </Link>
 
-            {/* 3. DROPDOWN: CONCOURS DE LANGUES */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIsLanguesOpen(true)}
-              onMouseLeave={() => setIsLanguesOpen(false)}
-            >
-              <button className="hover:text-brand-gold transition-colors text-slate-200 flex items-center gap-1 font-black text-[10px] xl:text-[11px] tracking-wider focus:outline-none uppercase cursor-pointer">
-                <span>CONCOURS DE LANGUES</span>
-                <ChevronDown size={11} className={`transition-transform duration-200 ${isLanguesOpen ? 'rotate-180 text-brand-gold' : ''}`} />
-              </button>
 
-              {isLanguesOpen && (
-                <div className="absolute top-full left-0 mt-0 w-64 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
-                  {languesList.map((item, i) => (
-                    <Link 
-                      key={i}
-                      to={`/langues/${item.slug}`}
-                      className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
 
-            {/* 4. DROPDOWN: SOUTIEN SCOLAIRE */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIsSoutienOpen(true)}
-              onMouseLeave={() => setIsSoutienOpen(false)}
-            >
-              <button className="hover:text-brand-gold transition-colors text-slate-200 flex items-center gap-1 font-black text-[10px] xl:text-[11px] tracking-wider focus:outline-none uppercase cursor-pointer">
-                <span>SOUTIEN SCOLAIRE</span>
-                <ChevronDown size={11} className={`transition-transform duration-200 ${isSoutienOpen ? 'rotate-180 text-brand-gold' : ''}`} />
-              </button>
-
-              {isSoutienOpen && (
-                <div className="absolute top-full left-0 mt-0 w-60 bg-brand-blue border border-slate-800 rounded-b-xl shadow-xl py-2 z-50 grid grid-cols-1">
-                  {soutienList.map((item, i) => (
-                    <Link 
-                      key={i}
-                      to={`/soutien/${item.slug}`}
-                      className="block px-4 py-2 text-[11px] font-black tracking-wide text-slate-200 hover:bg-slate-800 hover:text-brand-gold transition-colors text-left border-l-2 border-transparent hover:border-brand-gold"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <a href="/#bourses-etudes" className="hover:text-brand-gold transition-colors text-slate-200">
+            <Link to="/#bourses-etudes" className="hover:text-brand-gold transition-colors text-slate-200">
               BOURSES
-            </a>
-            
+            </Link>
+
             {/* CORRECTION DESKTOP : Modifié de href="#contact-section" à to="/contact" */}
             <Link to="/contact" className="hover:text-brand-gold transition-colors text-white font-black">
               CONTACT
@@ -242,6 +157,7 @@ export default function Navbar() {
               ))}
             </div>
           </div>
+          
 
           <hr className="border-slate-800 my-1" />
           <a href="/#bourses-etudes" onClick={() => setIsOpen(false)} className="block py-1.5 text-xs font-bold text-slate-300 hover:text-brand-gold">
