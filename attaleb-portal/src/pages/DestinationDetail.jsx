@@ -335,18 +335,28 @@ export default function DestinationDetail() {
           </div>
 
           {/* Card de Contact */}
-          <div className="bg-brand-blue text-white p-6 rounded-2xl shadow-sm space-y-4 text-center">
-            <h4 className="font-black text-sm uppercase tracking-wide text-brand-gold">Besoin d'accompagnement ?</h4>
-            <p className="text-[11px] text-slate-300 leading-relaxed font-medium">
-              {data.ctaText}
-            </p>
-            <div className="pt-2">
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Des questions ? Appelez-nous :</p>
-              <a href="tel:0645212800" className="text-sm font-black text-white block mt-0.5 tracking-wide bg-white/10 py-2 rounded-xl border border-white/10 hover:bg-white/20 transition-all">
-                06 45 21 28 00
-              </a>
-            </div>
-          </div>
+          {/* Card de Contact - Version Claire Minimaliste */}
+          {/* Card de Contact - Version Bleu Clair Lumineux */}
+{/* Card de Contact - Version Jaune Lumineux Doux */}
+<div className="bg-amber-100 p-6 rounded-2xl shadow-sm space-y-4 text-center border border-amber-200">
+  <h4 className="font-black text-sm uppercase tracking-wide text-brand-blue">
+    Besoin d'accompagnement ?
+  </h4>
+  <p className="text-[11px] text-slate-800 leading-relaxed font-black">
+    {data.ctaText}
+  </p>
+  <div className="pt-2">
+    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+      Des questions ? Appelez-nous :
+    </p>
+    <a 
+      href="tel:0645212800" 
+      className="text-sm font-black text-white block mt-1.5 tracking-wide bg-brand-blue py-2.5 rounded-xl hover:bg-brand-blue/90 transition-all shadow-md"
+    >
+      06 45 21 28 00
+    </a>
+  </div>
+</div>
 
         </div>
       </main>
