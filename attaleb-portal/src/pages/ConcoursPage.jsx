@@ -76,13 +76,6 @@ export default function ConcoursPage() {
       icon: "engineering",
       desc: "Accédez aux écoles d'ingénieurs marocaines grâce à nos préparations ciblées.", 
       features: ["Annales corrigées", "Calcul mental rapide", "Maths & Physique", "Logique"] 
-    },
-    { 
-      name: "ISKE", 
-      fullName: "Institut Supérieur des Études Juridiques et Économiques",
-      icon: "law",
-      desc: "Préparation au concours d'accès à l'ISKE, l'école d'excellence en droit et économie au Maroc.", 
-      features: ["Droit & Économie", "Tests de logique", "Culture générale", "Méthodologie QCM"] 
     }
   ];
 
