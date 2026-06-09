@@ -23,6 +23,7 @@ export default function Navbar() {
             <Link to="/concours" className="hover:text-brand-gold transition-colors">PRÉPARATION CONCOURS</Link>
             <Link to="/langues" className="hover:text-brand-gold transition-colors">CONCOURS DE LANGUES</Link>
             <Link to="/soutien" className="hover:text-brand-gold transition-colors">SOUTIEN SCOLAIRE</Link>
+            <Link to="/bourses" className="hover:text-brand-gold transition-colors">BOURSES</Link>
             <Link to="/contact" className="hover:text-brand-gold transition-colors">CONTACT</Link>
           </div>
 
@@ -44,6 +45,7 @@ export default function Navbar() {
           <Link to="/concours" onClick={() => setIsOpen(false)} className="hover:text-brand-gold">PRÉPARATION CONCOURS</Link>
           <Link to="/langues" onClick={() => setIsOpen(false)} className="hover:text-brand-gold">CONCOURS DE LANGUES</Link>
           <Link to="/soutien" onClick={() => setIsOpen(false)} className="hover:text-brand-gold">SOUTIEN SCOLAIRE</Link>
+          <Link to="/bourses" onClick={() => setIsOpen(false)} className="hover:text-brand-gold">BOURSES</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-brand-gold">CONTACT</Link>
         </div>
       )}

@@ -11,6 +11,7 @@ import germanyFlag from '../assets/germany-flag-png-large.png';
 import heroBg from '../assets/image.png';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -37,9 +38,6 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto w-full flex flex-col items-center text-white space-y-6 relative z-10">
           
-          <span className="text-brand-gold text-xs font-bold tracking-widest uppercase bg-brand-gold/10 px-3 py-1.5 rounded border border-brand-gold/20">
-            Filiale de MICC - Depuis 2016
-          </span>
           
           <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-tight max-w-3xl">
             VOTRE AVENIR,<br />
@@ -47,7 +45,7 @@ export default function Home() {
           </h1>
           
           <p className="text-sm md:text-base text-slate-200 max-w-xl leading-relaxed font-light">
-            Orientation, inscription à l'étranger, préparation aux concours et soutien scolaire — un accompagnement complet depuis Marrakech.
+            Orientation, inscription, préparation aux concours et soutien scolaire — un accompagnement complet pour votre projet académique.
           </p>
           
           <p className="text-xs text-brand-gold font-semibold tracking-wide uppercase">
@@ -91,6 +89,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION PARTENAIRES ACADÉMIQUES */}
+<section className="py-16 bg-white px-4 border-b border-slate-100">
+  <div className="max-w-7xl mx-auto mb-12 text-center">
+    <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Collaborations</span>
+    <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">PARTENAIRES ACADÉMIQUES</h2>
+  </div>
+
+  <div className="w-full overflow-hidden">
+    <motion.div 
+      className="flex gap-16 items-center"
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+    >
+      {[
+        "../assets/qmul.webp", 
+        "../assets/UWL-logo.png", 
+        "../assets/hofstra-university-logo.png", 
+        "../assets/images.jfif", 
+        "../assets/29-1024x1024.png",
+        "../assets/lr-logo.jpg", 
+        "../assets/spainflag.png", 
+        "../assets/spainflag.png", 
+        "../assets/spainflag.png", 
+        "../assets/spainflag.png"
+      ].map((logo, index) => (
+        <div key={index} className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300">
+          <img 
+            src={logo} 
+            alt="Partenaire" 
+            className="h-14 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity" 
+          />
+        </div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
       {/* ==========================================
           UN ACCOMPAGNEMENT COMPLET (6 SERVICES)
          ========================================== */}
@@ -105,23 +140,37 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Études à l'Étranger */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <Globe size={22} />
-              </div>
-              <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Études à l'Étranger</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
-              </ul>
-            </div>
-            <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              Voir les destinations →
-            </Link>
-          </div>
+ <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+  <div>
+    <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
+      {/* Ton nouveau SVG ici */}
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        strokeWidth={1.5} 
+        stroke="currentColor" 
+        className="w-6 h-6"
+      >
+        <path 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" 
+        />
+      </svg>
+    </div>
+    <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Études à l'Étranger</h3>
+    <ul className="space-y-3 text-xs text-slate-600">
+      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
+      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
+      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
+      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
+    </ul>
+  </div>
+  <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+    Voir les destinations →
+  </Link>
+</div>
 
           {/* Card 2: Bourses d'Études */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -230,7 +279,7 @@ export default function Home() {
             <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Études à l'Étranger</span>
             <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">VOS DESTINATIONS RÊVÉES</h2>
             <p className="text-xs text-slate-500 mt-2 max-w-md mx-auto leading-relaxed">
-              attaleb.net vous accompagne vers les universités et grandes écoles de ces pays, avec un dossier solide et un suivi jusqu'à l'admission.
+              attaleb vous accompagne vers les universités et grandes écoles de ces pays, avec un dossier solide et un suivi jusqu'à l'admission.
             </p>
           </div>
 
@@ -312,9 +361,9 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
-              <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />attaleb.net ?</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />ATTALEB</h2>
               <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                Filiale de MECC, attaleb.net est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
+                Filiale de MECC, attaleb est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
               </p>
             </div>
 
@@ -347,7 +396,7 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-5 bg-gradient-to-b from-brand-blue to-brand-blueDark p-8 rounded-3xl shadow-xl text-white border-b-4 border-brand-gold space-y-6">
-            <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">attaleb.net EN CHIFFRES</h3>
+            <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">attaleb EN CHIFFRES</h3>
             
             <div className="space-y-4">
               <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
@@ -409,9 +458,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "SALMA A.", school: "Médecine, Université de Médecine de Cluj - Roumanie", text: "Grâce à Attaleb.ma j'ai obtenu mon admission en médecine en Roumanie en quelques semaines seulement. Un accompagnement exceptionnel, du dossier jusqu'au visa !" },
+              { name: "SALMA A.", school: "Médecine, Université de Médecine de Cluj - Roumanie", text: "Grâce à Attaleb j'ai obtenu mon admission en médecine en Roumanie en quelques semaines seulement. Un accompagnement exceptionnel, du dossier jusqu'au visa !" },
               { name: "YOUSSEF EL G.", school: "Master Ingénierie, Université de Bordeaux - France", text: "L'équipe m'a aidé à préparer mon TCF et à monter un dossier solide. Résultat : admis à 2 universités françaises ! Je recommande vivement !" },
-              { name: "NADA A.", school: "ENCG TO, Classe préparatoire d'exception", text: "Les cours de soutien d'Attaleb.ma m'ont permis de décrocher mon admission en classes préparatoires. Professionnalisme, rigueur et toujours disponibles." }
+              { name: "NADA A.", school: "ENCG TO, Classe préparatoire d'exception", text: "Les cours de soutien d'Attaleb m'ont permis de décrocher mon admission en classes préparatoires. Professionnalisme, rigueur et toujours disponibles." }
             ].map((test, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
