@@ -13,6 +13,15 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 
+// Partner logos (proper Vite imports)
+import qmulLogo from '../assets/qmul.webp';
+import uwlLogo from '../assets/UWL-Logo.png';
+import hofstraLogo from '../assets/hofstras-university-logo.jpg';
+import partnerImg1 from '../assets/images.jfif';
+import partnerImg2 from '../assets/29-1024x1024.jpg';
+import bsbLogo from '../assets/BSB_logo_burgundy-1.png';
+import lrLogo from '../assets/lr-logo.jpg';
+
 export default function Home() {
   const [formData, setFormData] = useState({
     prenom: '',
@@ -103,22 +112,22 @@ export default function Home() {
       transition={{ duration: 30, ease: "linear", repeat: Infinity }}
     >
       {[
-        "../assets/qmul.webp", 
-        "../assets/UWL-logo.png", 
-        "../assets/hofstra-university-logo.png", 
-        "../assets/images.jfif", 
-        "../assets/29-1024x1024.png",
-        "../assets/lr-logo.jpg", 
-        "../assets/spainflag.png", 
-        "../assets/spainflag.png", 
-        "../assets/spainflag.png", 
-        "../assets/spainflag.png"
-      ].map((logo, index) => (
-        <div key={index} className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300">
+        qmulLogo, 
+        uwlLogo, 
+        hofstraLogo, 
+        partnerImg1, 
+        partnerImg2,
+        bsbLogo, 
+        lrLogo,
+        spainFlag,
+        qmulLogo,
+        uwlLogo
+      ].map((logoSrc, index) => (
+        <div key={index} className="flex-shrink-0 transition-all duration-300">
           <img 
-            src={logo} 
+            src={logoSrc} 
             alt="Partenaire" 
-            className="h-14 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity" 
+            className="h-14 w-auto object-contain transition-transform hover:scale-110" 
           />
         </div>
       ))}
@@ -142,23 +151,7 @@ export default function Home() {
           {/* Card 1: Études à l'Étranger */}
  <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
   <div>
-    <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-      {/* Ton nouveau SVG ici */}
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        fill="none" 
-        viewBox="0 0 24 24" 
-        strokeWidth={1.5} 
-        stroke="currentColor" 
-        className="w-6 h-6"
-      >
-        <path 
-          strokeLinecap="round" 
-          strokeLinejoin="round" 
-          d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" 
-        />
-      </svg>
-    </div>
+    <Globe size={28} className="text-blue-500 mb-6" />
     <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Études à l'Étranger</h3>
     <ul className="space-y-3 text-xs text-slate-600">
       <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
@@ -175,9 +168,7 @@ export default function Home() {
           {/* Card 2: Bourses d'Études */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <Award size={22} />
-              </div>
+              <Award size={28} className="text-amber-500 mb-6" />
               <h3 id="bourses-etudes" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Bourses d'Études</h3>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
@@ -194,9 +185,7 @@ export default function Home() {
           {/* Card 3: Préparation aux Concours */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <CheckCircle2 size={22} />
-              </div>
+              <CheckCircle2 size={28} className="text-emerald-500 mb-6" />
               <h3 id="preparation-concours" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Préparation aux Concours</h3>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
@@ -205,7 +194,7 @@ export default function Home() {
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Planning intensif de révision et examens blancs corrigés</li>
               </ul>
             </div>
-            <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+            <Link to="/concours" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
               S'entraîner maintenant →
             </Link>
           </div>
@@ -213,9 +202,7 @@ export default function Home() {
           {/* Card 4: Séjours Linguistiques */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <Send size={22} />
-              </div>
+              <Send size={28} className="text-sky-500 mb-6" />
               <h3 id="sejours-linguistiques" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
@@ -224,7 +211,7 @@ export default function Home() {
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Logement en famille d'accueil ou en résidence étudiante inclus</li>
               </ul>
             </div>
-            <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+            <Link to="/langues" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
               Découvrir les séjours →
             </Link>
           </div>
@@ -232,9 +219,7 @@ export default function Home() {
           {/* Card 5: Soutien Scolaire */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <BookOpen size={22} />
-              </div>
+              <BookOpen size={28} className="text-purple-500 mb-6" />
               <h3 id="soutien-scolaire" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Soutien Scolaire</h3>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
@@ -243,7 +228,7 @@ export default function Home() {
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Séances interactives en présentiel ou à distance en ligne</li>
               </ul>
             </div>
-            <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+            <Link to="/soutien" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
               S'inscrire au soutien →
             </Link>
           </div>
@@ -251,9 +236,7 @@ export default function Home() {
           {/* Card 6: Orientation & Coaching */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center mb-6">
-                <GraduationCap size={22} />
-              </div>
+              <GraduationCap size={28} className="text-rose-500 mb-6" />
               <h3 id="orientation-coaching" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Orientation & Coaching</h3>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
