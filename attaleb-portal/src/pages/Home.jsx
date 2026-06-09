@@ -104,38 +104,37 @@ export default function Home() {
       </section>
 
       {/* SECTION PARTENAIRES ACADÉMIQUES */}
-<section className="py-16 bg-white px-4 border-b border-slate-100">
-  <div className="max-w-7xl mx-auto mb-12 text-center">
-    <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Collaborations</span>
-    <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">PARTENAIRES ACADÉMIQUES</h2>
-  </div>
-
-  <div className="w-full overflow-hidden">
-    <motion.div 
-      className="flex gap-14 items-center"
-      animate={{ x: ["0%", "-50%"] }}
-      transition={{ duration: 12, ease: "linear", repeat: Infinity }}
-    >
-      {[
-        // Original partners
-        qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
-        // International universities
-        harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo,
-        // Duplicate set for seamless loop
-        qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
-        harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
-      ].map((logoSrc, index) => (
-        <div key={index} className="flex-shrink-0 transition-all duration-300">
-          <img 
-            src={logoSrc} 
-            alt="Partenaire" 
-            className="h-14 w-auto object-contain transition-transform hover:scale-110" 
-          />
+      <section className="py-16 bg-white border-b border-slate-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto mb-12 text-center px-4">
+          <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Collaborations</span>
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">PARTENAIRES ACADÉMIQUES</h2>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+
+        <div className="w-full overflow-hidden">
+          <motion.div 
+            className="flex items-center w-max" // w-max force le conteneur à prendre toute la largeur des logos
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 10, ease: "linear", repeat: Infinity }} // 10 = Très rapide
+          >
+            {[
+              qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
+              harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo,
+              // Doublon pour la boucle parfaite
+              qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
+              harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
+            ].map((logoSrc, index) => (
+              <div key={index} className="flex-shrink-0 px-3"> {/* px-3 réduit l'espace */}
+                <img 
+                  src={logoSrc} 
+                  alt="Partenaire" 
+                  className="h-16 w-auto object-contain transition-transform hover:scale-110" 
+                  // J'ai retiré 'grayscale' pour garder les couleurs
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* ==========================================
           UN ACCOMPAGNEMENT COMPLET (6 SERVICES)
