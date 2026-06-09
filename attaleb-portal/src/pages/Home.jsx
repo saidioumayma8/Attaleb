@@ -21,6 +21,11 @@ import partnerImg1 from '../assets/images.jfif';
 import partnerImg2 from '../assets/29-1024x1024.jpg';
 import bsbLogo from '../assets/BSB_logo_burgundy-1.png';
 import lrLogo from '../assets/lr-logo.jpg';
+import harvardLogo from '../assets/Harvard_University_logo.png';
+import stanfordLogo from '../assets/stanford-university-logo.png';
+import uclLogo from '../assets/ucl-logo.webp';
+import columbiaLogo from '../assets/colombia-logo.png';
+import chicagoLogo from '../assets/chicago-logo.png';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -107,21 +112,18 @@ export default function Home() {
 
   <div className="w-full overflow-hidden">
     <motion.div 
-      className="flex gap-16 items-center"
+      className="flex gap-14 items-center"
       animate={{ x: ["0%", "-50%"] }}
-      transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+      transition={{ duration: 12, ease: "linear", repeat: Infinity }}
     >
       {[
-        qmulLogo, 
-        uwlLogo, 
-        hofstraLogo, 
-        partnerImg1, 
-        partnerImg2,
-        bsbLogo, 
-        lrLogo,
-        spainFlag,
-        qmulLogo,
-        uwlLogo
+        // Original partners
+        qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
+        // International universities
+        harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo,
+        // Duplicate set for seamless loop
+        qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
+        harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
       ].map((logoSrc, index) => (
         <div key={index} className="flex-shrink-0 transition-all duration-300">
           <img 

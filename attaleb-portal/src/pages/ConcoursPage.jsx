@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, Zap, Globe, GraduationCap, ArrowRight, Star, Shield, Plane } from 'lucide-react';
+import { CheckCircle2, Zap, Globe, GraduationCap, ArrowRight, Star, Shield, Plane, Briefcase, Stethoscope, Cog, Scale } from 'lucide-react';
 
 export default function ConcoursPage() {
   
@@ -57,32 +57,32 @@ export default function ConcoursPage() {
 
   const concoursNationaux = [
     { 
+      name: "Commerce", 
+      fullName: "ENCG / ISCAE",
+      icon: "commerce",
+      desc: "Préparation au TAFEM et aux épreuves d'admission ISCAE.", 
+      features: ["Tests psychotechniques", "Culture générale", "Entretien oral", "Logique"] 
+    },
+    { 
       name: "Médecine & Pharmacie", 
       fullName: "FMP / FMD",
-      icon: "⚕️",
+      icon: "medicine",
       desc: "Préparation intensive pour les facultés de Médecine, Pharmacie et Dentaire au Maroc.", 
       features: ["Simulations réelles", "Techniques QCM", "Coaching stress", "Révisions SVT/Physique"] 
     },
     { 
       name: "Ingénierie", 
       fullName: "ENSA / ENSAM",
-      icon: "⚙️",
+      icon: "engineering",
       desc: "Accédez aux écoles d'ingénieurs marocaines grâce à nos préparations ciblées.", 
       features: ["Annales corrigées", "Calcul mental rapide", "Maths & Physique", "Logique"] 
     },
     { 
-      name: "Commerce", 
-      fullName: "ENCG / ISCAE",
-      icon: "📊",
-      desc: "Préparation au TAFEM et aux épreuves d'admission ISCAE.", 
-      features: ["Tests psychotechniques", "Culture générale", "Entretien oral", "Logique"] 
-    },
-    { 
-      name: "Classes Prépa", 
-      fullName: "CPGE",
-      icon: "📐",
-      desc: "Anticipez le rythme des prépas et assurez votre transition vers les grandes écoles.", 
-      features: ["Méthodologie", "Maths approfondies", "Gestion du temps", "Physique/Chimie"] 
+      name: "ISKE", 
+      fullName: "Institut Supérieur des Études Juridiques et Économiques",
+      icon: "law",
+      desc: "Préparation au concours d'accès à l'ISKE, l'école d'excellence en droit et économie au Maroc.", 
+      features: ["Droit & Économie", "Tests de logique", "Culture générale", "Méthodologie QCM"] 
     }
   ];
 
@@ -214,7 +214,12 @@ export default function ConcoursPage() {
                 <div className="p-6 md:p-8 space-y-4">
                   {/* Title Row */}
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl mt-0.5">{p.icon}</span>
+                    <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+                      {p.icon === 'commerce' && <Briefcase size={18} className="text-emerald-600" />}
+                      {p.icon === 'medicine' && <Stethoscope size={18} className="text-emerald-600" />}
+                      {p.icon === 'engineering' && <Cog size={18} className="text-emerald-600" />}
+                      {p.icon === 'law' && <Scale size={18} className="text-emerald-600" />}
+                    </div>
                     <div>
                       <h3 className="text-lg font-black text-brand-blue uppercase tracking-wide">{p.name}</h3>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{p.fullName}</p>
