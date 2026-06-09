@@ -22,6 +22,7 @@ import ConcoursPage from './pages/ConcoursPage.jsx';
 import LanguesPage from './pages/LanguesPage.jsx';
 import SoutienPage from './pages/SoutienPage.jsx';
 import Apropos from './pages/Apropos.jsx';
+import Bourses from './pages/Bourses.jsx';
 
 export default function App() {
   return (
@@ -55,7 +56,8 @@ export default function App() {
           <Route path="/soutien" element={<SoutienPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/a-propos" element={<Apropos />} />
-        </Routes>
+          <Route path="/bourses" element={<Bourses />} />
+                  </Routes>
       </main>
       <Footer />
 
