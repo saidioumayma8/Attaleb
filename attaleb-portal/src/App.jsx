@@ -37,20 +37,21 @@ export default function App() {
           <Route path="/" element={<Home />} />
           
           {/* When path is "/destinations" display the Destinations page */}
+          {/* Destinations: specific routes FIRST */}
           <Route path="/destinations" element={<Destinations />} />
-          <Route path="/destinations/:countrySlug" element={<DestinationDetail />} />
           <Route path="/destinations/espagne" element={<SpainDetail />} />
           <Route path="/destinations/allemagne" element={<GermanyDetail />} />
           <Route path="/destinations/belgique" element={<BelgiumDetail />} />
           <Route path="/destinations/italie" element={<ItalyDetail />} />
-          <Route path="/destinations/etats-unis" element={<USADetail />} />
-          <Route path="/destinations/etats-unis" element={<USADetail />} />
+          <Route path="/destinations/usa" element={<USADetail />} />
           <Route path="/destinations/canada" element={<CanadaDetail />} />
           <Route path="/destinations/royaume-uni" element={<RoyaumeUniDetail />} />
-          <Route path="/destinations/portugal" element={<PortugalDetail />} />
-          <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} />
+          <Route path="/destinations/portugal" element={<PortugalDetail />} /> 
+          <Route path="/destinations/emirats-arabes-unis" element={<EmiratsDetail />} /> 
           <Route path="/destinations/roumanie" element={<RoumanieDetail />} />
           <Route path="/destinations/chine" element={<ChineDetail />} />
+          {/* Wildcard catch-all LAST */}
+          <Route path="/destinations/:countrySlug" element={<DestinationDetail />} />
           <Route path="/concours" element={<ConcoursPage />} />
           <Route path="/langues" element={<LanguesPage />} />
           <Route path="/langues/:slug" element={<LanguesPage />} />

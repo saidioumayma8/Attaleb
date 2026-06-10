@@ -3,6 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { BookOpen, Award, CheckCircle2, GraduationCap, ClipboardCheck, Users, Brain, ArrowRight, Target, Star } from 'lucide-react';
 import soutienHero from '../assets/soutien-hero.png';
 import soutienCta from '../assets/soutien-cta.png';
+import officeTutoring from '../assets/office-tutoring.png';
+import classroomTeacher from '../assets/classroom-teacher.png';
+import lectureHall from '../assets/lecture-hall.png';
 
 const soutienDatabase = {
   'lycee-marocain': {
@@ -237,6 +240,37 @@ function SoutienLanding() {
         </div>
       </section>
 
+      {/* NOS ESPACES — Image Gallery */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <p className="text-brand-gold text-[10px] font-black uppercase tracking-widest">Nos Espaces</p>
+          <h2 className="text-xl md:text-2xl font-black text-brand-blue uppercase">Découvrez Notre Environnement d'Apprentissage</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="relative rounded-2xl overflow-hidden shadow-md group">
+            <img src={officeTutoring} alt="Coaching individuel Attaleb" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-4">
+              <p className="text-white text-xs font-black uppercase">Coaching Individuel</p>
+              <p className="text-slate-300 text-[10px]">Postes de travail équipés et personnalisés</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-md group">
+            <img src={classroomTeacher} alt="Cours en classe Attaleb" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-4">
+              <p className="text-white text-xs font-black uppercase">Cours en Classe</p>
+              <p className="text-slate-300 text-[10px]">Enseignants experts et interactifs</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-md group">
+            <img src={lectureHall} alt="Amphithéâtre et conférences Attaleb" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-4">
+              <p className="text-white text-xs font-black uppercase">Conférences & Séminaires</p>
+              <p className="text-slate-300 text-[10px]">Salles de conférence pour événements</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Notre Méthode */}
       <section className="bg-white py-16 px-4 border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
@@ -377,7 +411,7 @@ function SoutienDetail() {
               <h3 className="font-black text-lg uppercase tracking-wide text-brand-gold">
                 Inscriptions Annuelles
               </h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-light">{data.ctaText}</p>
+              <p className="text-xs text-slate-300 leading-relaxed font-light">Contactez-nous pour commencer votre parcours</p>
             </div>
             <div className="space-y-4 pt-4 border-t border-white/10">
               <div className="flex items-center gap-3">

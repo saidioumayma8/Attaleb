@@ -211,7 +211,7 @@ export default function ItalyDetail() {
     Besoin d'accompagnement ?
   </h4>
   <p className="text-[11px] text-slate-800 leading-relaxed font-black">
-    {data.ctaText}
+    Contactez-nous pour commencer votre parcours
   </p>
   <div className="pt-2">
     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">

@@ -49,3 +49,33 @@ html {
   width: 32px;
   height: 32px;
 }
+
+/* Destination Card Mobile Auto-Transition: Flag → Capital */
+@keyframes flagFadeOut {
+  0%, 60% { opacity: 0.4; }
+  100% { opacity: 0; }
+}
+
+@keyframes capitalFadeIn {
+  0%, 60% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.dest-flag-mobile {
+  animation: flagFadeOut 4s ease-in-out forwards;
+}
+
+.dest-capital-mobile {
+  animation: capitalFadeIn 4s ease-in-out forwards;
+}
+
+@media (min-width: 768px) {
+  .dest-flag-mobile {
+    animation: none;
+    opacity: 0.4;
+  }
+  .dest-capital-mobile {
+    animation: none;
+    opacity: 0;
+  }
+}

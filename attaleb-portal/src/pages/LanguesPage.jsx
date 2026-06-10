@@ -1,6 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, ArrowRight, Star, Mic, Headphones, PenTool, MessageSquare, Briefcase } from 'lucide-react';
+import languesTeam from '../assets/langues-team.png';
+import languesExam from '../assets/langues-exam.png';
+import languesCoach from '../assets/langues-coach.png';
 
 const languesDatabase = {
   'ielts': {
@@ -264,7 +267,25 @@ function LanguesLanding() {
         </div>
       </section>
 
-      <main className="max-w-6xl mx-auto px-4 py-16 space-y-24">
+      {/* Team Photo Banner */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="relative">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={languesTeam}
+              alt="L'équipe pédagogique Attaleb — professeurs de langues"
+              className="w-full h-56 md:h-72 object-cover"
+            />
+          </div>
+          {/* Overlay caption */}
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-5">
+            <p className="text-white text-sm font-black uppercase tracking-wide">Notre Équipe de Professeurs Experts</p>
+            <p className="text-slate-300 text-[11px] font-medium">Professeurs natifs certifiés — Anglais, Français, Allemand, Espagnol</p>
+          </div>
+        </div>
+      </section>
+
+      <main className="max-w-6xl mx-auto px-4 pb-16 space-y-24">
 
         {/* ╔═══════════════════════════════════════╗
            ║   SECTION 1: ENGLISH                    ║
@@ -490,11 +511,74 @@ function LanguesLanding() {
           </div>
         </section>
 
+        {/* ═══ EXAM ENVIRONMENT PHOTO ═══ */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+          <div className="md:col-span-3">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={languesExam}
+                alt="Salle d'examen — préparation aux concours de langues"
+                className="w-full h-48 md:h-60 object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:col-span-2 space-y-4">
+            <h3 className="text-lg font-black text-brand-blue uppercase">Conditions Réelles d'Examen</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Nos examens blancs se déroulent dans les mêmes conditions que l'épreuve officielle — timing strict, salle surveillée et format identique. C'est la clé de la réussite.
+            </p>
+            <div className="flex gap-3">
+              <div className="bg-blue-50 px-4 py-2 rounded-xl border border-blue-100 text-center">
+                <div className="text-lg font-black text-brand-blue">6</div>
+                <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Langues</div>
+              </div>
+              <div className="bg-amber-50 px-4 py-2 rounded-xl border border-amber-100 text-center">
+                <div className="text-lg font-black text-brand-blue">100%</div>
+                <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Conditions Réelles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ═══ POURQUOI ATTALEB ═══ */}
         <section>
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">POURQUOI ATTALEB ?</h2>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-10">
+            {/* Coach photo */}
+            <div className="md:col-span-2">
+              <div className="rounded-2xl overflow-hidden shadow-lg h-full">
+                <img
+                  src={languesCoach}
+                  alt="Accompagnement personnalisé — coach Attaleb"
+                  className="w-full h-full object-cover min-h-[220px]"
+                />
+              </div>
+            </div>
+            {/* Text */}
+            <div className="md:col-span-3 flex flex-col justify-center space-y-4">
+              <h3 className="text-xl font-black text-brand-blue uppercase">Un Accompagnement Humain et Personnalisé</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Chez Attaleb, chaque étudiant bénéficie d'un suivi individuel avec un coach dédié qui l'accompagne du diagnostic initial jusqu'au jour de l'examen. Nos conseillers sont disponibles pour répondre à toutes vos questions.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <div className="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100 text-center">
+                  <div className="text-lg font-black text-emerald-700">8</div>
+                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Max par Groupe</div>
+                </div>
+                <div className="bg-rose-50 px-4 py-2 rounded-xl border border-rose-100 text-center">
+                  <div className="text-lg font-black text-rose-700">1:1</div>
+                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Coaching</div>
+                </div>
+                <div className="bg-sky-50 px-4 py-2 rounded-xl border border-sky-100 text-center">
+                  <div className="text-lg font-black text-sky-700">7j/7</div>
+                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: <Target size={20} />, color: "text-blue-500", title: "Méthode Ciblée", desc: "Entraînement spécifique aux formats de chaque test avec exercices types et corrections détaillées." },
@@ -619,7 +703,7 @@ function LanguesDetail() {
           <div className="bg-brand-blue text-white p-8 rounded-3xl shadow-xl space-y-6 sticky top-6">
             <div className="space-y-2">
               <h3 className="font-black text-lg uppercase tracking-wide text-brand-gold">Sessions Prochaines</h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-light">{data.ctaText}</p>
+              <p className="text-xs text-slate-300 leading-relaxed font-light">Contactez-nous pour commencer votre parcours</p>
             </div>
             <div className="space-y-4 pt-4 border-t border-white/10">
               <div className="flex items-center gap-3">

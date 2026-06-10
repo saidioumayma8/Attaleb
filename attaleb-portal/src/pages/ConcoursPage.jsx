@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Zap, Globe, GraduationCap, ArrowRight, Star, Shield, Plane, Briefcase, Stethoscope, Cog, Scale } from 'lucide-react';
+import concoursTeacher from '../assets/classroom-teacher.png';
+import concoursLecture from '../assets/lecture-hall.png';
 
 export default function ConcoursPage() {
   
@@ -267,6 +269,26 @@ export default function ConcoursPage() {
         </section>
 
       </main>
+
+      {/* ═══ NOS SALLES & ÉTUDIANTS ═══ */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+            <img src={concoursTeacher} alt="Enseignement interactif — préparation aux concours" className="w-full h-52 md:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-5">
+              <p className="text-white text-sm font-black uppercase">Enseignement Interactif</p>
+              <p className="text-slate-300 text-[11px]">Nos professeurs vous préparent avec méthode et passion</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+            <img src={concoursLecture} alt="Étudiants en préparation aux concours" className="w-full h-52 md:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-5">
+              <p className="text-white text-sm font-black uppercase">Préparation en Conditions Réelles</p>
+              <p className="text-slate-300 text-[11px]">Examens blancs et simulations pour garantir votre réussite</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════ CTA BOTTOM ═══════════ */}
       <section className="bg-brand-blue py-16 px-4 text-white text-center">

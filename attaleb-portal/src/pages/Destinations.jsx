@@ -130,14 +130,14 @@ export default function Destinations() {
               <img 
                 src={country.capitalImg} 
                 alt={country.name} 
-                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out z-0" 
+                className="absolute inset-0 w-full h-full object-cover dest-capital-mobile md:group-hover:opacity-100 md:group-hover:scale-105 transition-all duration-500 ease-in-out z-0" 
               />
 
               {/* Image 2: Country Flag */}
               <img 
                 src={country.flag} 
                 alt={`Drapeau ${country.name}`} 
-                className="absolute inset-0 w-full h-full object-cover object-center opacity-40 group-hover:opacity-0 transition-all duration-500 ease-in-out z-0" 
+                className="absolute inset-0 w-full h-full object-cover object-center dest-flag-mobile md:group-hover:opacity-0 transition-all duration-500 ease-in-out z-0"
               />
 
               {/* Dark Gradient Overlay */}
