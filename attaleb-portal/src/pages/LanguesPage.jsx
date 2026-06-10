@@ -1,8 +1,62 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, ArrowRight } from 'lucide-react';
+import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, ArrowRight, Star, Mic, Headphones, PenTool, MessageSquare, Briefcase } from 'lucide-react';
 
 const languesDatabase = {
+  'ielts': {
+    name: "IELTS (Anglais)",
+    tagline: "Le test d'anglais le plus accepté au monde — UK, Canada, Australie, Europe et plus encore.",
+    bgImage: "https://images.unsplash.com/photo-1489486501123-5c1af10d0be6?auto=format&fit=crop&w=1600&q=80",
+    overview: "L'IELTS Academic est le test de référence pour l'admission dans les universités anglophones et les programmes enseignés en anglais à travers le monde. Notre préparation intensive vous garantit d'atteindre le score requis.",
+    details: [
+      { title: "Listening & Reading", desc: "Techniques de skimming, scanning et prise de notes pour maximiser votre score aux sections compréhension." },
+      { title: "Writing (Task 1 & 2)", desc: "Rédaction de rapports graphiques et d'essais argumentatifs avec feedback personnalisé." },
+      { title: "Speaking", desc: "Simulations d'entretien avec des examinateurs certifiés pour gagner en fluidité et confiance." }
+    ],
+    features: [
+      "Simulations hebdomadaires en conditions réelles",
+      "Correction personnalisée des essays",
+      "Pratique intensive du Speaking en face-à-face",
+      "Vocabulaire académique et idiomes avancés"
+    ],
+    ctaText: "Atteignez votre score IELTS cible avec notre méthode éprouvée."
+  },
+  'toefl': {
+    name: "TOEFL iBT (Anglais)",
+    tagline: "Le test standard pour les universités américaines et canadiennes.",
+    bgImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80",
+    overview: "Le TOEFL iBT est le test privilégié par les institutions nord-américaines. Il évalue les 4 compétences linguistiques dans un format 100% informatisé. Notre programme vous prépare spécifiquement au format et au timing du test.",
+    details: [
+      { title: "Reading & Listening", desc: "Stratégies pour les textes académiques longs et les lectures audio avec prise de notes efficace." },
+      { title: "Speaking (4 tâches)", desc: "Entraînement aux tâches intégrées et indépendantes avec enregistrement et feedback détaillé." },
+      { title: "Writing (2 tâches)", desc: "Maîtrise de la tâche intégrée (lecture + audio + rédaction) et de l'essai indépendant." }
+    ],
+    features: [
+      "Plateforme de test identique au TOEFL officiel",
+      "Templates de réponses Speaking & Writing",
+      "Score prédictif grâce aux tests diagnostics",
+      "Préparation au format 100% informatisé"
+    ],
+    ctaText: "Préparez le TOEFL avec des outils identiques au test officiel."
+  },
+  'toeic': {
+    name: "TOEIC (Anglais Professionnel)",
+    tagline: "La certification d'anglais professionnel la plus demandée par les recruteurs et entreprises.",
+    bgImage: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
+    overview: "Le TOEIC (Test of English for International Communication) évalue l'anglais dans un contexte professionnel. Il est exigé par de nombreuses entreprises marocaines et internationales, ainsi que par certaines écoles de commerce.",
+    details: [
+      { title: "Listening Comprehension", desc: "Entraînement aux 4 parties : photos, questions-réponses, conversations et exposés." },
+      { title: "Reading Comprehension", desc: "Maîtrise des 3 parties : phrases incomplètes, compréhension de textes et doubles passages." },
+      { title: "Score 850+", desc: "Programme conçu pour atteindre le score Gold (850+) requis par les multinationales." }
+    ],
+    features: [
+      "Simulations complètes de 2h en conditions réelles",
+      "Techniques de gestion du temps (200 questions en 2h)",
+      "Vocabulaire Business et Corporate English",
+      "Stratégies pour les pièges classiques du TOEIC"
+    ],
+    ctaText: "Boostez votre CV avec un score TOEIC qui impressionne les recruteurs."
+  },
   'tcf-tef': {
     name: "Préparation TCF / TEF",
     tagline: "Validez votre projet Campus France avec un score optimal aux tests de connaissance du français.",
@@ -39,89 +93,130 @@ const languesDatabase = {
     ],
     ctaText: "Investissez dans votre avenir avec un diplôme valable à vie."
   },
-  'ielts-toefl': {
-    name: "IELTS & TOEFL (Anglais)",
-    tagline: "Maîtrisez l'anglais académique pour intégrer les universités anglophones (USA, UK, Canada, Allemagne).",
-    bgImage: "https://images.unsplash.com/photo-1489486501123-5c1af10d0be6?auto=format&fit=crop&w=1600&q=80",
-    overview: "L'IELTS et le TOEFL sont les tests d'anglais les plus acceptés au monde. Que ce soit pour des études aux États-Unis ou des programmes en anglais en Allemagne, un score élevé est votre passeport vers l'international.",
+  'espagnol-dele': {
+    name: "Espagnol (DELE)",
+    tagline: "Certifiez votre niveau d'espagnol avec le diplôme officiel reconnu par les universités hispanophones.",
+    bgImage: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1600&q=80",
+    overview: "Le DELE (Diplomas de Español como Lengua Extranjera) est le certificat officiel de l'Instituto Cervantes. Il est exigé par les universités espagnoles et latino-américaines pour l'admission en Licence et Master.",
     details: [
-      { title: "IELTS (Academic)", desc: "Le test privilégié pour le Royaume-Uni, l'Australie, le Canada et l'Europe." },
-      { title: "TOEFL iBT", desc: "Le test standard utilisé majoritairement par les institutions américaines." },
-      { title: "Score Garanti", desc: "Nos programmes sont conçus pour vous faire atteindre les seuils requis par les meilleures institutions (Top 100 QS)." }
+      { title: "Niveau B1", desc: "Niveau intermédiaire requis pour la plupart des universités espagnoles." },
+      { title: "Niveau B2", desc: "Niveau avancé recommandé pour les filières sélectives et les masters." },
+      { title: "Diplôme à vie", desc: "Comme le DELF, le DELE est valable à vie et reconnu dans le monde entier." }
     ],
     features: [
-      "Pratique intensive des épreuves de Speaking",
-      "Rédaction de rapports académiques (Writing Task 1 & 2)",
-      "Techniques de Reading pour textes complexes",
-      "Vocabulaire académique et idiomes"
+      "Cours avec professeurs hispanophones natifs",
+      "Préparation aux 4 épreuves (Lire, Écrire, Écouter, Parler)",
+      "Immersion culturelle et ateliers conversation",
+      "Simulations d'examen en conditions réelles"
     ],
-    ctaText: "Boostez votre score IELTS/TOEFL et ouvrez les portes du monde."
-  },
-  'allemand-goethe': {
-    name: "Allemand (Goethe-Zertifikat)",
-    tagline: "Apprenez l'allemand de A1 à B2 pour vos projets d'études ou d'insertion en Allemagne.",
-    bgImage: "https://images.unsplash.com/photo-1527866959612-397447d92419?auto=format&fit=crop&w=1600&q=80",
-    overview: "L'Allemagne demande une certification Goethe (B1 ou B2) pour les visas étudiants. Notre approche pédagogique privilégie l'immersion et la communication pour une progression rapide en langue allemande.",
-    details: [
-      { title: "Niveau B1 ZERTIFIKAT", desc: "Le minimum requis pour l'obtention du visa étudiant pour l'Allemagne." },
-      { title: "Niveau B2", desc: "Niveau recommandé pour une intégration universitaire fluide et l'accès au Studienkolleg." },
-      { title: "Certification Officielle", desc: "Préparation spécifique au format des épreuves du Goethe-Institut." }
-    ],
-    features: [
-      "Cours interactifs en petits groupes",
-      "Simulations d'examens officiels Goethe",
-      "Focus sur la communication interculturelle",
-      "Orientation sur le système d'études allemand"
-    ],
-    ctaText: "Commencez votre apprentissage de l'allemand avec une méthode éprouvée."
+    ctaText: "Maîtrisez l'espagnol et accédez aux universités d'Espagne et d'Amérique Latine."
   }
 };
 
-// Overview cards data
-const languesCards = [
+// ─── SECTION 1: ENGLISH (IELTS first, then TOEFL, then TOEIC) ───
+const englishCerts = [
   {
-    slug: 'tcf-tef',
-    icon: '🇫🇷',
-    title: 'TCF / TEF',
-    subtitle: 'Français Langue Étrangère',
-    desc: 'Préparation intensive aux tests de français pour Campus France et immigration Canada.',
-    levels: 'A1 → C2',
-    color: 'from-blue-600 to-blue-800'
-  },
-  {
-    slug: 'delf-dalf',
-    icon: '🎓',
-    title: 'DELF / DALF',
-    subtitle: 'Diplômes Officiels à Vie',
-    desc: 'Diplômes reconnus internationalement, valables à vie. B2 pour université, C1 pour filières d\'élite.',
-    levels: 'B1 → C2',
-    color: 'from-indigo-600 to-indigo-800'
-  },
-  {
-    slug: 'ielts-toefl',
-    icon: '🌍',
-    title: 'IELTS & TOEFL',
-    subtitle: 'Anglais Académique',
-    desc: 'Tests d\'anglais acceptés worldwide : USA, UK, Canada, Allemagne et plus encore.',
+    slug: 'ielts',
+    icon: 'globe',
+    title: 'IELTS Academic',
+    subtitle: 'International English Testing',
+    flag: '🇬🇧',
+    desc: 'Le test d\'anglais le plus accepté au monde : UK, Canada, Australie, Europe et programmes en anglais.',
     levels: 'Band 5.5 → 8.0',
-    color: 'from-red-600 to-red-800'
+    validity: '2 ans',
+    schools: "Oxford, Cambridge, McGill, Melbourne...",
+    color: 'from-red-500 to-rose-600'
   },
   {
-    slug: 'allemand-goethe',
-    icon: '🇩🇪',
-    title: 'Allemand Goethe',
-    subtitle: 'Goethe-Zertifikat',
-    desc: 'Apprentissage de l\'allemand pour études et visa étudiant en Allemagne.',
-    levels: 'A1 → B2',
-    color: 'from-amber-600 to-amber-800'
+    slug: 'toefl',
+    icon: 'globe',
+    title: 'TOEFL iBT',
+    subtitle: 'Test of English as a Foreign Language',
+    flag: '🇺🇸',
+    desc: 'Le test standard pour les universités américaines et canadiennes. Format 100% informatisé.',
+    levels: '80 → 110+',
+    validity: '2 ans',
+    schools: "Harvard, MIT, UCLA, U. Toronto...",
+    color: 'from-blue-600 to-indigo-700'
+  },
+  {
+    slug: 'toeic',
+    icon: 'briefcase',
+    title: 'TOEIC',
+    subtitle: 'Anglais Professionnel',
+    flag: '💼',
+    desc: 'La certification d\'anglais professionnel la plus demandée par les recruteurs et multinationales.',
+    levels: 'Score 850+',
+    validity: '2 ans',
+    schools: "Entreprises, Business Schools, MBA...",
+    color: 'from-amber-500 to-orange-600'
   }
 ];
 
-// ─── LANDING PAGE (no slug) ───
+// ─── SECTION 2: FRENCH ───
+const frenchCerts = [
+  {
+    slug: 'tcf-tef',
+    icon: 'file',
+    title: 'TCF / TEF',
+    subtitle: 'Test de Connaissance du Français',
+    flag: '🇫🇷',
+    desc: 'Préparation intensive aux tests de français pour Campus France et immigration Canada. Score B2+ garanti.',
+    levels: 'A1 → C2',
+    validity: '2 ans',
+    schools: "Sorbonne, Sciences Po, HEC Paris...",
+    color: 'from-blue-500 to-indigo-600'
+  },
+  {
+    slug: 'delf-dalf',
+    icon: 'award',
+    title: 'DELF / DALF',
+    subtitle: 'Diplômes Officiels à Vie',
+    flag: '🇫🇷',
+    desc: 'Diplômes reconnus internationalement, valables à vie. B2 pour université, C1 pour filières d\'élite.',
+    levels: 'B1 → C2',
+    validity: 'À vie',
+    schools: "Toutes universités françaises...",
+    color: 'from-indigo-500 to-purple-600'
+  }
+];
+
+// ─── SECTION 3: SPANISH ───
+const spanishCerts = [
+  {
+    slug: 'espagnol-dele',
+    icon: 'pen',
+    title: 'DELE',
+    subtitle: 'Diplomas de Español como Lengua Extranjera',
+    flag: '🇪🇸',
+    desc: 'Certification officielle de l\'Instituto Cervantes pour les universités espagnoles et latino-américaines. Valable à vie.',
+    levels: 'B1 → C1',
+    validity: 'À vie',
+    schools: "U. Complutense, U. Barcelona, UAM...",
+    color: 'from-yellow-500 to-red-500'
+  }
+];
+
+// Icon mapping
+function CertIcon({ type, className }) {
+  switch (type) {
+    case 'file': return <FileText size={18} className={className} />;
+    case 'award': return <Award size={18} className={className} />;
+    case 'globe': return <Globe size={18} className={className} />;
+    case 'briefcase': return <Briefcase size={18} className={className} />;
+    case 'pen': return <PenTool size={18} className={className} />;
+    default: return <Languages size={18} className={className} />;
+  }
+}
+
+// ═══════════════════════════════════════
+//  LANDING PAGE
+// ═══════════════════════════════════════
 function LanguesLanding() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
-      {/* Hero Banner */}
+      
+      {/* Hero */}
       <section
         className="relative bg-cover bg-center bg-no-repeat py-24 px-4 text-center flex items-center justify-center min-h-[320px]"
         style={{
@@ -136,91 +231,281 @@ function LanguesLanding() {
             Concours de Langues
           </h1>
           <p className="text-xs md:text-base text-slate-200 max-w-2xl mx-auto font-medium leading-relaxed">
-            Préparez vos certifications linguistiques avec Attaleb — TCF, DELF, IELTS, TOEFL, Goethe — et ouvrez les portes des meilleures universités du monde.
+            Préparez vos certifications linguistiques avec Attaleb — IELTS, TOEFL, TOEIC, TCF, DELF, DELE — et ouvrez les portes des meilleures universités du monde.
           </p>
+          <div className="flex flex-wrap justify-center gap-3 pt-4">
+            <a href="#anglais" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-5 py-2.5 rounded transition-all uppercase tracking-wider flex items-center gap-2">
+              🇬🇧 English
+            </a>
+            <a href="#francais" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-5 py-2.5 rounded transition-all uppercase tracking-wider flex items-center gap-2">
+              🇫🇷 Français
+            </a>
+            <a href="#espagnol" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-5 py-2.5 rounded transition-all uppercase tracking-wider flex items-center gap-2">
+              🇪🇸 Español
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Key Figures */}
+      {/* Stats */}
       <section className="bg-brand-blue text-white py-5 border-b border-brand-gold/30">
-        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div>
-            <div className="text-xl font-black text-brand-gold">4</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Certifications</div>
-          </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">95%</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Taux de Réussite</div>
-          </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">500+</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Étudiants Formés</div>
-          </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">6</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Langues Enseignées</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certification Cards */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Certifications</span>
-          <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">NOS PROGRAMMES DE LANGUES</h2>
-          <p className="text-xs text-slate-500 mt-2 max-w-lg mx-auto leading-relaxed">
-            Choisissez votre certification et découvrez notre programme de préparation sur mesure.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {languesCards.map((card) => (
-            <Link
-              key={card.slug}
-              to={`/langues/${card.slug}`}
-              className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className={`h-2 bg-gradient-to-r ${card.color}`} />
-              <div className="p-6 md:p-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">{card.icon}</span>
-                  <div>
-                    <h3 className="font-black text-base text-brand-blue uppercase tracking-wide">{card.title}</h3>
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
-                  </div>
-                </div>
-                <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                    Niveaux : {card.levels}
-                  </span>
-                  <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
-                    Voir le programme <ArrowRight size={12} />
-                  </span>
-                </div>
-              </div>
-            </Link>
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          {[
+            { val: "6", label: "Certifications" },
+            { val: "95%", label: "Taux de Réussite" },
+            { val: "500+", label: "Étudiants Formés" },
+            { val: "3", label: "Langues Enseignées" }
+          ].map((s, i) => (
+            <div key={i}>
+              <div className="text-xl font-black text-brand-gold">{s.val}</div>
+              <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">{s.label}</div>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Why Attaleb */}
-      <section className="bg-white py-16 px-4 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto">
+      <main className="max-w-6xl mx-auto px-4 py-16 space-y-24">
+
+        {/* ╔═══════════════════════════════════════╗
+           ║   SECTION 1: ENGLISH                    ║
+           ╚═══════════════════════════════════════╝ */}
+        <section id="anglais">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              🇬🇧 English
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">Certifications en Anglais</h2>
+            <p className="text-xs text-slate-500 mt-2 max-w-lg mx-auto leading-relaxed">
+              IELTS, TOEFL pour les études et TOEIC pour le monde professionnel.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {englishCerts.map((card) => (
+              <Link
+                key={card.slug}
+                to={`/langues/${card.slug}`}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
+                <div className="p-6 space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">{card.flag}</span>
+                    <div>
+                      <h3 className="font-black text-base text-brand-blue uppercase tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
+
+                  <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <span className="font-medium">{card.schools}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex gap-2">
+                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                        {card.levels}
+                      </span>
+                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+                        {card.validity}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                      Détails <ArrowRight size={12} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 max-w-md mx-auto">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+          <div className="w-3 h-3 bg-brand-gold rounded-full" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+        </div>
+
+        {/* ╔═══════════════════════════════════════╗
+           ║   SECTION 2: FRANÇAIS                   ║
+           ╚═══════════════════════════════════════╝ */}
+        <section id="francais">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              🇫🇷 Français
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">Certifications en Français</h2>
+            <p className="text-xs text-slate-500 mt-2 max-w-lg mx-auto leading-relaxed">
+              Indispensables pour étudier en France et au Canada — TCF, TEF, DELF et DALF.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {frenchCerts.map((card) => (
+              <Link
+                key={card.slug}
+                to={`/langues/${card.slug}`}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
+                <div className="p-6 md:p-8 space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">{card.flag}</span>
+                    <div>
+                      <h3 className="font-black text-lg text-brand-blue uppercase tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
+
+                  <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <span className="font-medium">{card.schools}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex gap-2">
+                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                        {card.levels}
+                      </span>
+                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+                        Validité : {card.validity}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                      Détails <ArrowRight size={12} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 max-w-md mx-auto">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+          <div className="w-3 h-3 bg-brand-gold rounded-full" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+        </div>
+
+        {/* ╔═══════════════════════════════════════╗
+           ║   SECTION 3: ESPAÑOL                    ║
+           ╚═══════════════════════════════════════╝ */}
+        <section id="espagnol">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              🇪🇸 Español
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">Certificación en Español</h2>
+            <p className="text-xs text-slate-500 mt-2 max-w-lg mx-auto leading-relaxed">
+              DELE — le diplôme officiel d'espagnol reconnu dans le monde entier.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto">
+            {spanishCerts.map((card) => (
+              <Link
+                key={card.slug}
+                to={`/langues/${card.slug}`}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 block"
+              >
+                <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
+                <div className="p-6 md:p-8 space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">{card.flag}</span>
+                    <div>
+                      <h3 className="font-black text-lg text-brand-blue uppercase tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
+
+                  <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <span className="font-medium">{card.schools}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex gap-2">
+                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                        {card.levels}
+                      </span>
+                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
+                        Validité : {card.validity}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                      Détails <ArrowRight size={12} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+          <div className="p-6 md:p-8 border-b border-slate-100">
+            <h2 className="text-xl font-black text-brand-blue uppercase text-center">Comparatif des Certifications</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="bg-slate-50 text-brand-blue">
+                  <th className="p-3 text-left font-black uppercase tracking-wide">Test</th>
+                  <th className="p-3 text-center font-black uppercase tracking-wide">Langue</th>
+                  <th className="p-3 text-center font-black uppercase tracking-wide">Validité</th>
+                  <th className="p-3 text-center font-black uppercase tracking-wide">Score Min.</th>
+                  <th className="p-3 text-center font-black uppercase tracking-wide">Pourquoi ?</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {[
+                  { test: "IELTS", lang: "🇬🇧 Anglais", validity: "2 ans", score: "6.5+", why: "UK, Canada, Europe" },
+                  { test: "TOEFL iBT", lang: "🇺🇸 Anglais", validity: "2 ans", score: "90+", why: "USA, Canada" },
+                  { test: "TOEIC", lang: "💼 Anglais Pro", validity: "2 ans", score: "850+", why: "Recrutement, MBA" },
+                  { test: "TCF", lang: "🇫🇷 Français", validity: "2 ans", score: "B2", why: "Campus France" },
+                  { test: "TEF", lang: "🇫🇷 Français", validity: "2 ans", score: "B2", why: "Immigration Canada" },
+                  { test: "DELF B2", lang: "🇫🇷 Français", validity: "À vie", score: "B2", why: "Universités France" },
+                  { test: "DALF C1", lang: "🇫🇷 Français", validity: "À vie", score: "C1", why: "Filières d'élite" },
+                  { test: "DELE B2", lang: "🇪🇸 Espagnol", validity: "À vie", score: "B2", why: "Universités Espagne" }
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-slate-50 transition-colors">
+                    <td className="p-3 font-bold text-brand-blue">{row.test}</td>
+                    <td className="p-3 text-center">{row.lang}</td>
+                    <td className="p-3 text-center text-slate-600">{row.validity}</td>
+                    <td className="p-3 text-center">
+                      <span className="bg-amber-50 text-brand-gold font-black px-2 py-0.5 rounded-full border border-amber-200">{row.score}</span>
+                    </td>
+                    <td className="p-3 text-center text-slate-600">{row.why}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* ═══ POURQUOI ATTALEB ═══ */}
+        <section>
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">POURQUOI ATTALEB ?</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Target size={20} />, title: "Méthode Ciblée", desc: "Entraînement spécifique aux formats de chaque test avec des exercices types et des corrections détaillées." },
-              { icon: <Globe size={20} />, title: "Intervenants Natifs", desc: "Professeurs anglophones, francophones et germanophones certifiés pour une immersion authentique." },
-              { icon: <Award size={20} />, title: "Résultats Prouvés", desc: "95% de nos étudiants atteignent le score requis dès leur première tentative d'examen." },
-              { icon: <BookOpen size={20} />, title: "Ressources Exclusives", desc: "Manuels, annales corrigées, laboratoires audio et plateformes en ligne inclus dans chaque programme." },
-              { icon: <FileText size={20} />, title: "Examens Blancs", desc: "Simulations complètes en conditions réelles avec évaluation détaillée et plan d'amélioration." },
-              { icon: <CheckCircle2 size={20} />, title: "Suivi Personnalisé", desc: "Groupes réduits et coaching individuel pour maximiser votre progression et votre confiance." }
+              { icon: <Target size={20} />, color: "text-blue-500", title: "Méthode Ciblée", desc: "Entraînement spécifique aux formats de chaque test avec exercices types et corrections détaillées." },
+              { icon: <Mic size={20} />, color: "text-rose-500", title: "Expression Orale", desc: "Ateliers de conversation avec intervenants natifs pour maîtriser l'épreuve orale." },
+              { icon: <Award size={20} />, color: "text-amber-500", title: "Résultats Prouvés", desc: "95% de nos étudiants atteignent le score requis dès leur première tentative." },
+              { icon: <Headphones size={20} />, color: "text-purple-500", title: "Laboratoire Audio", desc: "Équipement professionnel pour la compréhension orale en conditions d'examen." },
+              { icon: <FileText size={20} />, color: "text-emerald-500", title: "Examens Blancs", desc: "Simulations complètes hebdomadaires avec évaluation et plan d'amélioration." },
+              { icon: <CheckCircle2 size={20} />, color: "text-sky-500", title: "Suivi Personnalisé", desc: "Groupes réduits (max 8 élèves) et coaching individuel pour progresser." }
             ].map((item, i) => (
-              <div key={i} className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
-                <div className="w-10 h-10 bg-brand-blue text-brand-gold rounded-xl flex items-center justify-center">
+              <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 space-y-3">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-slate-50 ${item.color}`}>
                   {item.icon}
                 </div>
                 <h3 className="font-black text-xs text-brand-blue uppercase tracking-wide">{item.title}</h3>
@@ -228,8 +513,9 @@ function LanguesLanding() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+      </main>
 
       {/* CTA */}
       <section className="py-16 px-4 bg-brand-blue text-white text-center">
@@ -254,7 +540,9 @@ function LanguesLanding() {
   );
 }
 
-// ─── DETAIL PAGE (with slug) ───
+// ═══════════════════════════════════════
+//  DETAIL PAGE
+// ═══════════════════════════════════════
 function LanguesDetail() {
   const { slug } = useParams();
   const data = languesDatabase[slug];
@@ -273,7 +561,6 @@ function LanguesDetail() {
 
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
-      {/* 1. Header Banner */}
       <section
         className="relative bg-cover bg-center bg-no-repeat py-20 px-4 text-center flex items-center justify-center min-h-[300px]"
         style={{
@@ -296,7 +583,6 @@ function LanguesDetail() {
         </div>
       </section>
 
-      {/* 2. Main Content */}
       <main className="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 space-y-8">
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-6">
@@ -304,9 +590,7 @@ function LanguesDetail() {
               <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2">
                 <Target size={20} className="text-brand-gold" /> Objectifs de la Formation
               </h2>
-              <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                {data.overview}
-              </p>
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">{data.overview}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-50">
               {data.details.map((item, i) => (
@@ -317,7 +601,6 @@ function LanguesDetail() {
               ))}
             </div>
           </div>
-
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100">
             <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2 mb-8">
               <Award size={20} className="text-brand-gold" /> Pourquoi Choisir Attaleb.ma ?
@@ -332,7 +615,6 @@ function LanguesDetail() {
             </div>
           </div>
         </div>
-
         <div className="lg:col-span-1 space-y-6">
           <div className="bg-brand-blue text-white p-8 rounded-3xl shadow-xl space-y-6 sticky top-6">
             <div className="space-y-2">

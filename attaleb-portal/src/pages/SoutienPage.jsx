@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { BookOpen, Award, CheckCircle2, GraduationCap, ClipboardCheck, Users, Brain, ArrowRight, Target, Star } from 'lucide-react';
+import soutienHero from '../assets/soutien-hero.png';
+import soutienCta from '../assets/soutien-cta.png';
 
 const soutienDatabase = {
   'lycee-marocain': {
@@ -121,50 +123,81 @@ const soutienCards = [
 function SoutienLanding() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
-      {/* Hero Banner */}
-      <section
-        className="relative bg-cover bg-center bg-no-repeat py-24 px-4 text-center flex items-center justify-center min-h-[320px]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.92), rgba(11, 38, 79, 0.78)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')`
-        }}
-      >
-        <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="flex justify-center gap-2 mb-2">
-            <BookOpen size={28} className="text-brand-gold" />
-          </div>
-          <h1 className="text-3xl md:text-5xl font-black tracking-tight uppercase text-white">
-            Soutien Scolaire
-          </h1>
-          <p className="text-xs md:text-base text-slate-200 max-w-2xl mx-auto font-medium leading-relaxed">
-            Cours de soutien personnalisés pour tous les niveaux — du lycée marocain au système britannique, en passant par la mission française et l'université.
-          </p>
-        </div>
-      </section>
+      {/* ─── HERO: Split Layout ─── */}
+      <section className="relative bg-brand-blue overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute -top-20 -left-20 w-64 h-64 bg-brand-gold/5 rounded-full" />
+        <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-brand-gold/5 rounded-full" />
 
-      {/* Key Figures */}
-      <section className="bg-brand-blue text-white py-5 border-b border-brand-gold/30">
-        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div>
-            <div className="text-xl font-black text-brand-gold">4</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Programmes</div>
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left: Text */}
+          <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-brand-gold text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full">
+              <BookOpen size={14} />
+              Soutien Scolaire d'Excellence
+            </div>
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight uppercase text-white leading-tight">
+              Réussissez vos <br />
+              <span className="text-brand-gold">examens</span> avec <br />Attaleb
+            </h1>
+            <p className="text-xs md:text-sm text-slate-300 max-w-lg font-medium leading-relaxed">
+              Cours de soutien personnalisés pour tous les niveaux — du lycée marocain au système britannique, en passant par la mission française et l'université.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+              <Link to="#formules" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-7 py-3 rounded-full transition-all uppercase tracking-wider flex items-center gap-2">
+                Découvrir <ArrowRight size={14} />
+              </Link>
+              <Link to="/contact" className="border-2 border-white/30 hover:border-white/60 text-white text-xs font-bold px-7 py-3 rounded-full transition-all uppercase tracking-wider">
+                S'inscrire
+              </Link>
+            </div>
+
+            {/* Mini stats row */}
+            <div className="flex gap-6 justify-center lg:justify-start pt-4">
+              {[
+                { val: "200+", label: "Élèves" },
+                { val: "95%", label: "Réussite" },
+                { val: "30+", label: "Professeurs" }
+              ].map((s, i) => (
+                <div key={i} className="text-center">
+                  <div className="text-lg font-black text-brand-gold">{s.val}</div>
+                  <div className="text-[9px] text-slate-400 uppercase tracking-widest">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">200+</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Élèves Accompagnés</div>
-          </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">95%</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Taux de Réussite</div>
-          </div>
-          <div>
-            <div className="text-xl font-black text-brand-gold">30+</div>
-            <div className="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">Enseignants Experts</div>
+
+          {/* Right: Image */}
+          <div className="relative order-1 lg:order-2 flex justify-center">
+            {/* Glow behind image */}
+            <div className="absolute inset-0 bg-brand-gold/10 rounded-3xl blur-3xl scale-90" />
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 ring-1 ring-brand-gold/20">
+                <img
+                  src={soutienHero}
+                  alt="Salle de classe Attaleb — cours de soutien en action"
+                  className="w-full max-w-lg h-64 md:h-80 lg:h-96 object-cover"
+                />
+              </div>
+              {/* Floating badge top-right */}
+              <div className="absolute -top-4 -right-4 bg-brand-gold text-brand-blue rounded-xl px-3 py-2 shadow-lg rotate-3">
+                <div className="text-xs font-black flex items-center gap-1">
+                  <Star size={12} fill="currentColor" /> Mention
+                </div>
+              </div>
+              {/* Floating badge bottom-left */}
+              <div className="absolute -bottom-3 -left-3 bg-white text-brand-blue rounded-xl px-3 py-2 shadow-lg -rotate-2">
+                <div className="text-[10px] font-black flex items-center gap-1.5">
+                  <GraduationCap size={14} className="text-brand-gold" /> 4 Programmes
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Programme Cards */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section id="formules" className="max-w-6xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Programmes</span>
           <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">NOS FORMULES DE SOUTIEN</h2>
@@ -232,8 +265,13 @@ function SoutienLanding() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-brand-blue text-white text-center">
-        <div className="max-w-2xl mx-auto space-y-4">
+      <section
+        className="relative py-20 px-4 text-white text-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('${soutienCta}')` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-brand-blue/85" />
+        <div className="max-w-2xl mx-auto space-y-4 relative z-10">
           <h2 className="text-2xl md:text-3xl font-black uppercase">
             Inscrivez-vous dès <span className="text-brand-gold">maintenant</span>
           </h2>
