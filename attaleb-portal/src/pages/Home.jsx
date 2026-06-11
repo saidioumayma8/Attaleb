@@ -26,6 +26,10 @@ import stanfordLogo from '../assets/stanford-university-logo.png';
 import uclLogo from '../assets/ucl-logo.webp';
 import columbiaLogo from '../assets/colombia-logo.png';
 import chicagoLogo from '../assets/chicago-logo.png';
+const partnerLogos = [
+  qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
+  lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
+];
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -103,33 +107,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==========================================
-          PARTENAIRES ACADÉMIQUES
-         ========================================== */}
 
-<section className="py-16 bg-white overflow-hidden">
-  <div className="max-w-7xl mx-auto mb-12 text-center px-4">
-    <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">PARTENAIRES ACADÉMIQUES</h2>
-  </div>
-
-  <div className="w-full overflow-hidden">
-    <motion.div 
-      className="flex items-center gap-10" // Utilise 'gap' pour un espace constant
-      animate={{ x: ["0%", "-50%"] }}
-      transition={{ duration: 25, ease: "linear", repeat: Infinity }} // 25s pour une vitesse fluide
-    >
-      {[...partnerLogos, ...partnerLogos].map((logo, index) => (
-        <div key={index} className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
-          <img 
-            src={logo} 
-            alt="Partenaire" 
-            className="max-h-full w-auto object-contain" 
-          />
+      {/* --- TA SECTION PARTENAIRES CORRIGÉE --- */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto mb-12 text-center px-4">
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">PARTENAIRES ACADÉMIQUES</h2>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+        <div className="w-full overflow-hidden">
+          <motion.div 
+            className="flex items-center gap-10"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+          >
+            {[...partnerLogos, ...partnerLogos].map((logoSrc, index) => (
+              <div key={index} className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <img src={logoSrc} alt="Partenaire" className="max-h-full w-auto object-contain" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* ==========================================
           UN ACCOMPAGNEMENT COMPLET (6 SERVICES)
@@ -464,62 +461,19 @@ export default function Home() {
       {/* ==========================================
           8. RESTRUCTURED CONTACT ZONE (TEXT OVER MAP)
          ========================================== */}
-      <section id="contact-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
-        <div className="relative w-full h-[500px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100 flex items-center p-6 md:p-12">
-          
-          {/* Google Map Layer */}
-          <div className="absolute inset-0 w-full h-full z-0">
+<section id="contact-section" className="max-w-7xl mx-auto px-4 py-20">
+        <div className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-xl">
+          <div className="absolute inset-0 z-0">
             <iframe
-              title="Localisation du Cabinet Attaleb"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7088924619967!2d-8.06422422369687!3d31.670697447470656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8dafe9b910b8755d%3A0x64e321e067c29370!2sCabinet%20Attaleb!5e0!3m2!1sfr!2sma!4v1715690000000!5m2!1sfr!2sma"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full object-cover"
+              title="Localisation Cabinet"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.689656461994!2d-8.0519391!3d31.6214539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM3JzE3LjIiTiA4wrAwMycwNi41Ilc!5e0!3m2!1sfr!2sma!4v1!5m2!1sfr!2sma"
+              width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
             ></iframe>
           </div>
-
-          {/* Translucent overlay */}
-          <div className="absolute inset-0 bg-brand-blueDark/40 pointer-events-none z-10"></div>
-
-          {/* Floating Content Box */}
-          <div className="relative z-20 max-w-md w-full bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-white/20 space-y-6">
-            <div>
-              <span className="text-xs font-extrabold text-brand-gold uppercase tracking-widest block mb-1">
-                Contactez-nous
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-brand-blue tracking-tighter uppercase leading-none">
-                PARLONS DE<br />
-                <span className="text-slate-900">VOTRE AVENIR</span>
-              </h2>
-            </div>
-            
-            <p className="text-slate-600 text-xs font-medium leading-relaxed">
-              Notre équipe d'orientation est à votre entière disposition pour vous guider dans vos choix d'études et d'avenir professionnel.
-            </p>
-            
-            {/* Contact Card */}
-            <div className="bg-amber-100/90 p-5 rounded-2xl border border-amber-200/60 space-y-3 text-center">
-              <h4 className="font-black text-xs uppercase tracking-wide text-brand-blue">
-                Besoin d'accompagnement ?
-              </h4>
-              <p className="text-[11px] text-slate-700 leading-relaxed font-medium">
-                Appelez-nous directement pour fixer un rendez-vous avec l'un de nos conseillers.
-              </p>
-              <div className="pt-1">
-                <a 
-                  href="tel:0645212800" 
-                  className="inline-block w-full text-center bg-brand-blue text-white text-xs font-bold py-2.5 rounded-xl hover:bg-brand-blue/90 transition-all uppercase tracking-wide shadow-sm"
-                >
-                  06 45 21 28 00
-                </a>
-              </div>
-            </div>
+          <div className="relative z-20 max-w-md bg-white/90 p-8 rounded-2xl m-8">
+            <h2 className="text-2xl font-black text-brand-blue uppercase">Contactez-nous</h2>
+            <p className="text-sm mt-4">Besoin d'accompagnement ? Appelez-nous au : +212 6 XX XX XX XX</p>
           </div>
-
         </div>
       </section>
 
