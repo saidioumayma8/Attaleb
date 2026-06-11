@@ -103,38 +103,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION PARTENAIRES ACADÉMIQUES */}
-      <section className="py-16 bg-white border-b border-slate-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto mb-12 text-center px-4">
-          <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Collaborations</span>
-          <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">PARTENAIRES ACADÉMIQUES</h2>
-        </div>
+      {/* ==========================================
+          PARTENAIRES ACADÉMIQUES
+         ========================================== */}
 
-        <div className="w-full overflow-hidden">
-          <motion.div 
-            className="flex items-center w-max" // w-max force le conteneur à prendre toute la largeur des logos
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 10, ease: "linear", repeat: Infinity }} // 10 = Très rapide
-          >
-            {[
-              qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
-              harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo,
-              // Doublon pour la boucle parfaite
-              qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, lrLogo,
-              harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
-            ].map((logoSrc, index) => (
-              <div key={index} className="flex-shrink-0 px-3"> {/* px-3 réduit l'espace */}
-                <img 
-                  src={logoSrc} 
-                  alt="Partenaire" 
-                  className="h-16 w-auto object-contain transition-transform hover:scale-110" 
-                  // J'ai retiré 'grayscale' pour garder les couleurs
-                />
-              </div>
-            ))}
-          </motion.div>
+<section className="py-16 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto mb-12 text-center px-4">
+    <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">PARTENAIRES ACADÉMIQUES</h2>
+  </div>
+
+  <div className="w-full overflow-hidden">
+    <motion.div 
+      className="flex items-center gap-10" // Utilise 'gap' pour un espace constant
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{ duration: 25, ease: "linear", repeat: Infinity }} // 25s pour une vitesse fluide
+    >
+      {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+        <div key={index} className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+          <img 
+            src={logo} 
+            alt="Partenaire" 
+            className="max-h-full w-auto object-contain" 
+          />
         </div>
-      </section>
+      ))}
+    </motion.div>
+  </div>
+</section>
 
       {/* ==========================================
           UN ACCOMPAGNEMENT COMPLET (6 SERVICES)
@@ -475,13 +470,14 @@ export default function Home() {
           {/* Google Map Layer */}
           <div className="absolute inset-0 w-full h-full z-0">
             <iframe
-              title="Google Maps Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.0948924372993!2d-8.0142999!3d31.631778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM3JzU0LjQiTiA4wrAwMCc1MS41Ilc!5e0!3m2!1sfr!2sma!4v1640000000000!5m2!1sfr!2sma"
+              title="Localisation du Cabinet Attaleb"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7088924619967!2d-8.06422422369687!3d31.670697447470656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8dafe9b910b8755d%3A0x64e321e067c29370!2sCabinet%20Attaleb!5e0!3m2!1sfr!2sma!4v1715690000000!5m2!1sfr!2sma"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full object-cover"
             ></iframe>
           </div>
