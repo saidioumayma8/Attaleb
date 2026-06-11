@@ -26,6 +26,13 @@ import stanfordLogo from '../assets/stanford-university-logo.png';
 import uclLogo from '../assets/ucl-logo.webp';
 import columbiaLogo from '../assets/colombia-logo.png';
 import chicagoLogo from '../assets/chicago-logo.png';
+// Service backgrounds
+import campusImg from '../assets/campus.jpeg';
+import graduationImg from '../assets/graduation-ceremony.png';
+import classroomImg from '../assets/classroom-empty.png';
+import languesImg from '../assets/langues-team.png';
+import soutienImg from '../assets/soutien-hero.png';
+import coachingImg from '../assets/study-space.png';
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
   lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
@@ -142,105 +149,171 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Études à l'Étranger */}
- <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-  <div>
-    <Globe size={28} className="text-blue-500 mb-6" />
-    <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Études à l'Étranger</h3>
-    <ul className="space-y-3 text-xs text-slate-600">
-      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
-      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
-      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
-      <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
-    </ul>
-  </div>
-  <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-    Voir les destinations →
-  </Link>
-</div>
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={campusImg} 
+                alt="Études à l'Étranger" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="etudes-etranger" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Études à l'Étranger</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
+              </ul>
+            </div>
+            
+            <div className="relative z-10">
+              <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                Voir les destinations →
+              </Link>
+            </div>
+          </div>
 
           {/* Card 2: Bourses d'Études */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <Award size={28} className="text-amber-500 mb-6" />
-              <h3 id="bourses-etudes" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4 ">Bourses d'Études</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={graduationImg} 
+                alt="Bourses d'Études" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="bourses-etudes" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Bourses d'Études</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bourses d'excellence, d'exonération de frais et de subsistance</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Optimisation du dossier (lettres de motivation, recommandations)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Accompagnement aux entretiens et critères d'éligibilité</li>
               </ul>
             </div>
-            <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              Postuler aux bourses →
-            </Link>
+            
+            <div className="relative z-10">
+              <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                Postuler aux bourses →
+              </Link>
+            </div>
           </div>
 
           {/* Card 3: Préparation aux Concours */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <CheckCircle2 size={28} className="text-emerald-500 mb-6" />
-              <h3 id="preparation-concours" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Préparation aux Concours</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={classroomImg} 
+                alt="Préparation aux Concours" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="preparation-concours" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Préparation aux Concours</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Classes Préparatoires nationales et internationales (MPSI, PCSI)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Grandes Écoles Nationales d'élite : ENSA, ENCG, ENSAM</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Planning intensif de révision et examens blancs corrigés</li>
               </ul>
             </div>
-            <Link to="/concours" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              S'entraîner maintenant →
-            </Link>
+            
+            <div className="relative z-10">
+              <Link to="/concours" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                S'entraîner maintenant →
+              </Link>
+            </div>
           </div>
 
           {/* Card 4: Séjours Linguistiques */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <Send size={28} className="text-sky-500 mb-6" />
-              <h3 id="sejours-linguistiques" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={languesImg} 
+                alt="Séjours Linguistiques" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="sejours-linguistiques" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Cours d'Anglais, Allemand, Espagnol intensifs en écoles partenaires</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Préparation accélérée aux certifications : TCF, DELF, IELTS, TOEFL</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Logement en famille d'accueil ou en résidence étudiante inclus</li>
               </ul>
             </div>
-            <Link to="/langues" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              Découvrir les séjours →
-            </Link>
+            
+            <div className="relative z-10">
+              <Link to="/langues" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                Découvrir les séjours →
+              </Link>
+            </div>
           </div>
 
           {/* Card 5: Soutien Scolaire */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <BookOpen size={28} className="text-purple-500 mb-6" />
-              <h3 id="soutien-scolaire" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Soutien Scolaire</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={soutienImg} 
+                alt="Soutien Scolaire" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="soutien-scolaire" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Soutien Scolaire</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Matières scientifiques, littéraires et économiques</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Matières scientifiques, littéraires and économiques</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Formules adaptées : cours individuels sur mesure ou en mini-groupe</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Séances interactives en présentiel ou à distance en ligne</li>
               </ul>
             </div>
-            <Link to="/soutien" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              S'inscrire au soutien →
-            </Link>
+            
+            <div className="relative z-10">
+              <Link to="/soutien" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                S'inscrire au soutien →
+              </Link>
+            </div>
           </div>
 
           {/* Card 6: Orientation & Coaching */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <GraduationCap size={28} className="text-rose-500 mb-6" />
-              <h3 id="orientation-coaching" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Orientation & Coaching</h3>
-              <ul className="space-y-3 text-xs text-slate-600">
+          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+            <div className="absolute inset-0 pointer-events-none">
+              <img 
+                src={coachingImg} 
+                alt="Orientation & Coaching" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+              />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 id="orientation-coaching" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Orientation & Coaching</h3>
+              <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Coaching personnalisé pour élaborer un projet d'études cohérent</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Simulations réelles d'entretiens oraux de sélection</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Ateliers pratiques pour rédiger des CV et lettres percutants</li>
               </ul>
             </div>
-            <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-              Prendre rendez-vous →
-            </Link>
+            
+            <div className="relative z-10">
+              <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
+                Prendre rendez-vous →
+              </Link>
+            </div>
           </div>
 
         </div>
@@ -339,7 +412,7 @@ export default function Home() {
               <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
               <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />ATTALEB</h2>
               <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                Filiale de MECC, attaleb est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
+                Filiale de MICC, attaleb est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
               </p>
             </div>
 
@@ -397,33 +470,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NOTRE PROCESSUS */}
-      <section className="py-16 bg-slate-50 border-t border-b border-slate-100 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Comment ça marche</span>
-            <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">NOTRE PROCESSUS</h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { num: "01", title: "CONSULTATION INITIALE", desc: "Entretien gratuit de votre profil de projet d'études." },
-              { num: "02", title: "PLAN PERSONNALISÉ", desc: "Stratégie sur mesure pour la sélection des établissements, pays." },
-              { num: "03", title: "PRÉPARATION DOSSIER", desc: "Constitution rigoureuse et optimisation de vos documents." },
-              { num: "04", title: "ADMISSION & SUIVI", desc: "Accompagnement complet jusqu'à la confirmation d'inscription." }
-            ].map((step, idx) => (
-              <div key={idx} className="bg-white border border-slate-200/60 p-6 rounded-2xl text-center shadow-sm relative group">
-                <div className="w-10 h-10 bg-brand-blue text-white font-black text-xs rounded-full flex items-center justify-center mx-auto mb-4">
-                  {step.num}
-                </div>
-                <h3 className="font-black text-xs text-brand-blue uppercase tracking-wide mb-1.5">{step.title}</h3>
-                <p className="text-[11px] text-slate-500 font-light leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CE QUE DISENT NOS ÉTUDIANTS */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -472,7 +518,7 @@ export default function Home() {
           </div>
           <div className="relative z-20 max-w-md bg-white/90 p-8 rounded-2xl m-8">
             <h2 className="text-2xl font-black text-brand-blue uppercase">Contactez-nous</h2>
-            <p className="text-sm mt-4">Besoin d'accompagnement ? Appelez-nous au : +212 6 XX XX XX XX</p>
+            <p className="text-sm mt-4">Besoin d'accompagnement ? Appelez-nous au : +212 6 45212800</p>
           </div>
         </div>
       </section>
