@@ -26,13 +26,6 @@ import stanfordLogo from '../assets/stanford-university-logo.png';
 import uclLogo from '../assets/ucl-logo.webp';
 import columbiaLogo from '../assets/colombia-logo.png';
 import chicagoLogo from '../assets/chicago-logo.png';
-// Service backgrounds
-import campusImg from '../assets/campus.jpeg';
-import graduationImg from '../assets/graduation-ceremony.png';
-import classroomImg from '../assets/classroom-empty.png';
-import languesImg from '../assets/langues-team.png';
-import soutienImg from '../assets/soutien-hero.png';
-import coachingImg from '../assets/study-space.png';
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
   lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
@@ -149,17 +142,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Études à l'Étranger */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={campusImg} 
-                alt="Études à l'Étranger" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="etudes-etranger" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Études à l'Étranger</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
@@ -169,7 +153,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 Voir les destinations →
               </Link>
@@ -177,17 +161,8 @@ export default function Home() {
           </div>
 
           {/* Card 2: Bourses d'Études */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={graduationImg} 
-                alt="Bourses d'Études" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="bourses-etudes" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Bourses d'Études</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
@@ -197,7 +172,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 Postuler aux bourses →
               </Link>
@@ -205,17 +180,8 @@ export default function Home() {
           </div>
 
           {/* Card 3: Préparation aux Concours */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={classroomImg} 
-                alt="Préparation aux Concours" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="preparation-concours" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Préparation aux Concours</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
@@ -225,7 +191,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/concours" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 S'entraîner maintenant →
               </Link>
@@ -233,17 +199,8 @@ export default function Home() {
           </div>
 
           {/* Card 4: Séjours Linguistiques */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={languesImg} 
-                alt="Séjours Linguistiques" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="sejours-linguistiques" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
@@ -253,7 +210,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/langues" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 Découvrir les séjours →
               </Link>
@@ -261,17 +218,8 @@ export default function Home() {
           </div>
 
           {/* Card 5: Soutien Scolaire */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={soutienImg} 
-                alt="Soutien Scolaire" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="soutien-scolaire" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Soutien Scolaire</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
@@ -281,7 +229,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/soutien" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 S'inscrire au soutien →
               </Link>
@@ -289,17 +237,8 @@ export default function Home() {
           </div>
 
           {/* Card 6: Orientation & Coaching */}
-          <div className="relative overflow-hidden bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-            <div className="absolute inset-0 pointer-events-none">
-              <img 
-                src={coachingImg} 
-                alt="Orientation & Coaching" 
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-              />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to top, rgba(12, 35, 71, 0.95) 0%, rgba(12, 35, 71, 0.45) 50%, rgba(12, 35, 71, 0) 90%)' }}></div>
-            </div>
-            
-            <div className="relative z-10">
+          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="">
               <h3 id="orientation-coaching" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Orientation & Coaching</h3>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
@@ -309,7 +248,7 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="relative z-10">
+            <div className="">
               <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
                 Prendre rendez-vous →
               </Link>
