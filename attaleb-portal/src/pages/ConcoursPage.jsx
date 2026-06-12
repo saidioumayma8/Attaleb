@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 import { CheckCircle2, Zap, Globe, GraduationCap, ArrowRight, Star, Shield, Plane, Briefcase, Stethoscope, Cog, Scale } from 'lucide-react';
 import concoursTeacher from '../assets/classroom-teacher.png';
 import concoursLecture from '../assets/lecture-hall.png';
+import satLogo from '../assets/SAT.jfif';
+import gmatLogo from '../assets/GMAT.png';
+import greLogo from '../assets/GRE.svg';
+import sesameLogo from '../assets/SESAME.png';
+import actLogo from '../assets/ACT.png';
+import tageMageLogo from '../assets/TageMage.png';
 
 export default function ConcoursPage() {
   
   const concoursInternationaux = [
     { 
       name: "SAT", 
+      logo: satLogo,
       fullName: "Scholastic Assessment Test",
       flag: "🇺🇸",
       desc: "Le test standardisé américain requis pour l'admission dans les universités aux États-Unis et de nombreux programmes internationaux.", 
@@ -17,6 +24,7 @@ export default function ConcoursPage() {
     },
     { 
       name: "GMAT", 
+      logo: gmatLogo,
       fullName: "Graduate Management Admission Test",
       flag: "🌐",
       desc: "Le test de référence mondial pour les MBA et programmes de Master dans les Business Schools internationales.", 
@@ -25,6 +33,7 @@ export default function ConcoursPage() {
     },
     { 
       name: "SESAME", 
+      logo: sesameLogo,
       fullName: "Concours Écoles de Commerce",
       flag: "🇫🇷",
       desc: "Concours commun pour intégrer les grandes écoles de commerce françaises post-bac.", 
@@ -33,6 +42,7 @@ export default function ConcoursPage() {
     },
     { 
       name: "GRE", 
+      logo: greLogo,
       fullName: "Graduate Record Examinations",
       flag: "🌐",
       desc: "Requis pour les programmes de Master et Doctorat dans les universités américaines et canadiennes.", 
@@ -41,6 +51,7 @@ export default function ConcoursPage() {
     },
     { 
       name: "ACT", 
+      logo: actLogo,
       fullName: "American College Testing",
       flag: "🇺🇸",
       desc: "Alternative au SAT, accepté par toutes les universités américaines. Préparez les 4 sections avec efficacité.", 
@@ -49,6 +60,7 @@ export default function ConcoursPage() {
     },
     { 
       name: "TAGE MAGE", 
+      logo: tageMageLogo,
       fullName: "Test d'Aptitude à la Gestion",
       flag: "🇫🇷",
       desc: "Le test incontournable pour les admissions en Grandes Écoles de Commerce et IAE en France.", 
@@ -102,6 +114,22 @@ export default function ConcoursPage() {
               <GraduationCap size={14} /> Concours Nationaux
             </a>
           </div>
+
+          {/* Concours Logos Strip */}
+          <div className="flex justify-center items-center gap-3 md:gap-4 flex-nowrap overflow-x-auto px-4 pt-6">
+            {[
+              { src: satLogo, name: "SAT" },
+              { src: gmatLogo, name: "GMAT" },
+              { src: sesameLogo, name: "SESAME" },
+              { src: greLogo, name: "GRE" },
+              { src: actLogo, name: "ACT" },
+              { src: tageMageLogo, name: "TAGE MAGE" }
+            ].map((logo, i) => (
+              <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-2 hover:bg-white/20 hover:scale-110 transition-all duration-300 group">
+                <img src={logo.src} alt={logo.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -148,7 +176,13 @@ export default function ConcoursPage() {
                 <div className="p-6 md:p-8 space-y-4">
                   {/* Title Row */}
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl mt-0.5">{p.flag}</span>
+                    {p.logo ? (
+                      <div className="w-12 h-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-1 shadow-sm shrink-0 overflow-hidden">
+                        <img src={p.logo} alt={p.name} className="w-full h-full object-contain" />
+                      </div>
+                    ) : (
+                      <span className="text-3xl mt-0.5">{p.flag}</span>
+                    )}
                     <div>
                       <h3 className="text-lg font-black text-brand-blue uppercase tracking-wide">{p.name}</h3>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{p.fullName}</p>
@@ -278,13 +312,6 @@ export default function ConcoursPage() {
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-5">
               <p className="text-white text-sm font-black uppercase">Enseignement Interactif</p>
               <p className="text-slate-300 text-[11px]">Nos professeurs vous préparent avec méthode et passion</p>
-            </div>
-          </div>
-          <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-            <img src={concoursLecture} alt="Étudiants en préparation aux concours" className="w-full h-52 md:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-5">
-              <p className="text-white text-sm font-black uppercase">Préparation en Conditions Réelles</p>
-              <p className="text-slate-300 text-[11px]">Examens blancs et simulations pour garantir votre réussite</p>
             </div>
           </div>
         </div>

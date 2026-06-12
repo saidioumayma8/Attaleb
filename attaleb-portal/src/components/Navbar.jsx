@@ -12,15 +12,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           <div className="flex-shrink-0">
-            <div className="flex-shrink-0">
-  <Link to="/" className="flex items-center gap-2">
-    <img 
-      src={logo} 
-      alt="Attaleb Logo" 
-      className="h-12 w-auto object-contain" 
-    />
-  </Link>
-</div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+            {/* Logo */}
+            <Link to="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Attaleb Logo" 
+                className="h-10 w-auto object-contain" 
+              />
+            </Link>
+
+            {/* Texte */}
+            <Link to="/" className="text-xl md:text-2xl font-black tracking-wider text-white uppercase transition-colors">
+              Attaleb<span className="text-brand-gold">.net</span>
+            </Link>
+          </div>
           </div>
 
           {/* Desktop Navigation (Reste inchangé) */}

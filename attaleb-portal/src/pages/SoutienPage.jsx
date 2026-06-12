@@ -246,7 +246,7 @@ function SoutienLanding() {
           <p className="text-brand-gold text-[10px] font-black uppercase tracking-widest">Nos Espaces</p>
           <h2 className="text-xl md:text-2xl font-black text-brand-blue uppercase">Découvrez Notre Environnement d'Apprentissage</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="relative rounded-2xl overflow-hidden shadow-md group">
             <img src={officeTutoring} alt="Coaching individuel Attaleb" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-4">
@@ -261,42 +261,9 @@ function SoutienLanding() {
               <p className="text-slate-300 text-[10px]">Enseignants experts et interactifs</p>
             </div>
           </div>
-          <div className="relative rounded-2xl overflow-hidden shadow-md group">
-            <img src={lectureHall} alt="Amphithéâtre et conférences Attaleb" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-blue/90 to-transparent p-4">
-              <p className="text-white text-xs font-black uppercase">Conférences & Séminaires</p>
-              <p className="text-slate-300 text-[10px]">Salles de conférence pour événements</p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Notre Méthode */}
-      <section className="bg-white py-16 px-4 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">NOTRE MÉTHODE</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: <Target size={20} />, title: "Diagnostic Initial", desc: "Évaluation complète du niveau de l'élève pour identifier les lacunes et définir un plan d'action personnalisé." },
-              { icon: <Users size={20} />, title: "Groupes Réduits", desc: "Maximum 6 élèves par groupe pour garantir un encadrement de qualité et une attention individuelle." },
-              { icon: <Brain size={20} />, title: "Pédagogie Active", desc: "Exercices progressifs, cas pratiques et mises en situation pour ancrer les connaissances en profondeur." },
-              { icon: <ClipboardCheck size={20} />, title: "Suivi Régulier", desc: "Rapports de progression hebdomadaires envoyés aux parents avec notes et commentaires des enseignants." },
-              { icon: <Star size={20} />, title: "Enseignants Experts", desc: "Professeurs diplômés et expérimentés, spécialisés par matière et par système éducatif." },
-              { icon: <GraduationCap size={20} />, title: "Résultats Prouvés", desc: "95% de nos élèves améliorent leur moyenne de 3 à 5 points dès le premier trimestre." }
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
-                <div className="w-10 h-10 bg-brand-blue text-brand-gold rounded-xl flex items-center justify-center">
-                  {item.icon}
-                </div>
-                <h3 className="font-black text-xs text-brand-blue uppercase tracking-wide">{item.title}</h3>
-                <p className="text-[11px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section

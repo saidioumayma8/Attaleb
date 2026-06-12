@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, HelpCircle, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -14,11 +15,34 @@ export default function Contact() {
   
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logique d'envoi du formulaire (ex: API ou EmailJS)
-    console.log('Formulaire envoyé :', formData);
-    setSubmitted(true);
+    setSending(true);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/oumaymasaidi08@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Nouvelle demande de consultation - ' + formData.prenom + ' ' + formData.nom,
+          Nom: formData.nom,
+          Prenom: formData.prenom,
+          Email: formData.email,
+          Telephone: formData.telephone,
+          Destination: formData.destination,
+          Niveau: formData.niveau,
+          Message: formData.message || 'Aucun message supplementaire'
+        })
+      });
+      setSubmitted(true);
+    } catch (err) {
+      // Fallback: mailto
+      var body = 'Nom: ' + formData.nom + '%0D%0A' + 'Prenom: ' + formData.prenom + '%0D%0A' + 'Email: ' + formData.email + '%0D%0A' + 'Telephone: ' + formData.telephone + '%0D%0A' + 'Destination: ' + formData.destination + '%0D%0A' + 'Niveau: ' + formData.niveau + '%0D%0A' + 'Message: ' + formData.message;
+      window.location.href = 'mailto:oumaymasaidi08@gmail.com?subject=Demande de consultation - ' + formData.prenom + ' ' + formData.nom + '&body=' + body;
+      setSubmitted(true);
+    }
+    setSending(false);
   };
 
   const handleChange = (e) => {
@@ -165,9 +189,14 @@ export default function Contact() {
 
               <button 
                 type="submit"
-                className="w-full bg-brand-blue hover:bg-blue-950 text-white font-black text-xs uppercase tracking-wide py-3.5 px-6 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+                disabled={sending}
+                className="w-full bg-brand-blue hover:bg-blue-950 disabled:opacity-50 disabled:cursor-not-allowed text-white font-black text-xs uppercase tracking-wide py-3.5 px-6 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
               >
-                <Send size={14} className="text-brand-gold" /> Demander ma consultation gratuite
+                {sending ? (
+                  <><span className="w-4 h-4 border-2 border-white/30 border-t-amber-400 rounded-full inline-block animate-spin" /> Envoi en cours...</>
+                ) : (
+                  <><Send size={14} className="text-brand-gold" /> Demander ma consultation gratuite</>
+                )}
               </button>
             </form>
           )}

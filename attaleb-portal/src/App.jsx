@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Destinations from './pages/Destinations.jsx';
@@ -28,6 +29,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 relative">
       {/* Navigation Bar stays visible on top */}
+      <ScrollToTop />
       <Navbar />
       
       {/* Main Page Content switches dynamically based on the URL */}

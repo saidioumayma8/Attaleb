@@ -116,7 +116,7 @@ export default function Home() {
         <div className="w-full overflow-hidden">
           <motion.div 
             className="flex items-center gap-10"
-            animate={{ x: ["0%", "-50%"] }}
+            animate={{ x: ["0%", "-80%"] }}
             transition={{ duration: 25, ease: "linear", repeat: Infinity }}
           >
             {[...partnerLogos, ...partnerLogos].map((logoSrc, index) => (
@@ -342,72 +342,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* POURQUOI CHOISIR ATTALEB.MA ? */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-7 space-y-6">
-            <div>
-              <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Pourquoi nous ?</span>
-              <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">POURQUOI CHOISIR<br />ATTALEB</h2>
-              <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                Filiale de MICC, attaleb est le cabinet de consulting éducatif de référence à Marrakech. Notre équipe transforme vos ambitions en admissions réelles — en France, en Roumanie, au Canada et au-delà.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> EXPERTISE RECONNUE
-                </h4>
-                <p className="text-[11px] text-slate-500 pl-3.5 mt-0.5">Conseillers spécialisés par filière — droit, médecine, ingénierie, commerce — avec un réseau actif depuis plus de 10 ans.</p>
-              </div>
-              <div>
-                <h4 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> SUIVI PERSONNALISÉ
-                </h4>
-                <p className="text-[11px] text-slate-500 pl-3.5 mt-0.5">Chaque étudiant bénéficie d'un conseiller dédié, de la sélection des établissements jusqu'à l'obtention du visa.</p>
-              </div>
-              <div>
-                <h4 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> RÉSEAU INTERNATIONAL
-                </h4>
-                <p className="text-[11px] text-slate-500 pl-3.5 mt-0.5">300+ universités partenaires en France, Royaume-Uni, Allemagne, Espagne, Canada, Roumanie et bien au-delà.</p>
-              </div>
-              <div>
-                <h4 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> RÉSULTATS PROUVÉS
-                </h4>
-                <p className="text-[11px] text-slate-500 pl-3.5 mt-0.5">Plus de 500 étudiants accompagnés, 95% d'admissions obtenues dès la première candidature.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 bg-gradient-to-b from-brand-blue to-brand-blueDark p-8 rounded-3xl shadow-xl text-white border-b-4 border-brand-gold space-y-6">
-            <h3 className="font-black text-sm tracking-wider uppercase text-brand-gold">attaleb EN CHIFFRES</h3>
-            
-            <div className="space-y-4">
-              <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
-                <span className="text-xl font-black text-brand-gold">500+</span>
-                <span className="text-[11px] font-light text-slate-300">Étudiants accompagnés vers l'étranger</span>
-              </div>
-              <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
-                <span className="text-xl font-black text-brand-gold">95%</span>
-                <span className="text-[11px] font-light text-slate-300">Taux d'admission dès la 1ère candidature</span>
-              </div>
-              <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
-                <span className="text-xl font-black text-brand-gold">12+</span>
-                <span className="text-[11px] font-light text-slate-300">Pays de destination pris en charge</span>
-              </div>
-              <div className="bg-white/5 p-3.5 rounded-xl flex items-center gap-4 border border-white/5">
-                <span className="text-xl font-black text-brand-gold">300+</span>
-                <span className="text-[11px] font-light text-slate-300">Universités partenaires dans le monde</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
       {/* CE QUE DISENT NOS ÉTUDIANTS */}
       <section className="py-20 px-4 bg-white">

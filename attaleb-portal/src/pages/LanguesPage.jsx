@@ -4,6 +4,12 @@ import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, Arro
 import languesTeam from '../assets/langues-team.png';
 import languesExam from '../assets/langues-exam.png';
 import languesCoach from '../assets/langues-coach.png';
+import ieltsLogo from '../assets/IELTS.png';
+import toeflLogo from '../assets/TOEFL.jpg';
+import tcfLogo from '../assets/TCF.png';
+import deleLogo from '../assets/DELE.webp';
+import delfLogo from '../assets/DELF.png';
+import toeicLogo from '../assets/TOEIC.png';
 
 const languesDatabase = {
   'ielts': {
@@ -121,6 +127,7 @@ const englishCerts = [
   {
     slug: 'ielts',
     icon: 'globe',
+    logo: ieltsLogo,
     title: 'IELTS Academic',
     subtitle: 'International English Testing',
     flag: '🇬🇧',
@@ -133,6 +140,7 @@ const englishCerts = [
   {
     slug: 'toefl',
     icon: 'globe',
+    logo: toeflLogo,
     title: 'TOEFL iBT',
     subtitle: 'Test of English as a Foreign Language',
     flag: '🇺🇸',
@@ -145,6 +153,7 @@ const englishCerts = [
   {
     slug: 'toeic',
     icon: 'briefcase',
+    logo: toeicLogo,
     title: 'TOEIC',
     subtitle: 'Anglais Professionnel',
     flag: '💼',
@@ -161,6 +170,7 @@ const frenchCerts = [
   {
     slug: 'tcf-tef',
     icon: 'file',
+    logo: tcfLogo,
     title: 'TCF / TEF',
     subtitle: 'Test de Connaissance du Français',
     flag: '🇫🇷',
@@ -173,6 +183,7 @@ const frenchCerts = [
   {
     slug: 'delf-dalf',
     icon: 'award',
+    logo: delfLogo,
     title: 'DELF / DALF',
     subtitle: 'Diplômes Officiels à Vie',
     flag: '🇫🇷',
@@ -189,6 +200,7 @@ const spanishCerts = [
   {
     slug: 'espagnol-dele',
     icon: 'pen',
+    logo: deleLogo,
     title: 'DELE',
     subtitle: 'Diplomas de Español como Lengua Extranjera',
     flag: '🇪🇸',
@@ -246,6 +258,22 @@ function LanguesLanding() {
             <a href="#espagnol" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-5 py-2.5 rounded transition-all uppercase tracking-wider flex items-center gap-2">
               🇪🇸 Español
             </a>
+          </div>
+
+          {/* Certification Logos Strip */}
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 pt-6">
+            {[
+              { src: ieltsLogo, name: 'IELTS' },
+              { src: toeflLogo, name: 'TOEFL' },
+              { src: toeicLogo, name: 'TOEIC' },
+              { src: tcfLogo, name: 'TCF' },
+              { src: delfLogo, name: 'DELF' },
+              { src: deleLogo, name: 'DELE' },
+            ].map((logo, i) => (
+              <div key={i} className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-2 hover:bg-white/20 hover:scale-110 transition-all duration-300 group">
+                <img src={logo.src} alt={logo.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -311,7 +339,13 @@ function LanguesLanding() {
                 <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
                 <div className="p-6 space-y-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">{card.flag}</span>
+                    {card.logo ? (
+                      <div className="w-12 h-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-1 shadow-sm shrink-0 overflow-hidden">
+                        <img src={card.logo} alt={card.title} className="w-full h-full object-contain" />
+                      </div>
+                    ) : (
+                      <span className="text-2xl">{card.flag}</span>
+                    )}
                     <div>
                       <h3 className="font-black text-base text-brand-blue uppercase tracking-wide">{card.title}</h3>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
@@ -374,7 +408,13 @@ function LanguesLanding() {
                 <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
                 <div className="p-6 md:p-8 space-y-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{card.flag}</span>
+                    {card.logo ? (
+                      <div className="w-14 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-1.5 shadow-sm shrink-0 overflow-hidden">
+                        <img src={card.logo} alt={card.title} className="w-full h-full object-contain" />
+                      </div>
+                    ) : (
+                      <span className="text-3xl">{card.flag}</span>
+                    )}
                     <div>
                       <h3 className="font-black text-lg text-brand-blue uppercase tracking-wide">{card.title}</h3>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
@@ -437,7 +477,13 @@ function LanguesLanding() {
                 <div className={`h-1.5 bg-gradient-to-r ${card.color}`} />
                 <div className="p-6 md:p-8 space-y-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{card.flag}</span>
+                    {card.logo ? (
+                      <div className="w-14 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-1.5 shadow-sm shrink-0 overflow-hidden">
+                        <img src={card.logo} alt={card.title} className="w-full h-full object-contain" />
+                      </div>
+                    ) : (
+                      <span className="text-3xl">{card.flag}</span>
+                    )}
                     <div>
                       <h3 className="font-black text-lg text-brand-blue uppercase tracking-wide">{card.title}</h3>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
@@ -562,41 +608,9 @@ function LanguesLanding() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 Chez Attaleb, chaque étudiant bénéficie d'un suivi individuel avec un coach dédié qui l'accompagne du diagnostic initial jusqu'au jour de l'examen. Nos conseillers sont disponibles pour répondre à toutes vos questions.
               </p>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <div className="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100 text-center">
-                  <div className="text-lg font-black text-emerald-700">8</div>
-                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Max par Groupe</div>
-                </div>
-                <div className="bg-rose-50 px-4 py-2 rounded-xl border border-rose-100 text-center">
-                  <div className="text-lg font-black text-rose-700">1:1</div>
-                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Coaching</div>
-                </div>
-                <div className="bg-sky-50 px-4 py-2 rounded-xl border border-sky-100 text-center">
-                  <div className="text-lg font-black text-sky-700">7j/7</div>
-                  <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Support</div>
-                </div>
-              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: <Target size={20} />, color: "text-blue-500", title: "Méthode Ciblée", desc: "Entraînement spécifique aux formats de chaque test avec exercices types et corrections détaillées." },
-              { icon: <Mic size={20} />, color: "text-rose-500", title: "Expression Orale", desc: "Ateliers de conversation avec intervenants natifs pour maîtriser l'épreuve orale." },
-              { icon: <Award size={20} />, color: "text-amber-500", title: "Résultats Prouvés", desc: "95% de nos étudiants atteignent le score requis dès leur première tentative." },
-              { icon: <Headphones size={20} />, color: "text-purple-500", title: "Laboratoire Audio", desc: "Équipement professionnel pour la compréhension orale en conditions d'examen." },
-              { icon: <FileText size={20} />, color: "text-emerald-500", title: "Examens Blancs", desc: "Simulations complètes hebdomadaires avec évaluation et plan d'amélioration." },
-              { icon: <CheckCircle2 size={20} />, color: "text-sky-500", title: "Suivi Personnalisé", desc: "Groupes réduits (max 8 élèves) et coaching individuel pour progresser." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 space-y-3">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-slate-50 ${item.color}`}>
-                  {item.icon}
-                </div>
-                <h3 className="font-black text-xs text-brand-blue uppercase tracking-wide">{item.title}</h3>
-                <p className="text-[11px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </section>
 
       </main>

@@ -2,10 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Globe, FileText, CheckCircle2, ArrowRight, Target, Clock, MapPin, Star, BookOpen, Users, Sparkles } from 'lucide-react';
 
+import fulbrightLogo from '../assets/Fulbright-bourse.png';
+import cheveningLogo from '../assets/cheveningLogo.png';
+import vanierLogo from '../assets/vanierLogo.jpg';
+import usaLogo from '../assets/usaLogo.png';
+import pearsonLogo from '../assets/pearsonLogo.png';
+
 const bourses = [
   {
     id: 'fulbright',
     name: 'Fulbright',
+    logo: fulbrightLogo,
     country: 'États-Unis',
     flag: '🇺🇸',
     color: 'from-blue-600 to-red-600',
@@ -32,6 +39,7 @@ const bourses = [
   {
     id: 'chevening',
     name: 'Chevening',
+    logo: cheveningLogo,
     country: 'Royaume-Uni',
     flag: '🇬🇧',
     color: 'from-red-600 to-amber-500',
@@ -58,6 +66,7 @@ const bourses = [
   {
     id: 'vanier',
     name: 'Vanier CGS',
+    logo: vanierLogo,
     country: 'Canada',
     flag: '🇨🇦',
     color: 'from-red-600 to-red-800',
@@ -84,6 +93,7 @@ const bourses = [
   {
     id: 'usa-scholarship',
     name: 'USA Scholarships',
+    logo: usaLogo,
     country: 'États-Unis',
     flag: '🇺🇸',
     color: 'from-indigo-600 to-blue-800',
@@ -110,6 +120,7 @@ const bourses = [
   {
     id: 'pearson-canada',
     name: 'Pearson International',
+    logo: pearsonLogo,
     country: 'Canada',
     flag: '🇨🇦',
     color: 'from-emerald-600 to-teal-700',
@@ -156,11 +167,14 @@ export default function Bourses() {
             Fulbright, Chevening, Vanier, Pearson — Attaleb vous accompagne dans la candidature aux bourses les plus prestigieuses du monde.
           </p>
 
-          {/* Mini flags */}
-          <div className="flex justify-center gap-4 mt-8">
-            {['🇺🇸 Fulbright', '🇬🇧 Chevening', '🇨🇦 Vanier', '🇺🇸 USA', '🇨🇦 Pearson'].map((item, i) => (
-              <a key={i} href={`#${bourses[i].id}`} className="text-[10px] font-bold text-white/70 hover:text-brand-gold transition-colors uppercase tracking-wider">
-                {item}
+          {/* Bourse Logos Strip */}
+          <div className="flex flex-wrap justify-center items-center gap-5 md:gap-8 mt-8">
+            {bourses.map((bourse) => (
+              <a key={bourse.id} href={`#${bourse.id}`} className="flex flex-col items-center gap-2 group">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-3 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+                  <img src={bourse.logo} alt={bourse.name} className="w-full h-full object-contain" />
+                </div>
+                <span className="text-[9px] font-bold text-white/60 group-hover:text-brand-gold transition-colors uppercase tracking-wider text-center">{bourse.name}</span>
               </a>
             ))}
           </div>
@@ -196,8 +210,8 @@ export default function Bourses() {
               <div className="p-6 md:p-10">
                 {/* Header */}
                 <div className="flex flex-wrap items-start gap-4 mb-6">
-                  <div className={`w-14 h-14 rounded-2xl ${b.iconBg} flex items-center justify-center ${b.iconColor} shrink-0`}>
-                    {b.icon}
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center shrink-0 p-1.5 shadow-sm overflow-hidden">
+                    <img src={b.logo} alt={b.name} className="w-full h-full object-contain" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
@@ -270,30 +284,6 @@ export default function Bourses() {
           </section>
         ))}
 
-        {/* ═══ POURQUOI ATTALEB ═══ */}
-        <section className="pt-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">Pourquoi postuler avec Attaleb ?</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: <Target size={20} />, color: "text-blue-500", title: "Éligibilité Vérifiée", desc: "Analyse approfondie de votre profil pour identifier les bourses où vous avez le plus de chances." },
-              { icon: <FileText size={20} />, color: "text-rose-500", title: "Dossier Optimisé", desc: "CV, lettre de motivation et personal statement rédigés selon les standards internationaux." },
-              { icon: <Users size={20} />, color: "text-amber-500", title: "Coaching Entretien", desc: "Préparation aux entretiens de sélection avec simulations et feedback personnalisé." },
-              { icon: <Clock size={20} />, color: "text-purple-500", title: "Planning Personnalisé", desc: "Calendrier détaillé des deadlines et rappels pour ne rater aucune date limite." },
-              { icon: <Globe size={20} />, color: "text-emerald-500", title: "Réseau International", desc: "Connexions avec des anciens boursiers et mentors dans chaque pays cible." },
-              { icon: <CheckCircle2 size={20} />, color: "text-sky-500", title: "Suivi Complet", desc: "Accompagnement de A à Z — du choix de la bourse jusqu'à la soumission du dossier." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 space-y-3">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-slate-50 ${item.color}`}>
-                  {item.icon}
-                </div>
-                <h3 className="font-black text-xs text-brand-blue uppercase tracking-wide">{item.title}</h3>
-                <p className="text-[11px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
       </main>
 
