@@ -74,38 +74,6 @@ export default function Apropos() {
   </div>
 </section>
 
-        {/* SECTION ÉTUDES A L'ÉTRANGER + IMAGE CAMPUS INTERNATIONAL */}
-        <section className="space-y-8">
-          <div className="bg-blue-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div className="lg:col-span-2 space-y-4">
-              <span className="text-amber-400 font-semibold tracking-wide uppercase text-sm">International</span>
-              <h2 className="text-3xl font-bold">Accompagnement pour vos études à l'étranger</h2>
-              <p className="text-blue-100 leading-relaxed">
-                Notre programme est le leader marocain en termes d’accompagnement complet des étudiants qui souhaitent poursuivre leurs études à l’étranger, depuis le choix de l'université jusqu'à l'obtention du visa. 
-              </p>
-              <p className="text-blue-200 text-sm">
-                Nous prenons en charge votre dossier dès l'inscription, garantissant ainsi que votre future carrière est gérée de manière professionnelle et complète.
-              </p>
-            </div>
-            <div className="bg-blue-900/50 border border-blue-800 p-6 rounded-2xl space-y-4 text-center">
-              <div className="text-4xl font-extrabold text-amber-400">300+</div>
-              <p className="text-sm text-blue-100 font-medium">
-                Universités et institutions de formation partenaires à travers le monde pour vous offrir une insertion optimale.
-              </p>
-            </div>
-          </div>
-
-          {/* Image de mise en avant pour illustrer le départ à l'étranger */}
-          <div className="w-full h-64 sm:h-96 rounded-3xl overflow-hidden shadow-sm">
-            <img 
-              src={campusImage} 
-              alt="Campus universitaire international" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </section>
-
-
         {/* BOULE 3D + STEPS */}
         <section className="py-16 space-y-10 overflow-hidden">
           <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -189,7 +157,7 @@ export default function Apropos() {
                 initial={{ opacity: 0, x: -50, y: -50 }} whileInView={{ opacity: 1, x: 0, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.0, type: "spring" }}>
                 <motion.div className="bg-white/15 backdrop-blur-md rounded-2xl px-3 py-2 border border-white/20 shadow-lg" animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
                   <Banknote className="w-5 h-5 sm:w-6 sm:h-6 text-violet-300 mx-auto mb-0.5" />
-                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Bourses</span>
+                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Bourses d'Études</span>
                 </motion.div>
               </motion.div>
 
@@ -198,7 +166,7 @@ export default function Apropos() {
                 initial={{ opacity: 0, x: 50, y: -50 }} whileInView={{ opacity: 1, x: 0, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.2, type: "spring" }}>
                 <motion.div className="bg-white/15 backdrop-blur-md rounded-2xl px-3 py-2 border border-white/20 shadow-lg" animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}>
                   <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-300 mx-auto mb-0.5" />
-                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Études</span>
+                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Études Supérieures à l'Étranger</span>
                 </motion.div>
               </motion.div>
 
@@ -207,7 +175,7 @@ export default function Apropos() {
                 initial={{ opacity: 0, x: -50, y: 50 }} whileInView={{ opacity: 1, x: 0, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.6, type: "spring" }}>
                 <motion.div className="bg-white/15 backdrop-blur-md rounded-2xl px-3 py-2 border border-white/20 shadow-lg" animate={{ y: [0, 6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}>
                   <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-300 mx-auto mb-0.5" />
-                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Préparation</span>
+                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Préparations aux Concours</span>
                 </motion.div>
               </motion.div>
 
@@ -216,13 +184,45 @@ export default function Apropos() {
                 initial={{ opacity: 0, x: 50, y: 50 }} whileInView={{ opacity: 1, x: 0, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.4, type: "spring" }}>
                 <motion.div className="bg-white/15 backdrop-blur-md rounded-2xl px-3 py-2 border border-white/20 shadow-lg" animate={{ y: [0, 6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}>
                   <Languages className="w-5 h-5 sm:w-6 sm:h-6 text-rose-300 mx-auto mb-0.5" />
-                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Séjours</span>
+                  <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-tight block text-center">Soutien Scolaire</span>
                 </motion.div>
               </motion.div>
             </motion.div>
           </div>
 
         </section>
+        {/* SECTION ÉTUDES A L'ÉTRANGER + IMAGE CAMPUS INTERNATIONAL */}
+        <section className="space-y-8">
+          <div className="bg-blue-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="lg:col-span-2 space-y-4">
+              <span className="text-amber-400 font-semibold tracking-wide uppercase text-sm">International</span>
+              <h2 className="text-3xl font-bold">Accompagnement pour vos études à l'étranger</h2>
+              <p className="text-blue-100 leading-relaxed">
+                Notre programme est le leader marocain en termes d’accompagnement complet des étudiants qui souhaitent poursuivre leurs études à l’étranger, depuis le choix de l'université jusqu'à l'obtention du visa. 
+              </p>
+              <p className="text-blue-200 text-sm">
+                Nous prenons en charge votre dossier dès l'inscription, garantissant ainsi que votre future carrière est gérée de manière professionnelle et complète.
+              </p>
+            </div>
+            <div className="bg-blue-900/50 border border-blue-800 p-6 rounded-2xl space-y-4 text-center">
+              <div className="text-4xl font-extrabold text-amber-400">300+</div>
+              <p className="text-sm text-blue-100 font-medium">
+                Universités et institutions de formation partenaires à travers le monde pour vous offrir une insertion optimale.
+              </p>
+            </div>
+          </div>
+
+          {/* Image de mise en avant pour illustrer le départ à l'étranger */}
+          <div className="w-full h-64 sm:h-96 rounded-3xl overflow-hidden shadow-sm">
+            <img 
+              src={campusImage} 
+              alt="Campus universitaire international" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+
+
 
       </div>
     </div>

@@ -146,14 +146,6 @@ function SoutienLanding() {
             <p className="text-xs md:text-sm text-slate-300 max-w-lg font-medium leading-relaxed">
               Cours de soutien personnalisés pour tous les niveaux — du lycée marocain au système britannique, en passant par la mission française et l'université.
             </p>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-              <Link to="#formules" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-7 py-3 rounded-full transition-all uppercase tracking-wider flex items-center gap-2">
-                Découvrir <ArrowRight size={14} />
-              </Link>
-              <Link to="/contact" className="border-2 border-white/30 hover:border-white/60 text-white text-xs font-bold px-7 py-3 rounded-full transition-all uppercase tracking-wider">
-                S'inscrire
-              </Link>
-            </div>
 
             {/* Mini stats row */}
             <div className="flex gap-6 justify-center lg:justify-start pt-4">

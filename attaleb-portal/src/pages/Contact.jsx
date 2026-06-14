@@ -21,7 +21,7 @@ export default function Contact() {
     e.preventDefault();
     setSending(true);
     try {
-      const response = await fetch('https://formsubmit.co/ajax/oumaymasaidi08@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/medamineharifi@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
@@ -39,7 +39,7 @@ export default function Contact() {
     } catch (err) {
       // Fallback: mailto
       var body = 'Nom: ' + formData.nom + '%0D%0A' + 'Prenom: ' + formData.prenom + '%0D%0A' + 'Email: ' + formData.email + '%0D%0A' + 'Telephone: ' + formData.telephone + '%0D%0A' + 'Destination: ' + formData.destination + '%0D%0A' + 'Niveau: ' + formData.niveau + '%0D%0A' + 'Message: ' + formData.message;
-      window.location.href = 'mailto:oumaymasaidi08@gmail.com?subject=Demande de consultation - ' + formData.prenom + ' ' + formData.nom + '&body=' + body;
+      window.location.href = 'mailto:medamineharifi@gmail.com?subject=Demande de consultation - ' + formData.prenom + ' ' + formData.nom + '&body=' + body;
       setSubmitted(true);
     }
     setSending(false);

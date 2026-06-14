@@ -26,9 +26,13 @@ import stanfordLogo from '../assets/stanford-university-logo.png';
 import uclLogo from '../assets/ucl-logo.webp';
 import columbiaLogo from '../assets/colombia-logo.png';
 import chicagoLogo from '../assets/chicago-logo.png';
+import arizonalogo from '../assets/Arizona.png';
+import ascencia from '../assets/ascencia.png';
+import cardiff from '../assets/cardiff.png';
+import US from '../assets/US.png';
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
-  lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo
+  lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo, arizonalogo, ascencia, cardiff, US
 ];
 
 export default function Home() {
@@ -108,23 +112,39 @@ export default function Home() {
       </section>
 
 
-      {/* --- TA SECTION PARTENAIRES CORRIGÉE --- */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto mb-12 text-center px-4">
-          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">PARTENAIRES ACADÉMIQUES</h2>
+      {/* --- PARTENAIRES ACADEMIQUES - INFINITE LOOP CAROUSEL --- */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <div className="max-w-7xl mx-auto mb-10 text-center px-4">
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase tracking-wide">PARTENAIRES ACADEMIQUES</h2>
+          <p className="text-slate-500 text-sm mt-2">Nos universites partenaires a travers le monde</p>
         </div>
-        <div className="w-full overflow-hidden">
-          <motion.div 
-            className="flex items-center gap-10"
-            animate={{ x: ["0%", "-80%"] }}
-            transition={{ duration: 25, ease: "linear", repeat: Infinity }}
-          >
+
+        <style>{`
+          @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-80%); }
+          }
+          .logo-carousel {
+            animation: scrollLogos 40s linear infinite;
+          }
+          .logo-carousel:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        <div className="relative w-full overflow-hidden"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
+          }}>
+          <div className="flex items-center gap-6 logo-carousel will-change-transform"
+            style={{ width: 'max-content' }}>
             {[...partnerLogos, ...partnerLogos].map((logoSrc, index) => (
-              <div key={index} className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
-                <img src={logoSrc} alt="Partenaire" className="max-h-full w-auto object-contain" />
+              <div key={index} className="flex-shrink-0 w-40 h-24 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all duration-300 flex items-center justify-center p-4">
+                <img src={logoSrc} alt="Partenaire" className="max-h-full max-w-full object-contain" />
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
