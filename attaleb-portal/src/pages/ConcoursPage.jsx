@@ -125,7 +125,7 @@ export default function ConcoursPage() {
               { src: actLogo, name: "ACT" },
               { src: tageMageLogo, name: "TAGE MAGE" }
             ].map((logo, i) => (
-              <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-2 hover:bg-white/20 hover:scale-110 transition-all duration-300 group">
+              <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/90 backdrop-blur-sm border border-white/40 flex items-center justify-center p-2 hover:bg-white hover:scale-110 transition-all duration-300 group">
                 <img src={logo.src} alt={logo.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
               </div>
             ))}
@@ -269,36 +269,6 @@ export default function ConcoursPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* ╔═══════════════════════════════════════╗
-           ║   SECTION 3: PASSERELLE FRANCE          ║
-           ╚═══════════════════════════════════════╝ */}
-        <section className="bg-gradient-to-br from-brand-blue via-brand-blue to-brand-blueDark p-8 md:p-12 rounded-3xl text-white relative overflow-hidden">
-          {/* Decorative circles */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/10 rounded-full" />
-          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full" />
-          
-          <div className="relative z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl">🇫🇷</span>
-              <div>
-                <span className="text-brand-gold text-[10px] font-bold tracking-widest uppercase">Passerelle France</span>
-                <h2 className="text-xl md:text-2xl font-black uppercase">Aix-Marseille Université (AMU)</h2>
-              </div>
-            </div>
-            <p className="text-sm text-slate-300 leading-relaxed mb-8 max-w-2xl">
-              Accompagnement complet pour l'admission aux études de santé (PASS/LAS) en France. De la constitution du dossier Campus France jusqu'à l'inscription administrative.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {["Dossier Campus France", "Lettre de motivation", "Stratégie d'admission", "Soutien administratif"].map((f, j) => (
-                <div key={j} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 flex items-center gap-3">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0" />
-                  <span className="text-xs font-bold">{f}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

@@ -171,7 +171,7 @@ export default function Bourses() {
           <div className="flex flex-wrap justify-center items-center gap-5 md:gap-8 mt-8">
             {bourses.map((bourse) => (
               <a key={bourse.id} href={`#${bourse.id}`} className="flex flex-col items-center gap-2 group">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-3 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/40 flex items-center justify-center p-3 group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                   <img src={bourse.logo} alt={bourse.name} className="w-full h-full object-contain" />
                 </div>
                 <span className="text-[9px] font-bold text-white/60 group-hover:text-brand-gold transition-colors uppercase tracking-wider text-center">{bourse.name}</span>

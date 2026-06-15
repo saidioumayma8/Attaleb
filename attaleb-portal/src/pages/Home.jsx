@@ -30,9 +30,14 @@ import arizonalogo from '../assets/Arizona.png';
 import ascencia from '../assets/ascencia.png';
 import cardiff from '../assets/cardiff.png';
 import US from '../assets/US.png';
+import EU_Business_School_Logo from '../assets/EU_Business_School_Logo.png';
+import HEC_Paris from '../assets/HEC_Paris.png';
+import INSEA_logo from '../assets/INSEA_logo.png';
+import LSE from '../assets/LSE.png';
+import NEOMA from '../assets/NEOMA.jpg';
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
-  lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo, arizonalogo, ascencia, cardiff, US
+  lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo, arizonalogo, ascencia, cardiff, US, EU_Business_School_Logo, HEC_Paris, INSEA_logo, LSE, NEOMA
 ];
 
 export default function Home() {
@@ -128,7 +133,8 @@ export default function Home() {
             animation: scrollLogos 40s linear infinite;
           }
           .logo-carousel:hover {
-            animation-play-state: paused;
+            animation-play-state: pau
+            sed;
           }
         `}</style>
 

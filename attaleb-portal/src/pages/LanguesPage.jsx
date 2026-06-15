@@ -270,7 +270,7 @@ function LanguesLanding() {
               { src: delfLogo, name: 'DELF' },
               { src: deleLogo, name: 'DELE' },
             ].map((logo, i) => (
-              <div key={i} className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-2 hover:bg-white/20 hover:scale-110 transition-all duration-300 group">
+              <div key={i} className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/40 flex items-center justify-center p-2 hover:bg-white hover:scale-110 transition-all duration-300 group">
                 <img src={logo.src} alt={logo.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
               </div>
             ))}
