@@ -24,6 +24,7 @@ import LanguesPage from './pages/LanguesPage.jsx';
 import SoutienPage from './pages/SoutienPage.jsx';
 import Apropos from './pages/Apropos.jsx';
 import Bourses from './pages/Bourses.jsx';
+import SejoursPage from './pages/SejoursPage.jsx';
 
 export default function App() {
   return (
@@ -55,8 +56,10 @@ export default function App() {
           {/* Wildcard catch-all LAST */}
           <Route path="/destinations/:countrySlug" element={<DestinationDetail />} />
           <Route path="/concours" element={<ConcoursPage />} />
+          <Route path="/concours/:slug" element={<ConcoursPage />} />
           <Route path="/langues" element={<LanguesPage />} />
           <Route path="/langues/:slug" element={<LanguesPage />} />
+          <Route path="/sejours-linguistiques" element={<SejoursPage />} />
           <Route path="/soutien" element={<SoutienPage />} />
           <Route path="/soutien/:slug" element={<SoutienPage />} />
           <Route path="/contact" element={<Contact />} />

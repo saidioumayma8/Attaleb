@@ -27,7 +27,7 @@ export default function Apropos() {
 >
   <div className="max-w-3xl mx-auto px-4 relative z-10">
     <h1 className="text-3xl md:text-5xl font-black tracking-tight uppercase text-white">
-      À Propos de <span className="text-amber-400">Attaleb.net</span>
+      À Propos de <span className="text-amber-400">Attaleb</span>
     </h1>
     <p className="text-sm md:text-base text-slate-200 mt-4 max-w-xl mx-auto font-medium leading-relaxed drop-shadow-sm">
       Votre partenaire de confiance pour une orientation scolaire et universitaire réussie.
@@ -60,10 +60,10 @@ export default function Apropos() {
         Parce que chaque étudiant mérite des informations fiables
       </h2>
       <p className="text-lg text-gray-600 leading-relaxed">
-        Nous croyons fermement que tout étudiant mérite de recevoir des informations fiables et précises sur les choix qui s'offrent à lui. Afin qu'il puisse prendre des décisions éclairées et réussir dans ses études et sa carrière, nous avons créé la plateforme <span className="font-semibold text-blue-600">attaleb.net</span>.
+        Nous croyons fermement que tout étudiant mérite de recevoir des informations fiables et précises sur les choix qui s'offrent à lui. Afin qu'il puisse prendre des décisions éclairées et réussir dans ses études et sa carrière, nous avons créé la plateforme <span className="font-semibold text-blue-600">Attaleb</span>.
       </p>
       <p className="text-gray-600 leading-relaxed">
-        Grâce à Attaleb.net, les étudiants marocains disposent enfin d'une plateforme en ligne qui leur permet d'obtenir des informations précises sur les différentes options pour leurs études supérieures au Maroc.
+        Grâce à Attaleb, les étudiants marocains disposent enfin d'une plateforme en ligne qui leur permet d'obtenir des informations précises sur les différentes options pour leurs études supérieures au Maroc.
       </p>
     </div>
   </div>

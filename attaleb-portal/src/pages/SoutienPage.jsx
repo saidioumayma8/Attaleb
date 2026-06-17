@@ -1,11 +1,10 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { BookOpen, Award, CheckCircle2, GraduationCap, ClipboardCheck, Users, Brain, ArrowRight, Target, Star } from 'lucide-react';
+import { BookOpen, Award, CheckCircle2, GraduationCap, ClipboardCheck, Users, Brain, ArrowRight, Target, Star, LineChart, Dna, Beaker, Calculator } from 'lucide-react';
 import soutienHero from '../assets/soutien-hero.png';
 import soutienCta from '../assets/soutien-cta.png';
 import officeTutoring from '../assets/office-tutoring.png';
 import classroomTeacher from '../assets/classroom-teacher.png';
-import lectureHall from '../assets/lecture-hall.png';
 
 const soutienDatabase = {
   'lycee-marocain': {
@@ -14,9 +13,13 @@ const soutienDatabase = {
     bgImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80",
     overview: "Le programme du Bac Marocain demande une grande rigueur. Nos cours de soutien se concentrent sur la compréhension profonde des concepts et la maîtrise des méthodes de résolution pour exceller aux examens nationaux.",
     details: [
-      { title: "Matières Scientifiques", desc: "Focus sur les Mathématiques, la Physique-Chimie et les Sciences de la Vie et de la Terre (SVT) pour les filières BIOF et standard." },
       { title: "Préparation aux Examens", desc: "Entraînement intensif dès le début de l'année sur les annales des examens nationaux et régionaux." },
       { title: "Suivi Continu", desc: "Contrôles continus blancs et rapports de progression réguliers envoyés aux parents." }
+    ],
+    subjects: [
+      { name: "Mathématiques", icon: "function", desc: "Algèbre, analyse, géométrie et probabilités pour toutes les branches scientifiques." },
+      { name: "Physique-Chimie", icon: "flask", desc: "Ondes, mécanique, électricité, réactions chimiques et cinétique." },
+      { name: "Sciences de la Vie et de la Terre (SVT)", icon: "dna", desc: "Génétique, immunologie, géologie et biologie cellulaire." }
     ],
     features: [
       "Groupes réduits pour un encadrement optimal",
@@ -36,6 +39,13 @@ const soutienDatabase = {
       { title: "Méthodologie AEFE", desc: "Focus sur la rédaction, l'analyse de documents et la rigueur scientifique propre au système français." },
       { title: "Coaching Personnalisé", desc: "Aide à l'organisation du travail personnel et à la gestion de la charge de travail du lycée." }
     ],
+    subjects: [
+      { name: "Mathématiques", icon: "function", desc: "Enseignement de spécialité et tronc commun, préparation au Baccalauréat français." },
+      { name: "Physique-Chimie", icon: "flask", desc: "Programmes AEFE de spécialité, travaux pratiques et méthodologie de rédaction." },
+      { name: "Sciences de la Vie et de la Terre (SVT)", icon: "dna", desc: "Biologie, géologie et préparation à l'épreuve écrite du Bac." },
+      { name: "SES (Sciences Économiques)", icon: "line-chart", desc: "Économie, sociologie et regards croisés pour la spécialité SES." },
+      { name: "Français & Philosophie", icon: "book-open", desc: "Méthodologie de la dissertation, du commentaire de texte et préparation aux oraux." }
+    ],
     features: [
       "Intervenants maîtrisant parfaitement les programmes français",
       "Préparation approfondie aux épreuves de spécialité",
@@ -44,33 +54,21 @@ const soutienDatabase = {
     ],
     ctaText: "Optimisez vos chances d'intégrer les CPGE ou les universités françaises."
   },
-  'universitaire': {
-    name: "Soutien Universitaire",
-    tagline: "Réussissez vos modules complexes en Faculté, Grandes Écoles ou classes préparatoires.",
-    bgImage: "https://images.unsplash.com/photo-1541339907198-e08756defeec?auto=format&fit=crop&w=1600&q=80",
-    overview: "Le passage du lycée à l'enseignement supérieur est un défi majeur. Nos cours de soutien universitaire aident les étudiants en économie, gestion, sciences et ingénierie à valider leurs modules avec mention.",
-    details: [
-      { title: "Sciences de Gestion & Éco", desc: "Comptabilité, Microéconomie, Macroéconomie, Statistiques et Mathématiques Financières." },
-      { title: "Filières Ingénierie", desc: "Analyse réelle, Algèbre linéaire, Thermodynamique, Électromagnétisme et Algorithmique." },
-      { title: "Préparation aux Partiels", desc: "Sessions intensives avant les périodes d'examens pour réviser les points clés du semestre." }
-    ],
-    features: [
-      "Traitement des anciens sujets d'examens (Partiels)",
-      "Clarification des concepts abstraits",
-      "Aide à la résolution de TD complexes",
-      "Méthodologie de travail universitaire"
-    ],
-    ctaText: "Ne laissez pas un module bloquer votre progression universitaire."
-  },
   'as-a-level': {
     name: "AS AND A LEVEL (British System)",
     tagline: "Excellence académique pour le curriculum britannique : maximisez vos scores A/A* pour les meilleures universités.",
     bgImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80",
     overview: "Le système A-Level est la référence pour l'admission aux universités prestigieuses (Oxford, Cambridge, Russell Group). Nous offrons un soutien ciblé pour maîtriser les spécificités des examens Cambridge et Edexcel.",
     details: [
-      { title: "Matières Clés", desc: "Soutien intensif en Mathematics, Physics, Chemistry, Biology et Economics." },
       { title: "Préparation Examens", desc: "Entraînement rigoureux sur les Past Papers et maîtrise du schéma de notation (Mark Schemes)." },
       { title: "Transition AS → A2", desc: "Accompagnement continu pour maintenir un niveau d'excellence entre la première et la deuxième année." }
+    ],
+    subjects: [
+      { name: "Mathematics", icon: "function", desc: "Pure Mathematics, Statistics, and Mechanics (Cambridge & Edexcel)." },
+      { name: "Physics", icon: "flask", desc: "Mechanics, fields, waves, nuclear physics and practical exam skills." },
+      { name: "Chemistry", icon: "flask", desc: "Physical, organic, and inorganic chemistry, including transition metals." },
+      { name: "Biology", icon: "dna", desc: "Biochemistry, cell biology, physiology, genetics, and ecology." },
+      { name: "Economics", icon: "line-chart", desc: "Microeconomics and macroeconomics, analysis of market failures and policies." }
     ],
     features: [
       "Tuteurs anglophones experts en curriculum IG/AL",
@@ -101,15 +99,6 @@ const soutienCards = [
     desc: 'Soutien pour les élèves du système français : Brevet, Bac français et préparation Parcoursup.',
     levels: '3ème → Terminale',
     color: 'from-blue-600 to-blue-800'
-  },
-  {
-    slug: 'universitaire',
-    icon: '🎓',
-    title: 'Soutien Universitaire',
-    subtitle: 'Faculté & Grandes Écoles',
-    desc: 'Modules complexes en gestion, économie, sciences et ingénierie. Préparation aux partiels.',
-    levels: 'Licence & Prépa',
-    color: 'from-purple-600 to-purple-800'
   },
   {
     slug: 'as-a-level',
@@ -144,7 +133,7 @@ function SoutienLanding() {
               <span className="text-brand-gold">examens</span> avec <br />Attaleb
             </h1>
             <p className="text-xs md:text-sm text-slate-300 max-w-lg font-medium leading-relaxed">
-              Cours de soutien personnalisés pour tous les niveaux — du lycée marocain au système britannique, en passant par la mission française et l'université.
+              Cours de soutien personnalisés pour tous les niveaux — du lycée marocain au système britannique, en passant par la mission française.
             </p>
 
             {/* Mini stats row */}
@@ -183,7 +172,7 @@ function SoutienLanding() {
               {/* Floating badge bottom-left */}
               <div className="absolute -bottom-3 -left-3 bg-white text-brand-blue rounded-xl px-3 py-2 shadow-lg -rotate-2">
                 <div className="text-[10px] font-black flex items-center gap-1.5">
-                  <GraduationCap size={14} className="text-brand-gold" /> 4 Programmes
+                  <GraduationCap size={14} className="text-brand-gold" /> 3 Cursus
                 </div>
               </div>
             </div>
@@ -201,31 +190,33 @@ function SoutienLanding() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {soutienCards.map((card) => (
             <Link
               key={card.slug}
               to={`/soutien/${card.slug}`}
-              className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className={`h-2 bg-gradient-to-r ${card.color}`} />
-              <div className="p-6 md:p-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">{card.icon}</span>
-                  <div>
-                    <h3 className="font-black text-base text-brand-blue uppercase tracking-wide">{card.title}</h3>
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
+              <div>
+                <div className={`h-2 bg-gradient-to-r ${card.color}`} />
+                <div className="p-6 md:p-8 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">{card.icon}</span>
+                    <div>
+                      <h3 className="font-black text-base text-brand-blue uppercase tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{card.subtitle}</p>
+                    </div>
                   </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                    {card.levels}
-                  </span>
-                  <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
-                    Voir le programme <ArrowRight size={12} />
-                  </span>
-                </div>
+              </div>
+              <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-between">
+                <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                  {card.levels}
+                </span>
+                <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                  Voir le programme <ArrowRight size={12} />
+                </span>
               </div>
             </Link>
           ))}
@@ -255,7 +246,6 @@ function SoutienLanding() {
           </div>
         </div>
       </section>
-
 
       {/* CTA */}
       <section
@@ -330,6 +320,7 @@ function SoutienDetail() {
       {/* 2. Main Content */}
       <main className="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 space-y-8">
+          {/* Pedagogic Overview */}
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-6">
             <div className="space-y-4">
               <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2">
@@ -349,6 +340,31 @@ function SoutienDetail() {
             </div>
           </div>
 
+          {/* Subjects Taught Section */}
+          <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+            <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2">
+              <BookOpen size={20} className="text-brand-gold" /> Matières Enseignées
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {data.subjects.map((subj, i) => (
+                <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-3 hover:bg-slate-100/50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                    {subj.icon === 'function' && <Calculator size={16} />}
+                    {subj.icon === 'flask' && <Beaker size={16} />}
+                    {subj.icon === 'dna' && <Dna size={16} />}
+                    {subj.icon === 'line-chart' && <LineChart size={16} />}
+                    {subj.icon === 'book-open' && <BookOpen size={16} />}
+                  </div>
+                  <div className="space-y-0.5 text-left">
+                    <h4 className="text-xs font-black text-brand-blue uppercase">{subj.name}</h4>
+                    <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{subj.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Features / Method */}
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100">
             <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2 mb-8">
               <Users size={20} className="text-brand-gold" /> Notre Méthode de Réussite
