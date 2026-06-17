@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { HelmetProvider } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
@@ -25,6 +26,7 @@ import SoutienPage from './pages/SoutienPage.jsx';
 import Apropos from './pages/Apropos.jsx';
 import Bourses from './pages/Bourses.jsx';
 import SejoursPage from './pages/SejoursPage.jsx';
+
 
 export default function App() {
   return (

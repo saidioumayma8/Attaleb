@@ -367,7 +367,7 @@ function LanguesLanding() {
                         {card.validity}
                       </span>
                     </div>
-                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                       Détails <ArrowRight size={12} />
                     </span>
                   </div>
@@ -436,7 +436,7 @@ function LanguesLanding() {
                         Validité : {card.validity}
                       </span>
                     </div>
-                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                       Détails <ArrowRight size={12} />
                     </span>
                   </div>
@@ -505,7 +505,7 @@ function LanguesLanding() {
                         Validité : {card.validity}
                       </span>
                     </div>
-                    <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                       Détails <ArrowRight size={12} />
                     </span>
                   </div>

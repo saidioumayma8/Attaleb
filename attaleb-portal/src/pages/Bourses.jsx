@@ -274,7 +274,7 @@ export default function Bourses() {
                     <FileText size={11} className="text-brand-gold" /> Durée : {b.duration}
                   </div>
                   <div className="ml-auto">
-                    <Link to="/contact" className="inline-flex items-center gap-1.5 text-[11px] font-black text-brand-gold hover:text-brand-goldHover transition-colors uppercase tracking-wider">
+                    <Link to="/contact" className="inline-flex items-center gap-1.5 text-[11px] font-black text-red-600 hover:text-red-700 transition-colors uppercase tracking-wider">
                       Postuler avec Attaleb <ArrowRight size={13} />
                     </Link>
                   </div>

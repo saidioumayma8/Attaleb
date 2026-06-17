@@ -431,7 +431,7 @@ function ConcoursLanding() {
                   <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200 uppercase tracking-wider">
                     Préparation d'élite
                   </span>
-                  <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                     Voir les détails <ArrowRight size={12} />
                   </span>
                 </div>
@@ -506,7 +506,7 @@ function ConcoursLanding() {
                   <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200 uppercase tracking-wider">
                     Concours Maroc
                   </span>
-                  <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                     Voir les détails <ArrowRight size={12} />
                   </span>
                 </div>

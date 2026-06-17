@@ -9,7 +9,7 @@ import classroomTeacher from '../assets/classroom-teacher.png';
 const soutienDatabase = {
   'lycee-marocain': {
     name: "Soutien Lycée (Bac Marocain)",
-    tagline: "Assurez votre mention au Baccalauréat avec nos cours de soutien d'excellence en Mathématiques, PC et SVT.",
+    tagline: "Assurez votre mention au Baccalauréat avec nos cours de soutien d'excellence en Mathématiques, PC, Anglais et SVT.",
     bgImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80",
     overview: "Le programme du Bac Marocain demande une grande rigueur. Nos cours de soutien se concentrent sur la compréhension profonde des concepts et la maîtrise des méthodes de résolution pour exceller aux examens nationaux.",
     details: [
@@ -19,6 +19,7 @@ const soutienDatabase = {
     subjects: [
       { name: "Mathématiques", icon: "function", desc: "Algèbre, analyse, géométrie et probabilités pour toutes les branches scientifiques." },
       { name: "Physique-Chimie", icon: "flask", desc: "Ondes, mécanique, électricité, réactions chimiques et cinétique." },
+      { name: "Anglais", icon: "book-open", desc: "Communication écrite et orale, grammaire et vocabulaire." },
       { name: "Sciences de la Vie et de la Terre (SVT)", icon: "dna", desc: "Génétique, immunologie, géologie et biologie cellulaire." }
     ],
     features: [
@@ -214,7 +215,7 @@ function SoutienLanding() {
                 <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                   {card.levels}
                 </span>
-                <span className="text-[11px] font-bold text-brand-gold group-hover:underline flex items-center gap-1">
+                <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
                   Voir le programme <ArrowRight size={12} />
                 </span>
               </div>
