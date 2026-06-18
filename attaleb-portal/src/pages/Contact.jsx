@@ -21,21 +21,28 @@ export default function Contact() {
     e.preventDefault();
     setSending(true);
     try {
-      const response = await fetch('https://formsubmit.co/ajax/medamineharifi@gmail.com', {
+      const formPayload = new FormData();
+      formPayload.append('_subject', 'Nouvelle demande de consultation - ' + formData.prenom + ' ' + formData.nom);
+      formPayload.append('Nom', formData.nom);
+      formPayload.append('Prenom', formData.prenom);
+      formPayload.append('Email', formData.email);
+      formPayload.append('Telephone', formData.telephone);
+      formPayload.append('Destination', formData.destination);
+      formPayload.append('Niveau', formData.niveau);
+      formPayload.append('Message', formData.message || 'Aucun message supplementaire');
+      formPayload.append('_template', 'table');
+
+      const response = await fetch('https://formsubmit.co/medamineharifi@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'Nouvelle demande de consultation - ' + formData.prenom + ' ' + formData.nom,
-          Nom: formData.nom,
-          Prenom: formData.prenom,
-          Email: formData.email,
-          Telephone: formData.telephone,
-          Destination: formData.destination,
-          Niveau: formData.niveau,
-          Message: formData.message || 'Aucun message supplementaire'
-        })
+        headers: { 'Accept': 'application/json' },
+        body: formPayload
       });
-      setSubmitted(true);
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        throw new Error('FormSubmit error');
+      }
     } catch (err) {
       // Fallback: mailto
       var body = 'Nom: ' + formData.nom + '%0D%0A' + 'Prenom: ' + formData.prenom + '%0D%0A' + 'Email: ' + formData.email + '%0D%0A' + 'Telephone: ' + formData.telephone + '%0D%0A' + 'Destination: ' + formData.destination + '%0D%0A' + 'Niveau: ' + formData.niveau + '%0D%0A' + 'Message: ' + formData.message;
