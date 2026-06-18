@@ -227,25 +227,14 @@ export default function ChineDetail() {
           </div>
 
 {/* Card de Contact - Version Jaune Lumineux Doux */}
-<div className="bg-amber-100 p-6 rounded-2xl shadow-sm space-y-4 text-center border border-amber-200">
-  <h4 className="font-black text-sm uppercase tracking-wide text-brand-blue">
-    Besoin d'accompagnement ?
-  </h4>
-  <p className="text-[11px] text-slate-800 leading-relaxed font-black">
-    Contactez-nous pour commencer votre parcours
-  </p>
-  <div className="pt-2">
-    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-      Des questions ? Appelez-nous :
-    </p>
-    <a 
-      href="tel:0645212800" 
-      className="text-sm font-black text-white block mt-1.5 tracking-wide bg-brand-blue py-2.5 rounded-xl hover:bg-brand-blue/90 transition-all shadow-md"
-    >
-      06 45 21 28 00
-    </a>
-  </div>
-</div>
+<div className="lg:col-span-1 space-y-6">
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4 sticky top-6 text-center">
+            <h3 className="font-black text-lg uppercase tracking-wide text-brand-blue">Contactez-nous</h3>
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
+              06 45 21 28 00
+            </a>
+          </div>
+        </div>
 
         </div>
       </main>

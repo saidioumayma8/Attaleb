@@ -185,18 +185,14 @@ export default function SejoursPage() {
       </main>
 
       {/* CTA Bottom Section */}
-      <section className="py-16 px-4 bg-white text-center">
-        <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">
-            Prêt à partir en <span className="text-red-600">immersion</span> ?
-          </h2>
-          <div className="flex justify-center pt-4">
+      <div className="lg:col-span-1 space-y-6">
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4 sticky top-6 text-center">
+            <h3 className="font-black text-lg uppercase tracking-wide text-brand-blue">Contactez-nous</h3>
             <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>
         </div>
-      </section>
     </div>
   );
 }
