@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Globe, GraduationCap, CheckCircle2, Plane, Home as HomeIcon, Star, Users, Phone, ArrowRight, Shield, BookOpen, Languages } from 'lucide-react';
 import ukFlag from '../assets/Flag_of_the_United_Kingdom_(3-5).svg.webp';
 import canadaFlag from '../assets/Flag-Canada.webp';
-import usaFlag from '../assets/US.png';
 
 export default function SejoursPage() {
   const formulas = [
@@ -35,7 +34,7 @@ export default function SejoursPage() {
       gradient: "from-amber-500 to-orange-600",
       checkColor: "text-amber-500",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-      flag: usaFlag
+      flag: "https://flagcdn.com/w640/us.png"
     }
   ];
 
