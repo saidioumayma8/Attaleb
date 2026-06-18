@@ -274,8 +274,8 @@ export default function Bourses() {
                     <FileText size={11} className="text-brand-gold" /> Durée : {b.duration}
                   </div>
                   <div className="ml-auto">
-                    <Link to="/contact" className="inline-flex items-center gap-1.5 text-[11px] font-black text-red-600 hover:text-red-700 transition-colors uppercase tracking-wider">
-                      Postuler avec Attaleb <ArrowRight size={13} />
+                    <Link to="/contact" className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider group">
+                      Postuler avec Attaleb <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -288,19 +288,13 @@ export default function Bourses() {
       </main>
 
       {/* ─── CTA ─── */}
-      <section className="py-16 px-4 bg-brand-blue text-white text-center">
+      <section className="py-16 px-4 bg-white text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-3xl font-black uppercase">
-            Candidature <span className="text-brand-gold">gratuite</span>
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">
+            Candidature <span className="text-red-600">gratuite</span>
           </h2>
-          <p className="text-xs text-slate-300 leading-relaxed">
-            Contactez-nous pour une évaluation gratuite de votre éligibilité et un plan de candidature personnalisé.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link to="/contact" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
-              Évaluer Mon Éligibilité
-            </Link>
-            <a href="tel:0645212800" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
+          <div className="flex justify-center pt-4">
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>

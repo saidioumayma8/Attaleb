@@ -223,7 +223,7 @@ export default function Contact() {
 
             <div className="space-y-3.5 pt-2 text-xs font-medium">
               <div className="flex items-start gap-3">
-                <Phone size={16} className="text-brand-gold shrink-0 mt-0.5" />
+                <Phone size={16} className="text-emerald-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase">Téléphone Consultant</span>
                   <a href="tel:0631550128" className="hover:text-brand-gold font-bold tracking-wide">06 45 21 28 00</a>
@@ -231,7 +231,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail size={16} className="text-brand-gold shrink-0 mt-0.5" />
+                <Mail size={16} className="text-violet-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase">Support Émail</span>
                   <a href="mailto:contact@attaleb.ma" className="hover:text-brand-gold font-bold">contact@attaleb.ma</a>
@@ -239,7 +239,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin size={16} className="text-brand-gold shrink-0 mt-0.5" />
+                <MapPin size={16} className="text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase">Service Consulaire / Visas</span>
                   <p className="text-slate-200 text-[11px] leading-relaxed">

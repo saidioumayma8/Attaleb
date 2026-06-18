@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, ArrowRight, Star, Mic, Headphones, PenTool, MessageSquare, Briefcase } from 'lucide-react';
+import { BookOpen, Award, CheckCircle2, Globe, FileText, Languages, Target, ArrowRight, Star, Mic, Headphones, PenTool, MessageSquare, Briefcase, Zap, Users } from 'lucide-react';
 import languesTeam from '../assets/langues-team.png';
 import languesExam from '../assets/langues-exam.png';
 import languesCoach from '../assets/langues-coach.png';
@@ -354,21 +354,13 @@ function LanguesLanding() {
                   <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
 
                   <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <Star size={11} className="text-amber-500 shrink-0" />
                     <span className="font-medium">{card.schools}</span>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="flex gap-2">
-                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                        {card.levels}
-                      </span>
-                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
-                        {card.validity}
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
-                      Détails <ArrowRight size={12} />
+                  <div className="flex items-center justify-end pt-2">
+                    <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
+                      Voir les détails <ArrowRight size={12} />
                     </span>
                   </div>
                 </div>
@@ -423,21 +415,13 @@ function LanguesLanding() {
                   <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
 
                   <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <Star size={11} className="text-amber-500 shrink-0" />
                     <span className="font-medium">{card.schools}</span>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="flex gap-2">
-                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                        {card.levels}
-                      </span>
-                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
-                        Validité : {card.validity}
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
-                      Détails <ArrowRight size={12} />
+                  <div className="flex items-center justify-end pt-2">
+                    <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
+                      Voir les détails <ArrowRight size={12} />
                     </span>
                   </div>
                 </div>
@@ -492,21 +476,13 @@ function LanguesLanding() {
                   <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
 
                   <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-                    <Star size={11} className="text-brand-gold shrink-0" />
+                    <Star size={11} className="text-amber-500 shrink-0" />
                     <span className="font-medium">{card.schools}</span>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="flex gap-2">
-                      <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                        {card.levels}
-                      </span>
-                      <span className="text-[10px] font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-200">
-                        Validité : {card.validity}
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
-                      Détails <ArrowRight size={12} />
+                  <div className="flex items-center justify-end pt-2">
+                    <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
+                      Voir les détails <ArrowRight size={12} />
                     </span>
                   </div>
                 </div>
@@ -616,19 +592,13 @@ function LanguesLanding() {
       </main>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-brand-blue text-white text-center">
+      <section className="py-16 px-4 bg-white text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-3xl font-black uppercase">
-            Prêt à passer votre <span className="text-brand-gold">certification</span> ?
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">
+            Prêt à passer votre <span className="text-red-600">certification</span> ?
           </h2>
-          <p className="text-xs text-slate-300 leading-relaxed">
-            Contactez-nous pour un test de niveau gratuit et un plan de préparation personnalisé.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link to="/contact" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
-              S'inscrire Maintenant
-            </Link>
-            <a href="tel:0645212800" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
+          <div className="flex justify-center pt-4">
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>
@@ -670,7 +640,7 @@ function LanguesDetail() {
             ← Retour aux langues
           </Link>
           <div className="flex justify-center gap-2 mb-2">
-            <Languages size={24} className="text-brand-gold" />
+            <Languages size={24} className="text-cyan-400" />
           </div>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight uppercase text-white">
             {data.name}
@@ -686,56 +656,33 @@ function LanguesDetail() {
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-6">
             <div className="space-y-4">
               <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2">
-                <Target size={20} className="text-brand-gold" /> Objectifs de la Formation
+                <Target size={20} className="text-emerald-500" /> Objectifs de la Formation
               </h2>
               <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">{data.overview}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-50">
-              {data.details.map((item, i) => (
-                <div key={i} className="space-y-2">
-                  <h3 className="text-xs font-black text-brand-blue uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100">
-            <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2 mb-8">
-              <Award size={20} className="text-brand-gold" /> Pourquoi Choisir Attaleb.ma ?
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {data.features.map((feature, i) => (
-                <div key={i} className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center gap-3">
-                  <div className="w-2 h-2 bg-brand-gold rounded-full shrink-0" />
-                  <span className="text-xs font-bold text-slate-700">{feature}</span>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-100">
+              {data.details.map((item, i) => {
+                const colors = ['text-emerald-500', 'text-violet-500'];
+                const bgs = ['bg-emerald-50/50', 'bg-violet-50/50'];
+                const borders = ['border-emerald-100/60', 'border-violet-100/60'];
+                return (
+                  <div key={i} className={`space-y-2 p-4 ${bgs[i % 2]} rounded-xl border ${borders[i % 2]}`}>
+                    <h3 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-1.5">
+                      <Zap size={12} className={colors[i % 2]} /> {item.title}
+                    </h3>
+                    <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
         <div className="lg:col-span-1 space-y-6">
-          <div className="bg-brand-blue text-white p-8 rounded-3xl shadow-xl space-y-6 sticky top-6">
-            <div className="space-y-2">
-              <h3 className="font-black text-lg uppercase tracking-wide text-brand-gold">Sessions Prochaines</h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-light">Contactez-nous pour commencer votre parcours</p>
-            </div>
-            <div className="space-y-4 pt-4 border-t border-white/10">
-              <div className="flex items-center gap-3">
-                <Globe size={18} className="text-brand-gold" />
-                <span className="text-[11px] font-bold">Options en présentiel ou hybride</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FileText size={18} className="text-brand-gold" />
-                <span className="text-[11px] font-bold">Examens blancs inclus</span>
-              </div>
-            </div>
-            <Link to="/contact" className="block w-full bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-center py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
-              S'inscrire Maintenant
-            </Link>
-            <p className="text-[10px] text-center text-slate-400 font-medium">
-              Besoin de plus d'infos ? Appelez-nous : <br />
-              <span className="text-white font-black text-xs">06 45 21 28 00</span>
-            </p>
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4 sticky top-6 text-center">
+            <h3 className="font-black text-lg uppercase tracking-wide text-brand-blue">Contactez-nous</h3>
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
+              06 45 21 28 00
+            </a>
           </div>
         </div>
       </main>

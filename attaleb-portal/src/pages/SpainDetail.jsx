@@ -116,7 +116,7 @@ export default function SpainDetail() {
                 "Garant direct (blocage ~100 000 DH) ou garant UE"
               ].map((req, i) => (
                 <div key={i} className="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
                   <span>{req}</span>
                 </div>
               ))}

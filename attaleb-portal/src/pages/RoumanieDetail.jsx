@@ -154,7 +154,7 @@ export default function RoumanieDetail() {
                   { title: "Assurance & Logement", desc: "Assurance médicale internationale de voyage valide pour la Roumanie." }
                 ].map((req, i) => (
                   <div key={i} className="flex items-start gap-2 text-xs text-slate-600 font-medium leading-relaxed bg-slate-50/50 p-2.5 rounded-xl border border-slate-100">
-                    <CheckCircle2 size={13} className="text-brand-gold shrink-0 mt-0.5" />
+                    <CheckCircle2 size={13} className="text-emerald-500 shrink-0 mt-0.5" />
                     <span><strong>{req.title} :</strong> {req.desc}</span>
                   </div>
                 ))}

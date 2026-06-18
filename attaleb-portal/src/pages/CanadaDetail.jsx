@@ -138,15 +138,15 @@ export default function CanadaDetail() {
             <div className="space-y-3 text-xs text-slate-600 font-medium">
               <p>Le dossier consulaire requiert obligatoirement les éléments clés suivants :</p>
               <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                 <span><strong>Preuves d'acceptation & d'identité :</strong> Lettre d'admission officielle de l'établissement d'enseignement désigné (EED) et passeport valide.</span>
               </div>
               <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                 <span><strong>Garantie Financière :</strong> Un garant direct capable d'assurer les frais de subsistance et de scolarité de la première année (montant estimé entre 150 000 et 200 000 DH) ou un garant indirect résidant au Canada.</span>
               </div>
               <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                 <span><strong>Documents annexes :</strong> Une lettre d'explication claire (projet d'études), l'attestation de délivrance du CAQ (Québec) et un examen médical réglementaire.</span>
               </div>
             </div>

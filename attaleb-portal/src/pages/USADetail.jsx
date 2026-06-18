@@ -159,19 +159,19 @@ export default function USADetail() {
               <h4 className="font-black text-xs text-brand-blue uppercase">Les étapes clés du visa :</h4>
               <div className="space-y-2.5 text-xs text-slate-600 font-medium">
                 <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span><strong>Formulaire I-20 (ou DS-2019) :</strong> Document de demande de visa officiel envoyé par l'école après acceptation réglementaire (agréée SEVP).</span>
                 </div>
                 <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span><strong>Frais de traitement SEVIS :</strong> Redevance obligatoire à s'acquitter en ligne dès réception de l'I-20 (350 $ pour les visas F-1/M-1 et 220 $ pour le visa J-1).</span>
                 </div>
                 <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span><strong>Formulaire DS-160 :</strong> Demande en ligne de visa non-immigrant regroupant l'historique personnel, le parcours scolaire et médical.</span>
                 </div>
                 <div className="flex items-start gap-2.5 bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span><strong>Entretien Consulaire :</strong> Entrevue physique requise avec un agent des visas au Consulat/Ambassade des USA. Apporter impérativement : Passeport (valide +6 mois), confirmation DS-160, I-20 signé, reçu des frais, relevés de notes originaux et preuves solides de soutien financier (relevés bancaires ou affidavits de soutien d'au moins 3 500 € par année universitaire).</span>
                 </div>
               </div>

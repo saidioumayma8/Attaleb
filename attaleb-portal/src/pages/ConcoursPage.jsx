@@ -516,19 +516,13 @@ function ConcoursLanding() {
       </section>
 
       {/* ═══════════ CTA BOTTOM ═══════════ */}
-      <section className="bg-brand-blue py-16 px-4 text-white text-center">
+      <section className="py-16 px-4 bg-white text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-3xl font-black uppercase">
-            Prêt à réussir votre <span className="text-brand-gold">concours</span> ?
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">
+            Prêt à réussir votre <span className="text-red-600">concours</span> ?
           </h2>
-          <p className="text-xs text-slate-300 leading-relaxed">
-            Appelez-nous pour un bilan gratuit et un plan de préparation personnalisé adapté à votre objectif.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link to="/contact" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
-              Consultation Gratuite
-            </Link>
-            <a href="tel:0645212800" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
+          <div className="flex justify-center pt-4">
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>
@@ -628,30 +622,9 @@ function ConcoursDetail() {
 
         {/* Sidebar */}
         <div className="lg:col-span-1 space-y-6">
-          <div className="bg-brand-blue text-white p-8 rounded-3xl shadow-xl space-y-6 sticky top-6">
-            <div className="space-y-2">
-              <h3 className="font-black text-lg uppercase tracking-wide text-brand-gold">Informations Utiles</h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-light">Programmez dès aujourd'hui votre réussite.</p>
-            </div>
-            
-            <div className="space-y-4 pt-4 border-t border-white/10">
-              <div className="flex items-center gap-3">
-                <Globe size={18} className="text-cyan-400 shrink-0" />
-                <span className="text-[11px] font-bold">Options : En présentiel ou hybride</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Users size={18} className="text-violet-400 shrink-0" />
-                <span className="text-[11px] font-bold">Groupes restreints & Suivi sur-mesure</span>
-              </div>
-              {data.schools && (
-                <div className="flex items-start gap-3">
-                  <GraduationCap size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                  <span className="text-[11px] font-bold leading-normal">Écoles cibles : <br /><span className="text-slate-200 font-medium">{data.schools}</span></span>
-                </div>
-              )}
-            </div>
-
-            <a href="tel:0645212800" className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all border border-white/20">
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4 sticky top-6 text-center">
+            <h3 className="font-black text-lg uppercase tracking-wide text-brand-blue">Contactez-nous</h3>
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>

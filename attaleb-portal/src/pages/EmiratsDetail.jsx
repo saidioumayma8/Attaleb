@@ -172,7 +172,7 @@ export default function EmiratsDetail() {
                   { title: "Validité du titre", desc: "Le visa d'étudiant est octroyé pour une durée d'un an renouvelable sur présentation d'un justificatif de poursuite d'études." }
                 ].map((req, i) => (
                   <div key={i} className="flex items-start gap-2.5 text-xs text-slate-600 font-medium leading-relaxed bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                    <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                    <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                     <span><strong>{req.title} :</strong> {req.desc}</span>
                   </div>
                 ))}

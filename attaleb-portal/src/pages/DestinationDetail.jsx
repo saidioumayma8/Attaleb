@@ -307,7 +307,7 @@ export default function DestinationDetail() {
               <h4 className="font-black text-xs text-brand-blue uppercase tracking-wider">Justificatifs Clés requis :</h4>
               {data.visa.requirements.map((req, i) => (
                 <div key={i} className="flex items-start gap-2.5 text-xs text-slate-600 font-medium leading-relaxed bg-slate-50/50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span>{req}</span>
                 </div>
               ))}

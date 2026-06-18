@@ -78,7 +78,32 @@ const soutienDatabase = {
       "Suivi des performances et feedback régulier"
     ],
     ctaText: "Sécurisez vos notes pour intégrer l'université de vos rêves."
-  }
+  },
+  'ib': {
+    name: "IB (International Baccalaureate)",
+    tagline: "Accompagnement expert pour le diplôme IB : maîtrisez les HL/SL et obtenez votre score 40+.",
+    bgImage: "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1600&q=80",
+    overview: "Le Baccalauréat International est l'un des programmes les plus exigeants au monde. Notre approche méthodique couvre les 6 groupes de matières, le TOK, l'Extended Essay et le CAS pour garantir un score d'excellence.",
+    details: [
+      { title: "Matières HL & SL", desc: "Soutien ciblé sur les Higher Level et Standard Level avec focus sur les critères d'évaluation IB." },
+      { title: "Extended Essay & TOK", desc: "Accompagnement méthodologique pour la rédaction de l'EE et la maîtrise du Theory of Knowledge." },
+      { title: "Préparation Examens", desc: "Past papers, mark schemes et stratégies pour maximiser votre score final (40+)." }
+    ],
+    subjects: [
+      { name: "Mathematics AA/AI", icon: "function", desc: "Analysis & Approaches or Applications & Interpretation (HL/SL)." },
+      { name: "Physics / Chemistry", icon: "flask", desc: "Sciences expérimentales avec Internal Assessments et Paper 2/3." },
+      { name: "Biology", icon: "dna", desc: "Biologie IB avec focus sur les Data-Based Questions et l'IA." },
+      { name: "Economics / Business", icon: "line-chart", desc: "Économie et gestion : diagrammes, études de cas et évaluations." },
+      { name: "English / Français", icon: "book-open", desc: "Language A Literature/Language & Literature, IO et Written Tasks." }
+    ],
+    features: [
+      "Tuteurs experts certifiés IB avec expérience internationale",
+      "Méthodologie spécifique pour l'Extended Essay (4000 mots)",
+      "Préparation intensive aux Internal Assessments (IA)",
+      "Suivi personnalisé du CAS (Creativity, Activity, Service)"
+    ],
+    ctaText: "Visez le score 40+ avec notre accompagnement IB sur-mesure."
+  },
 };
 
 // Overview cards data
@@ -109,6 +134,14 @@ const soutienCards = [
     desc: 'Cambridge & Edexcel — Math, Physics, Chemistry, Biology, Economics pour scores A/A*.',
     levels: 'IG → A2',
     color: 'from-red-600 to-red-800'
+  }  ,{
+    slug: 'ib',
+    icon: '🌍',
+    title: 'IB (International Baccalaureate)',
+    subtitle: 'Diplôme International',
+    desc: 'Math AA/AI, Physics, Chemistry, Biology, Economics, English — score 40+ garanti.',
+    levels: 'DP1 & DP2',
+    color: 'from-amber-500 to-orange-600'
   }
 ];
 
@@ -211,12 +244,9 @@ function SoutienLanding() {
                   <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
                 </div>
               </div>
-              <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-between">
-                <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  {card.levels}
-                </span>
-                <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
-                  Voir le programme <ArrowRight size={12} />
+              <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-end">
+                <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
+                  Voir les détails <ArrowRight size={12} />
                 </span>
               </div>
             </Link>
@@ -249,24 +279,13 @@ function SoutienLanding() {
       </section>
 
       {/* CTA */}
-      <section
-        className="relative py-20 px-4 text-white text-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${soutienCta}')` }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-brand-blue/85" />
-        <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-          <h2 className="text-2xl md:text-3xl font-black uppercase">
-            Inscrivez-vous dès <span className="text-brand-gold">maintenant</span>
+      <section className="py-16 px-4 bg-white text-center">
+        <div className="max-w-2xl mx-auto space-y-4">
+          <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">
+            Inscrivez-vous dès <span className="text-red-600">maintenant</span>
           </h2>
-          <p className="text-xs text-slate-300 leading-relaxed">
-            Places limitées — réservez votre place pour la prochaine session de soutien scolaire.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link to="/contact" className="bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
-              S'inscrire au Soutien
-            </Link>
-            <a href="tel:0645212800" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
+          <div className="flex justify-center pt-4">
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
               06 45 21 28 00
             </a>
           </div>
@@ -382,30 +401,11 @@ function SoutienDetail() {
         </div>
 
         <div className="lg:col-span-1 space-y-6">
-          <div className="bg-brand-blue text-white p-8 rounded-3xl shadow-xl space-y-6 sticky top-6">
-            <div className="space-y-2">
-              <h3 className="font-black text-lg uppercase tracking-wide text-brand-gold">
-                Inscriptions Annuelles
-              </h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-light">Contactez-nous pour commencer votre parcours</p>
-            </div>
-            <div className="space-y-4 pt-4 border-t border-white/10">
-              <div className="flex items-center gap-3">
-                <BookOpen size={18} className="text-brand-gold" />
-                <span className="text-[11px] font-bold">Supports de cours exclusifs</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <GraduationCap size={18} className="text-brand-gold" />
-                <span className="text-[11px] font-bold">Professeurs expérimentés</span>
-              </div>
-            </div>
-            <Link to="/contact" className="block w-full bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-center py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
-              S'inscrire au soutien
-            </Link>
-            <p className="text-[10px] text-center text-slate-400 font-medium">
-              Besoin de conseils ? <br />
-              <span className="text-white font-black text-xs">06 45 21 28 00</span>
-            </p>
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4 sticky top-6 text-center">
+            <h3 className="font-black text-lg uppercase tracking-wide text-brand-blue">Contactez-nous</h3>
+            <a href="tel:0645212800" className="inline-flex items-center gap-2 text-sm font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 transition-all duration-300 uppercase tracking-widest">
+              06 45 21 28 00
+            </a>
           </div>
         </div>
       </main>

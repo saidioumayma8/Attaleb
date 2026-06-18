@@ -81,9 +81,7 @@ export default function Home() {
 
           {/* Centered Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full sm:w-auto">
-            <a href="#contact-section" className="w-full sm:w-auto text-center bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider shadow-md cursor-pointer">
-              Consultation Gratuite
-            </a>
+            
             <a href="#services-section" className="w-full sm:w-auto text-center border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
               Nos Services →
             </a>

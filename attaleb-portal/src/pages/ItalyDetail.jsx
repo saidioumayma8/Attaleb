@@ -137,7 +137,7 @@ export default function ItalyDetail() {
                 "Justificatif de disponibilité d’un logement dans la ville cible"
               ].map((req, i) => (
                 <div key={i} className="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                  <CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                  <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                   <span className="text-[11px] leading-snug">{req}</span>
                 </div>
               ))}
