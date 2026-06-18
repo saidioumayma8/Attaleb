@@ -22,12 +22,7 @@ const concoursDatabase = {
       { title: "Reading & Writing", desc: "Analyse critique de textes académiques, grammaire anglaise de haut niveau et structure logique des arguments." },
       { title: "Stratégies de timing", desc: "Méthodologie spécifique pour répondre avec rapidité et précision aux questions à choix multiples sous pression." }
     ],
-    features: [
-      "Simulations hebdomadaires sur la plateforme officielle Bluebook",
-      "Entraînement intensif au vocabulaire académique anglais",
-      "Fiches de synthèse et astuces mathématiques exclusives",
-      "Bilan et diagnostic personnalisé après chaque test blanc"
-    ],
+    features: [],
     ctaText: "Atteignez votre score SAT cible avec notre méthode éprouvée.",
     schools: "Harvard, MIT, Stanford, Columbia, NYU, et les filières anglophones européennes.",
     flag: "🇺🇸",
@@ -67,10 +62,7 @@ const concoursDatabase = {
       { title: "Épreuves Orales", desc: "Coaching intensif pour l'entretien individuel de motivation et de personnalité." }
     ],
     features: [
-      "Entraînement intensif sur la plateforme officielle du concours",
-      "Simulations d'entretiens oraux devant des jurys blancs",
-      "Fiches d'actualité pour l'épreuve d'Enjeux Contemporains",
-      "Méthode pas-à-pas pour l'analyse de dossiers documentaires"
+      
     ],
     ctaText: "Optimisez vos chances de réussite avec nos oraux blancs.",
     schools: "ESSEC BBA, EM Lyon BBA, CESEM NEOMA, KEDGE, IPAG, PSB...",
@@ -412,7 +404,7 @@ function ConcoursLanding() {
 
                     {/* Target Schools */}
                     <div className="flex items-center gap-2 text-[10px] text-slate-500 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
-                      <Star size={11} className="text-brand-gold shrink-0" />
+                      <Star size={11} className="text-amber-500 shrink-0" />
                       <span className="font-medium">{p.schools}</span>
                     </div>
 
@@ -420,18 +412,15 @@ function ConcoursLanding() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
                       {p.features.map((f, j) => (
                         <div key={j} className="flex items-center gap-2 text-[11px] font-bold text-slate-700 bg-blue-50/50 p-2.5 rounded-lg border border-blue-100/60">
-                          <CheckCircle2 size={12} className="text-blue-500 shrink-0" /> {f}
+                          <CheckCircle2 size={12} className="text-violet-500 shrink-0" /> {f}
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200 uppercase tracking-wider">
-                    Préparation d'élite
-                  </span>
-                  <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
+                <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-end">
+                  <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
                     Voir les détails <ArrowRight size={12} />
                   </span>
                 </div>
@@ -476,11 +465,11 @@ function ConcoursLanding() {
                   <div className="p-6 md:p-8 space-y-4">
                     {/* Title Row */}
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
-                        {p.icon === 'commerce' && <Briefcase size={18} className="text-emerald-600" />}
-                        {p.icon === 'medicine' && <Stethoscope size={18} className="text-emerald-600" />}
-                        {p.icon === 'engineering' && <Cog size={18} className="text-emerald-600" />}
-                        {p.icon === 'law' && <Scale size={18} className="text-emerald-600" />}
+                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-xl flex items-center justify-center shrink-0">
+                        {p.icon === 'commerce' && <Briefcase size={18} className="text-amber-600" />}
+                        {p.icon === 'medicine' && <Stethoscope size={18} className="text-rose-600" />}
+                        {p.icon === 'engineering' && <Cog size={18} className="text-blue-600" />}
+                        {p.icon === 'law' && <Scale size={18} className="text-purple-600" />}
                       </div>
                       <div>
                         <h3 className="text-lg font-black text-brand-blue uppercase tracking-wide">{p.name}</h3>
@@ -502,11 +491,8 @@ function ConcoursLanding() {
                   </div>
                 </div>
 
-                <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-brand-gold bg-amber-50 px-3 py-1 rounded-full border border-amber-200 uppercase tracking-wider">
-                    Concours Maroc
-                  </span>
-                  <span className="text-[11px] font-bold text-red-600 group-hover:text-red-700 group-hover:underline flex items-center gap-1">
+                <div className="px-6 md:px-8 pb-6 pt-4 border-t border-slate-50 flex items-center justify-end">
+                  <span className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-red-600 border-2 border-red-600 rounded-full px-4 py-2 group-hover:bg-white group-hover:text-red-600 group-hover:border-red-600 group-hover:shadow-lg group-hover:shadow-red-200 transition-all duration-300 uppercase tracking-wider">
                     Voir les détails <ArrowRight size={12} />
                   </span>
                 </div>
@@ -612,7 +598,7 @@ function ConcoursDetail() {
           <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-6">
             <div className="space-y-4">
               <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2">
-                <ClipboardCheck size={20} className="text-brand-gold" /> Présentation de la Préparation
+                <ClipboardCheck size={20} className="text-amber-500" /> Présentation de la Préparation
               </h2>
               <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
                 {data.overview}
@@ -621,31 +607,23 @@ function ConcoursDetail() {
             
             {/* Split Details Section */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-100">
-              {data.details.map((item, i) => (
-                <div key={i} className="space-y-2 p-4 bg-slate-50/50 rounded-xl border border-slate-100/50">
-                  <h3 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-1.5">
-                    <Zap size={12} className="text-brand-gold" /> {item.title}
-                  </h3>
-                  <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{item.desc}</p>
-                </div>
-              ))}
+              {data.details.map((item, i) => {
+                const colors = ['text-emerald-500', 'text-violet-500', 'text-cyan-500'];
+                const bgs = ['bg-emerald-50/50', 'bg-violet-50/50', 'bg-cyan-50/50'];
+                const borders = ['border-emerald-100/60', 'border-violet-100/60', 'border-cyan-100/60'];
+                return (
+                  <div key={i} className={`space-y-2 p-4 ${bgs[i % 3]} rounded-xl border ${borders[i % 3]}`}>
+                    <h3 className="text-xs font-black text-brand-blue uppercase tracking-wide flex items-center gap-1.5">
+                      <Zap size={12} className={colors[i % 3]} /> {item.title}
+                    </h3>
+                    <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Features Section */}
-          <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-100">
-            <h2 className="text-xl font-black text-brand-blue uppercase tracking-tight flex items-center gap-2 mb-8">
-              <Star size={20} className="text-brand-gold" /> Les Points Forts de notre Accompagnement
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {data.features.map((feature, i) => (
-                <div key={i} className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center gap-3 hover:bg-slate-100/50 transition-colors">
-                  <CheckCircle2 size={16} className={isNational ? "text-emerald-500 shrink-0" : "text-blue-500 shrink-0"} />
-                  <span className="text-xs font-bold text-slate-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
 
         {/* Sidebar */}
@@ -658,29 +636,24 @@ function ConcoursDetail() {
             
             <div className="space-y-4 pt-4 border-t border-white/10">
               <div className="flex items-center gap-3">
-                <Globe size={18} className="text-brand-gold shrink-0" />
+                <Globe size={18} className="text-cyan-400 shrink-0" />
                 <span className="text-[11px] font-bold">Options : En présentiel ou hybride</span>
               </div>
               <div className="flex items-center gap-3">
-                <Users size={18} className="text-brand-gold shrink-0" />
+                <Users size={18} className="text-violet-400 shrink-0" />
                 <span className="text-[11px] font-bold">Groupes restreints & Suivi sur-mesure</span>
               </div>
               {data.schools && (
                 <div className="flex items-start gap-3">
-                  <GraduationCap size={18} className="text-brand-gold shrink-0 mt-0.5" />
+                  <GraduationCap size={18} className="text-emerald-400 shrink-0 mt-0.5" />
                   <span className="text-[11px] font-bold leading-normal">Écoles cibles : <br /><span className="text-slate-200 font-medium">{data.schools}</span></span>
                 </div>
               )}
             </div>
 
-            <Link to="/contact" className="block w-full bg-brand-gold hover:bg-brand-goldHover text-brand-blue text-center py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-md">
-              S'inscrire Maintenant
-            </Link>
-            
-            <div className="text-[10px] text-center text-slate-400 font-medium pt-2 border-t border-white/10">
-              Besoin de conseil d'orientation ? <br />
-              <a href="tel:0645212800" className="text-white font-black text-xs hover:underline block mt-1">06 45 21 28 00</a>
-            </div>
+            <a href="tel:0645212800" className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all border border-white/20">
+              06 45 21 28 00
+            </a>
           </div>
         </div>
       </main>

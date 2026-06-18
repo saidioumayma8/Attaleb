@@ -148,33 +148,6 @@ export default function SejoursPage() {
           </div>
         </section>
 
-        {/* Accompaniment roadmap */}
-        <section className="space-y-12">
-          <div className="text-center max-w-xl mx-auto space-y-2">
-            <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Processus</span>
-            <h2 className="text-2xl md:text-3xl font-black text-brand-blue uppercase">Notre Accompagnement de A à Z</h2>
-            <p className="text-xs text-slate-500 leading-relaxed">
-              Nous gérons chaque étape de votre séjour pour vous garantir une expérience enrichissante et sereine.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Choix de l'école", desc: "Sélection de l'école agréée et de la formule de cours." },
-              { step: "02", title: "Inscription & Logement", desc: "Réservation de votre session de cours et de l'hébergement choisi." },
-              { step: "03", title: "Visa & Vol", desc: "Aide à la constitution du dossier de visa et réservation du vol." },
-              { step: "04", title: "Suivi sur place", desc: "Assistance et contact permanent durant tout votre séjour d'immersion." }
-            ].map((step, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative space-y-3 overflow-hidden">
-                <span className="absolute right-4 top-2 text-4xl md:text-5xl font-black text-slate-100 select-none z-0">{step.step}</span>
-                <div className="space-y-1 relative z-10 pt-4">
-                  <h4 className="text-xs font-black text-brand-blue uppercase tracking-wide">{step.title}</h4>
-                  <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
 
       {/* CTA Bottom Section */}

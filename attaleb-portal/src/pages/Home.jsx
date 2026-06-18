@@ -168,115 +168,115 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Études à l'Étranger */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="etudes-etranger" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Études à l'Étranger</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
+              <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Études à l'Étranger</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Gestion complète du dossier de candidature de A à Z</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Suivi administratif rigoureux jusqu'à l'obtention du visa</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                Voir les destinations →
+              <Link to="/destinations" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                Voir les destinations
               </Link>
             </div>
           </div>
 
           {/* Card 2: Bourses d'Études */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="bourses-etudes" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Bourses d'Études</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bourses d'excellence, d'exonération de frais et de subsistance</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Optimisation du dossier (lettres de motivation, recommandations)</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Accompagnement aux entretiens et critères d'éligibilité</li>
+              <h3 id="bourses-etudes" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Bourses d'Études</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Bourses d'excellence, d'exonération de frais et de subsistance</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Optimisation du dossier (lettres de motivation, recommandations)</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Accompagnement aux entretiens et critères d'éligibilité</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/bourses" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                Postuler aux bourses →
+              <Link to="/bourses" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                Postuler aux bourses
               </Link>
             </div>
           </div>
 
           {/* Card 3: Préparation aux Concours */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="preparation-concours" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Préparation aux Concours</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Classes Préparatoires nationales et internationales (MPSI, PCSI)</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Grandes Écoles Nationales d'élite : ENSA, ENCG, ENSAM</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Planning intensif de révision et examens blancs corrigés</li>
+              <h3 id="preparation-concours" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Préparation aux Concours</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Classes Préparatoires nationales et internationales (MPSI, PCSI)</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Grandes Écoles Nationales d'élite : ENSA, ENCG, ENSAM</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Planning intensif de révision et examens blancs corrigés</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/concours" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                S'entraîner maintenant →
+              <Link to="/concours" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                S'entraîner maintenant
               </Link>
             </div>
           </div>
 
           {/* Card 4: Séjours Linguistiques */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="sejours-linguistiques" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Cours d'Anglais, Allemand, Espagnol intensifs en écoles partenaires</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Préparation accélérée aux certifications : TCF, DELF, IELTS, TOEFL</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Logement en famille d'accueil ou en résidence étudiante inclus</li>
+              <h3 id="sejours-linguistiques" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Cours d'Anglais, Allemand, Espagnol intensifs en écoles partenaires</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Préparation accélérée aux certifications : TCF, DELF, IELTS, TOEFL</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Logement en famille d'accueil ou en résidence étudiante inclus</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/sejours-linguistiques" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                Découvrir les séjours →
+              <Link to="/sejours-linguistiques" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                Découvrir les séjours
               </Link>
             </div>
           </div>
 
           {/* Card 5: Soutien Scolaire */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="soutien-scolaire" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Soutien Scolaire</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Matières scientifiques, littéraires and économiques</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Formules adaptées : cours individuels sur mesure ou en mini-groupe</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Séances interactives en présentiel ou à distance en ligne</li>
+              <h3 id="soutien-scolaire" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Soutien Scolaire</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Matières scientifiques, littéraires and économiques</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Formules adaptées : cours individuels sur mesure ou en mini-groupe</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Séances interactives en présentiel ou à distance en ligne</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/soutien" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                S'inscrire au soutien →
+              <Link to="/soutien" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                S'inscrire au soutien
               </Link>
             </div>
           </div>
 
           {/* Card 6: Orientation & Coaching */}
-          <div className="bg-brand-blueDark rounded-2xl shadow-sm border border-slate-800 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="orientation-coaching" className="font-black text-base text-brand-gold uppercase tracking-wide mb-4">Orientation & Coaching</h3>
-              <ul className="space-y-3 text-xs text-slate-200">
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Coaching personnalisé pour élaborer un projet d'études cohérent</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Simulations réelles d'entretiens oraux de sélection</li>
-                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-brand-gold shrink-0 mt-0.5" /> Ateliers pratiques pour rédiger des CV et lettres percutants</li>
+              <h3 id="orientation-coaching" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Orientation & Coaching</h3>
+              <ul className="space-y-3 text-xs text-slate-600">
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Coaching personnalisé pour élaborer un projet d'études cohérent</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Simulations réelles d'entretiens oraux de sélection</li>
+                <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Ateliers pratiques pour rédiger des CV et lettres percutants</li>
               </ul>
             </div>
             
             <div className="">
-              <Link to="/contact" className="inline-block text-[11px] font-bold text-brand-gold mt-6 hover:underline uppercase tracking-wider text-left">
-                Prendre rendez-vous →
+              <Link to="/contact" className="inline-flex items-center gap-2 text-[11px] font-black text-white mt-6 bg-red-600 border-2 border-red-600 rounded-full px-5 py-2.5 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-lg hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider group">
+                Prendre rendez-vous
               </Link>
             </div>
           </div>
