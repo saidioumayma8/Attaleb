@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar, DollarSign } from 'lucide-react';
 
+
+function USADetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier aux États-Unis | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi les États-Unis sont une destination d'études internationales privilégiée pour les étudiants marocains." />
+      </Helmet>
+    </div>
+  );
+}
+
+
 export default function USADetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

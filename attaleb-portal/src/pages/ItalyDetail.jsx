@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar, DollarSign } from 'lucide-react';
 
+
+function ItalyDetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier en Italie | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi l'Italie est une destination d'études internationales privilégiée pour les étudiants marocains." />
+      </Helmet>
+    </div>
+  );
+}
+
+
 export default function ItalyDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

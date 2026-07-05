@@ -4,6 +4,17 @@ import { Link } from 'react-router-dom';
 
 import destinationsBg from '../assets/image.png';
 
+function Destinations() {
+  return (
+    <div>
+      <Helmet>
+        <title>Destinations d'études à l'étranger | Attaleb.net</title>
+        <meta name="description" content="Découvrez les meilleures destinations d'études à l'étranger pour les étudiants marocains. Trouvez l'Université idéale pour votre avenir académique." />
+      </Helmet>
+    </div>
+  );
+}
+
 export default function Destinations() {
 
   const allDestinations = [

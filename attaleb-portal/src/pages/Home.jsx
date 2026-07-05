@@ -35,6 +35,22 @@ import HEC_Paris from '../assets/HEC_Paris.png';
 import INSEA_logo from '../assets/INSEA_logo.png';
 import LSE from '../assets/LSE.png';
 import NEOMA from '../assets/NEOMA.jpg';
+import { Helmet } from 'react-helmet-async';
+
+function Home() {
+  return (
+    <div>
+                <Helmet>
+  <title>Études à l'étranger : Nos destinations | Attaleb.net</title>
+  <meta 
+    name="description" 
+    content="Découvrez nos destinations d'études à l'étranger : France, Canada, Roumanie, Allemagne, Espagne et plus. Attaleb vous guide pour réussir votre admission." 
+  />
+</Helmet>
+     </div>
+    
+  );
+}
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
   lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo, arizonalogo, ascencia, cardiff, US, EU_Business_School_Logo, HEC_Paris, INSEA_logo, LSE, NEOMA
@@ -408,10 +424,14 @@ export default function Home() {
         <div className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-xl">
           <div className="absolute inset-0 z-0">
             <iframe
-              title="Localisation Cabinet"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.653529851017!2d-8.064224224382386!3d31.670697474145456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafeb004041a099%3A0x3cc60d09eff4b5a6!2sCabinet%20Attaleb!5e0!3m2!1sen!2sma!4v1781681708032!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
-            ></iframe>
+            title="Localisation Cabinet"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.027050965383!2d-8.0123795!3d31.6360662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sYourLocationName!5e0!3m2!1sen!2sma!4v1600000000000!5m2!1sen!2sma"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy"
+          ></iframe>
           </div>
           <div className="relative z-20 max-w-md bg-white/90 p-8 rounded-2xl m-8">
             <h2 className="text-2xl font-black text-brand-blue uppercase">Contactez-nous</h2>

@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, BookOpen, CheckCircle2, GraduationCap, Calendar, FileText } from 'lucide-react';
 
+
+function SpainDetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier en Espagne | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi l'Espagne est une destination d'études internationales privilégiée pour les étudiants marocains." />
+      </Helmet>
+    </div>
+  );
+}
+
+
 export default function SpainDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, DollarSign, GraduationCap, Calendar } from 'lucide-react';
 
+
+function PortugalDetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier au Portugal | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi le Portugal est une destination d'études internationales privilégiée pour les étudiants marocains." />
+      </Helmet>
+    </div>
+  );
+}
+
+
 export default function PortugalDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

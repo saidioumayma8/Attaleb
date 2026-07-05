@@ -11,6 +11,17 @@ import deleLogo from '../assets/DELE.webp';
 import delfLogo from '../assets/DELF.png';
 import toeicLogo from '../assets/TOEIC.png';
 
+function LanguesPage() {
+  return (
+    <div>
+      <Helmet>
+        <title>Preparation des concours de langues | Attaleb.net</title>
+        <meta name="description" content="Découvrez nos programmes de formation linguistique pour réussir vos tests de langues internationales." />
+      </Helmet>
+    </div>
+  );
+}
+
 const languesDatabase = {
   'ielts': {
     name: "IELTS (Anglais)",

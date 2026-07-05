@@ -3,6 +3,18 @@ import { motion } from 'framer-motion';
 import { BookOpen, GraduationCap, Award, CheckCircle, School, Languages, Trophy, Banknote, Plane, Globe, MapPin, ArrowRight } from 'lucide-react';
 import missionImage from '../assets/mission.jpeg';
 import campusImage from '../assets/campus.jpeg';
+import { Helmet } from 'react-helmet-async';
+
+function Apropos() {
+  return (
+    <div>
+      <Helmet>
+        <title>Qui sommes-nous ? - Attaleb.net</title>
+        <meta name="description" content="      Découvrez l'équipe d'Attaleb.net. Nous accompagnons les étudiants marocains dans leur projet d'études internationales avec expertise et succès." />
+      </Helmet>
+    </div>
+  );
+}
 
 export default function Apropos() {
   const services = [

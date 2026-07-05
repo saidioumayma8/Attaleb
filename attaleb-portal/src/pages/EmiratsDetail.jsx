@@ -2,6 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, DollarSign, GraduationCap, Calendar } from 'lucide-react';
 
+
+function EmiratsDetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier aux Émirats Arabes Unis | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi les Émirats Arabes Unis sont une destination d'études internationales privilégiée pour les étudiants marocains." />
+      </Helmet>
+    </div>
+  );
+}
+
 export default function EmiratsDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

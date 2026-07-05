@@ -4,6 +4,19 @@ import { Globe, GraduationCap, CheckCircle2, Plane, Home as HomeIcon, Star, User
 import ukFlag from '../assets/Flag_of_the_United_Kingdom_(3-5).svg.webp';
 import canadaFlag from '../assets/Flag-Canada.webp';
 
+
+function SejoursPage() {
+  return (
+    <div>
+      <Helmet>
+        <title>Programmes de Séjours Linguistiques | Attaleb.net</title>
+        <meta name="description" content="Programmes d'immersion linguistique à l'étranger : apprenez l'anglais, l'allemand ou l'espagnol en immersion totale." />
+      </Helmet>
+    </div>
+  );
+}
+
+
 export default function SejoursPage() {
   const formulas = [
     {

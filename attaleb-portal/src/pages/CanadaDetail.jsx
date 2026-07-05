@@ -2,6 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar, DollarSign } from 'lucide-react';
 
+function CanadaDetail() {
+  return (
+    <div>
+      <Helmet>
+        <title>Étudier au Canada | Attaleb.net</title>
+        <meta name="description" content="Découvrez pourquoi le Canada est une destination idéale pour les étudiants marocains. Explorez les opportunités éducatives et culturelles." />
+      </Helmet>
+    </div>
+  );
+}
+
 export default function CanadaDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
