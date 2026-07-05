@@ -1,87 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home -->
-  <url>
-    <loc>https://www.attaleb.net/</loc>
-  </url>
-
-  <!-- Main pages -->
-  <url>
-    <loc>https://www.attaleb.net/destinations</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/concours</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/langues</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/sejours-linguistiques</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/soutien</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/contact</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/a-propos</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/bourses</loc>
-  </url>
-
-  <!-- Destination pages -->
-  <url>
-    <loc>https://www.attaleb.net/destinations/espagne</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/allemagne</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/belgique</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/italie</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/usa</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/canada</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/royaume-uni</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/portugal</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/emirats-arabes-unis</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/roumanie</loc>
-  </url>
-
-  <url>
-    <loc>https://www.attaleb.net/destinations/chine</loc>
-  </url>
-
+  <url><loc>https://www.attaleb.net/</loc></url>
+  <url><loc>https://www.attaleb.net/destinations</loc></url>
+  <url><loc>https://www.attaleb.net/concours</loc></url>
+  <url><loc>https://www.attaleb.net/langues</loc></url>
+  <url><loc>https://www.attaleb.net/sejours-linguistiques</loc></url>
+  <url><loc>https://www.attaleb.net/soutien</loc></url>
+  <url><loc>https://www.attaleb.net/contact</loc></url>
+  <url><loc>https://www.attaleb.net/a-propos</loc></url>
+  <url><loc>https://www.attaleb.net/bourses</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/espagne</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/allemagne</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/belgique</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/italie</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/usa</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/canada</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/royaume-uni</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/portugal</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/emirats-arabes-unis</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/roumanie</loc></url>
+  <url><loc>https://www.attaleb.net/destinations/chine</loc></url>
 </urlset>
