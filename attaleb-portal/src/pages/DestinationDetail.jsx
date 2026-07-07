@@ -2,18 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Globe, Award, BookOpen, CheckCircle2, GraduationCap, Calendar, FileText } from 'lucide-react';
 
-
-function DestinationDetail() {
-  return (
-    <div>
-      <Helmet>
-        <title> - Attaleb.net</title>
-        <meta name="description" content="      Découvrez l'équipe d'Attaleb.net. Nous accompagnons les étudiants marocains dans leur projet d'études internationales avec expertise et succès." />
-      </Helmet>
-    </div>
-  );
-}
-
 const detailsDatabase = {
   france: {
     name: "FRANCE",

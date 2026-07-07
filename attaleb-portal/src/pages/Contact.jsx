@@ -2,19 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, HelpCircle, CheckCircle } from 'lucide-react';
 
-function Contact() {
-  return (
-    <div>
-      <Helmet>
-        <title>Contactez-nous | Attaleb.net</title>
-        <meta name="description" content="Contactez notre équipe d'experts pour obtenir des informations sur nos programmes de préparation aux concours d'admission et à l'internationalisation des études." />
-      </Helmet>
-    </div>
-  );
-}
-
 export default function Contact() {
-
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',

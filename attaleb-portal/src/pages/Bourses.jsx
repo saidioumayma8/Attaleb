@@ -8,17 +8,6 @@ import vanierLogo from '../assets/vanierLogo.jpg';
 import usaLogo from '../assets/usaLogo.png';
 import pearsonLogo from '../assets/pearsonLogo.png';
 
-function Bourses() {
-  return (
-    <div>
-      <Helmet>
-        <title>Bourses d'études à l'étranger | Attaleb.net</title>
-        <meta name="description" content="Vous cherchez une bourse ? Nous vous aidons à trouver et postuler aux meilleures bourses d'études pour financer votre projet académique." />
-      </Helmet>
-    </div>
-  );
-}
-
 const bourses = [
   {
     id: 'fulbright',

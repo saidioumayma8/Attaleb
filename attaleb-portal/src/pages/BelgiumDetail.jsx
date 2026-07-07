@@ -2,18 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar } from 'lucide-react';
 
-
-function BelgiumDetail() {
-  return (
-    <div>
-      <Helmet>
-        <title>Étudier en Belgique | Attaleb.net</title>
-        <meta name="description" content="Découvrez pourquoi la Belgique est une destination idéale pour les étudiants marocains. Explorez les opportunités éducatives et culturelles   ." />
-      </Helmet>
-    </div>
-  );
-}
-
 export default function BelgiumDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

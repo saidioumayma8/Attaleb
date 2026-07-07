@@ -10,17 +10,6 @@ import sesameLogo from '../assets/SESAME.png';
 import actLogo from '../assets/ACT.png';
 import tageMageLogo from '../assets/TageMage.png';
 
-function ConcoursPage() {
-  return (
-    <div>
-      <Helmet>
-        <title>Concours d'Admission | Attaleb.net</title>
-        <meta name="description" content="Découvrez nos programmes de préparation aux concours d'admission pour intégrer les meilleures universités et écoles du monde." />
-      </Helmet>
-    </div>
-  );
-}
-
 const concoursDatabase = {
   'sat': {
     name: "SAT",

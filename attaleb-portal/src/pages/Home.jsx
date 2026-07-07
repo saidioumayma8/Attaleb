@@ -8,7 +8,8 @@ import spainFlag from '../assets/spainflag.png';
 import romaniaFlag from '../assets/Flag_of_Romania.svg.png';
 import canadaFlag from '../assets/Flag-Canada.webp';
 import germanyFlag from '../assets/germany-flag-png-large.png';
-import heroBg from '../assets/image.png';
+// --- NOUVELLE IMAGE IMPORTÉE ICI ---
+import newHeroBg from '../assets/campus-students-hero.jfif';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
@@ -37,20 +38,6 @@ import LSE from '../assets/LSE.png';
 import NEOMA from '../assets/NEOMA.jpg';
 import { Helmet } from 'react-helmet-async';
 
-function Home() {
-  return (
-    <div>
-                <Helmet>
-  <title>Études à l'étranger : Nos destinations | Attaleb.net</title>
-  <meta 
-    name="description" 
-    content="Découvrez nos destinations d'études à l'étranger : France, Canada, Roumanie, Allemagne, Espagne et plus. Attaleb vous guide pour réussir votre admission." 
-  />
-</Helmet>
-     </div>
-    
-  );
-}
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
   lrLogo, harvardLogo, stanfordLogo, uclLogo, columbiaLogo, chicagoLogo, arizonalogo, ascencia, cardiff, US, EU_Business_School_Logo, HEC_Paris, INSEA_logo, LSE, NEOMA
@@ -73,11 +60,14 @@ export default function Home() {
     <div className="w-full bg-white font-sans antialiased">
       
       {/* ==========================================
-          1. HERO BANNER (CUSTOM LOCAL BACKGROUND)
-         ========================================== */}
+          1. HERO BANNER (WITH NEW BACKGROUND)
+          ========================================== */}
       <section id="home-section"
         className="relative bg-cover bg-center min-h-[620px] md:h-[680px] flex items-center justify-center text-center pt-10 pb-16 px-4" 
-        style={{ backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.82), rgba(11, 38, 79, 0.82)), url(${heroBg})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.82), rgba(11, 38, 79, 0.82)), url(${newHeroBg})`,
+          backgroundBlendMode: 'multiply' // Assure que le texte reste lisible sur l'image
+        }}
       >
         <div className="max-w-4xl mx-auto w-full flex flex-col items-center text-white space-y-6 relative z-10">
           
@@ -129,7 +119,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* --- PARTENAIRES ACADEMIQUES - INFINITE LOOP CAROUSEL --- */}
       <section className="py-16 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
@@ -350,25 +339,30 @@ export default function Home() {
                 capitalImg: "https://imgproxy.natucate.com/ORD7pMTP40pEDZwb4SvL0hpEJO0NjAv3zoQrDEtXi0o/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdEUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvZTFhY2RhNjMtYzY2Ny00MWUwLWIyZWMtZjlkODcyZGYyNTMwLzI5ODg3Y2FlOTMtMTc2MTU4NjI5NS9uYXR1Y2F0ZS1yZWlzZXppZWwta2FuYWRhLWhlcm8uanBlZw" 
               }
             ].map((country, idx) => (
-              <div key={idx} className="relative rounded-xl overflow-hidden h-44 shadow-sm group cursor-pointer border border-slate-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 bg-brand-blueDark">
-                <img 
-                  src={country.capitalImg} 
-                  alt={country.name} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out" 
-                />
-                <img 
-                  src={country.flag} 
-                  alt={`Drapeau ${country.name}`} 
-                  className="absolute inset-0 w-full h-full object-cover object-center opacity-40 group-hover:opacity-0 transition-all duration-500 ease-in-out" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-blueDark/100 via-brand-blueDark/40 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-5 text-white w-full z-10">
-                  <h3 className="text-base font-black tracking-wide text-brand-gold uppercase">
-                    {country.name}
-                  </h3>
-                  <p className="text-[11px] text-slate-300 mt-0.5 font-light line-clamp-2 leading-relaxed">
-                    {country.desc}
-                  </p>
+              <div key={idx} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group">
+                {/* Image Section */}
+                <div className="relative h-40 overflow-hidden w-full bg-slate-50">
+                  <img 
+                    src={country.capitalImg} 
+                    alt={country.name} 
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out" 
+                  />
+                  <img 
+                    src={country.flag} 
+                    alt={`Drapeau ${country.name}`} 
+                    className="absolute inset-0 w-full h-full object-cover object-center opacity-100 group-hover:opacity-0 transition-all duration-500 ease-in-out" 
+                  />
+                </div>
+                {/* Text Section */}
+                <div className="p-5 flex flex-col justify-between flex-1 bg-white border-t border-slate-100">
+                  <div>
+                    <h3 className="text-base font-black text-brand-blue uppercase tracking-wide">
+                      {country.name}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-2 font-light leading-relaxed line-clamp-2">
+                      {country.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

@@ -6,20 +6,6 @@ import soutienCta from '../assets/soutien-cta.png';
 import officeTutoring from '../assets/office-tutoring.png';
 import classroomTeacher from '../assets/classroom-teacher.png';
 
-
-function SoutienPage() {
-  return (
-    <div>
-      <Helmet>
-        <title>Soutien scolaire à Marrakech - Attaleb.net</title>
-        <meta name="description" content="Soutien scolaire personnalisé pour primaire, collège, lycée et supérieur. Progressez en sciences, langues et économie avec nos experts." />
-      </Helmet>
-    </div>
-  );
-}
-
-
-
 const soutienDatabase = {
   'lycee-marocain': {
     name: "Soutien Lycée (Bac Marocain)",

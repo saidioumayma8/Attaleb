@@ -2,17 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, DollarSign, GraduationCap, Calendar, ShieldCheck } from 'lucide-react';
 
-function ChineDetail() {
-  return (
-    <div>
-      <Helmet>
-        <title>Étudier en Chine | Attaleb.net</title>
-        <meta name="description" content="Découvrez pourquoi la Chine est une destination idéale pour les étudiants marocains. Explorez les opportunités éducatives et culturelles." />
-      </Helmet>
-    </div>
-  );
-}
-
 export default function ChineDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">

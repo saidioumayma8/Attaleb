@@ -52,7 +52,7 @@ html {
 
 /* Destination Card Mobile Auto-Transition: Flag → Capital */
 @keyframes flagFadeOut {
-  0%, 60% { opacity: 0.4; }
+  0%, 60% { opacity: 1; }
   100% { opacity: 0; }
 }
 
@@ -72,7 +72,7 @@ html {
 @media (min-width: 768px) {
   .dest-flag-mobile {
     animation: none;
-    opacity: 0.4;
+    opacity: 1;
   }
   .dest-capital-mobile {
     animation: none;
