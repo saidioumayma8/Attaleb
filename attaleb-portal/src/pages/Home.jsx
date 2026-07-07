@@ -62,37 +62,24 @@ export default function Home() {
       {/* ==========================================
           1. HERO BANNER (WITH NEW BACKGROUND)
           ========================================== */}
-      <section id="home-section"
+<section id="home-section"
         className="relative bg-cover bg-center min-h-[620px] md:h-[680px] flex items-center justify-center text-center pt-10 pb-16 px-4" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.82), rgba(11, 38, 79, 0.82)), url(${newHeroBg})`,
-          backgroundBlendMode: 'multiply' // Assure que le texte reste lisible sur l'image
+          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.4), rgba(11, 38, 79, 0.4)), url(${newHeroBg})`,
+          backgroundBlendMode: 'multiply'
         }}
       >
         <div className="max-w-4xl mx-auto w-full flex flex-col items-center text-white space-y-6 relative z-10">
-          
-          
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-tight max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-tight max-w-3xl drop-shadow-md">
             VOTRE AVENIR,<br />
             <span className="text-brand-gold">NOTRE MISSION</span>
           </h1>
-          
           <p className="text-sm md:text-base text-slate-200 max-w-xl leading-relaxed font-light">
             Orientation, inscription, préparation aux concours et soutien scolaire — un accompagnement complet pour votre projet académique.
           </p>
-          
-          <p className="text-xs text-brand-gold font-semibold tracking-wide uppercase">
-            Rejoignez des milliers d'étudiants qui ont réalisé leurs rêves
-          </p>
-
-          {/* Centered Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full sm:w-auto">
-            
-            <a href="#services-section" className="w-full sm:w-auto text-center border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
-              Nos Services →
-            </a>
-          </div>
-
+          <a href="#services-section" className="border border-white/40 hover:bg-white/10 text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wider">
+            Nos Services →
+          </a>
         </div>
       </section>
 
