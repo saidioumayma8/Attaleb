@@ -26,6 +26,7 @@ import SoutienPage from './pages/SoutienPage.jsx';
 import Apropos from './pages/Apropos.jsx';
 import Bourses from './pages/Bourses.jsx';
 import SejoursPage from './pages/SejoursPage.jsx';
+import Actualites from './pages/Actualites.jsx';
 
 
 export default function App() {
@@ -67,6 +68,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/a-propos" element={<Apropos />} />
           <Route path="/bourses" element={<Bourses />} />
+          <Route path="/actualites" element={<Actualites />} />
                   </Routes>
       </main>
       <Footer />

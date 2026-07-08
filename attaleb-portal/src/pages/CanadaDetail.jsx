@@ -5,6 +5,10 @@ import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar, 
 export default function CanadaDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
+
+      had lkhera man3erf ach ghandir m3ah gals mnfekh 
+      lya hn ab7al lwlya yakma s7abo ana sa7bto 
+      wayni 7ssen B3
       
       {/* 1. Header Banner */}
       <section 

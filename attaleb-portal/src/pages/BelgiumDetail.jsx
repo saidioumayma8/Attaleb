@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function BelgiumDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
+
+      <Helmet>
+      <title>Étudier en Belgique | Guide complet pour étudiants marocains | Attaleb</title>
+      <meta name="description" content="Tout savoir sur les études en Belgique : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+    </Helmet>
       
       {/* 1. Header Banner */}
       <section 

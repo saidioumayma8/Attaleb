@@ -79,3 +79,20 @@ html {
     opacity: 0;
   }
 }
+
+/* Pulsing shadow animation for the golden call-to-action button */
+@keyframes goldPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 186, 115, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(229, 186, 115, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 186, 115, 0);
+  }
+}
+
+.btn-pulse-gold {
+  animation: goldPulse 2.5s infinite;
+}

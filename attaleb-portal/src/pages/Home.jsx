@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { 
   Globe, GraduationCap, BookOpen, CheckCircle2, 
-  ArrowRight, Search, Send, MapPin, Award, Mail, Phone
+  ArrowRight, Search, Send, MapPin, Award, Mail, Phone,
+  Trophy, Languages, Target
 } from 'lucide-react'; 
 import franceFlag from '../assets/france-flag-8x5.gif';
 import spainFlag from '../assets/spainflag.png';
@@ -160,7 +161,10 @@ export default function Home() {
           {/* Card 1: Études à l'Étranger */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Études à l'Étranger</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Globe className="text-black w-6 h-6 shrink-0" />
+                <h3 id="etudes-etranger" className="font-black text-base text-brand-blue uppercase tracking-wide">Études à l'Étranger</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Inscription en France, Roumanie, UK, Allemagne, Espagne, Canada...</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Choix stratégique de la filière et de l'université d'accueil</li>
@@ -179,7 +183,10 @@ export default function Home() {
           {/* Card 2: Bourses d'Études */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="bourses-etudes" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Bourses d'Études</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <GraduationCap className="text-black w-6 h-6 shrink-0" />
+                <h3 id="bourses-etudes" className="font-black text-base text-brand-blue uppercase tracking-wide">Bourses d'Études</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Recherche et sélection des programmes de bourses mondiaux</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Bourses d'excellence, d'exonération de frais et de subsistance</li>
@@ -198,7 +205,10 @@ export default function Home() {
           {/* Card 3: Préparation aux Concours */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="preparation-concours" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Préparation aux Concours</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Trophy className="text-black w-6 h-6 shrink-0" />
+                <h3 id="preparation-concours" className="font-black text-base text-brand-blue uppercase tracking-wide">Préparation aux Concours</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Concours Médecine & Pharmacie (FMPM, FMPR...)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Classes Préparatoires nationales et internationales (MPSI, PCSI)</li>
@@ -217,7 +227,10 @@ export default function Home() {
           {/* Card 4: Séjours Linguistiques */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="sejours-linguistiques" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Séjours Linguistiques</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Languages className="text-black w-6 h-6 shrink-0" />
+                <h3 id="sejours-linguistiques" className="font-black text-base text-brand-blue uppercase tracking-wide">Séjours Linguistiques</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Programmes d'immersion linguistique totale à l'étranger</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Cours d'Anglais, Allemand, Espagnol intensifs en écoles partenaires</li>
@@ -236,7 +249,10 @@ export default function Home() {
           {/* Card 5: Soutien Scolaire */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="soutien-scolaire" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Soutien Scolaire</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <BookOpen className="text-black w-6 h-6 shrink-0" />
+                <h3 id="soutien-scolaire" className="font-black text-base text-brand-blue uppercase tracking-wide">Soutien Scolaire</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Tous niveaux : Primaire, Collège, Lycée, Supérieur</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Matières scientifiques, littéraires and économiques</li>
@@ -255,7 +271,10 @@ export default function Home() {
           {/* Card 6: Orientation & Coaching */}
           <div className="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div className="">
-              <h3 id="orientation-coaching" className="font-black text-base text-brand-blue uppercase tracking-wide mb-4">Orientation & Coaching</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Target className="text-black w-6 h-6 shrink-0" />
+                <h3 id="orientation-coaching" className="font-black text-base text-brand-blue uppercase tracking-wide">Orientation & Coaching</h3>
+              </div>
               <ul className="space-y-3 text-xs text-slate-600">
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Bilans d'orientation approfondis et tests de personnalité</li>
                 <li className="flex items-start gap-2"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" /> Coaching personnalisé pour élaborer un projet d'études cohérent</li>
@@ -302,16 +321,16 @@ export default function Home() {
                 capitalImg: "https://cms-images.oliverstravels.com/app/uploads/2023/10/04080649/Barcelona.jpg" 
               },
               { 
-                name: "ROUMANIE", 
-                desc: "Le leader européen de la formation médicale d'excellence.",
-                flag: romaniaFlag,
-                capitalImg: "https://moreconsulting.eu/wp-content/uploads/2021/09/logoi-roumania-idrusi-etaireias-hero.jpg" 
-              },
-              { 
                 name: "ROYAUME-UNI", 
                 desc: "Oxford, Cambridge et les universités les plus prestigieuses du monde.",
-                flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg/330px-Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg.png",
+                flag: "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
                 capitalImg: "https://www.epaillote.com/project/resources/img/original/angleterre.jpg" 
+              },
+              { 
+                name: "ÉTATS-UNIS", 
+                desc: "Le prestige international et les plus grands campus mondiaux.",
+                flag: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+                capitalImg: "https://www.tourmag.com/photo/art/grande/43579491-35914718.jpg?v=1584033559" 
               },
               { 
                 name: "ALLEMAGNE", 
@@ -354,10 +373,96 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-10">
-            <Link to="/destinations" className="inline-block text-[11px] font-bold text-brand-gold hover:underline uppercase tracking-widest">
-              Voir toutes nos destinations (12 pays) →
+          <div className="text-center mt-12 mb-6">
+            <Link 
+              to="/destinations" 
+              className="inline-flex items-center gap-3 text-xs md:text-sm font-black text-brand-gold hover:text-white bg-white hover:bg-brand-gold border-2 border-brand-gold rounded-full px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest group btn-pulse-gold"
+            >
+              Voir toutes nos destinations (12 pays) 
+              <span className="inline-block group-hover:translate-x-2 transition-transform duration-300">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+          5. ACTUALITÉS
+         ========================================== */}
+      <section id="news-section" className="py-20 px-4 bg-white border-t border-b border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Actualités</span>
+            <h2 className="text-2xl md:text-3xl font-black text-brand-blue mt-1 uppercase">Actualités</h2>
+            <p className="text-xs text-slate-500 mt-2 max-w-md mx-auto leading-relaxed">
+              Retrouvez l'actualité d'Attaleb, nos articles de presse, dates de concours, offres de bourses et événements.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                category: "Presse",
+                date: "02 Juil 2026",
+                title: "Attaleb : un accompagnement 360° pour construire les parcours académiques de demain",
+                desc: "Découvrez notre vision de l'orientation et de l'accompagnement étudiant à l'ère digitale, parue dans le média national TelQuel.",
+                img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
+                link: "/actualites?article=telquel",
+                readTime: "5 min de lecture"
+              },
+              {
+                category: "Bourses",
+                date: "05 Juil 2026",
+                title: "Nouvelles bourses d'études au Canada pour l'année 2026-2027",
+                desc: "Découvrez les conditions d'éligibilité et les critères de sélection pour les nouvelles bourses d'excellence offertes par les universités partenaires canadiennes.",
+                img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80",
+                link: "/bourses",
+                readTime: "4 min de lecture"
+              },
+              {
+                category: "Concours",
+                date: "28 Juin 2026",
+                title: "Ouverture des inscriptions aux préparations médecine & ingénierie",
+                desc: "Les sessions intensives de préparation aux concours d'accès aux facultés de médecine (FMP) et aux écoles d'ingénieurs commencent bientôt. Inscrivez-vous dès maintenant.",
+                img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+                link: "/concours",
+                readTime: "3 min de lecture"
+              }
+            ].map((news, idx) => (
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+                <div className="relative h-48 overflow-hidden bg-slate-100">
+                  <img 
+                    src={news.img} 
+                    alt={news.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  />
+                  <div className="absolute top-4 left-4 bg-brand-gold text-white text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
+                    {news.category}
+                  </div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center justify-between text-[10px] text-slate-400 font-bold mb-3 uppercase tracking-wider">
+                    <span>{news.date}</span>
+                    <span>{news.readTime}</span>
+                  </div>
+                  <h3 className="text-base font-black text-brand-blue uppercase tracking-wide mb-3 leading-snug group-hover:text-brand-gold transition-colors duration-300 line-clamp-2">
+                    {news.title}
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light leading-relaxed mb-4 flex-1 line-clamp-3">
+                    {news.desc}
+                  </p>
+                  <Link to={news.link} className="inline-flex items-center gap-1.5 text-[11px] font-black text-brand-gold hover:text-brand-blue uppercase tracking-widest group/link transition-colors">
+                    Lire la suite 
+                    <ArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/contact" className="inline-flex items-center gap-2 text-[11px] font-black text-white bg-brand-blue border-2 border-brand-blue rounded-full px-6 py-3 hover:bg-white hover:text-brand-blue hover:shadow-lg transition-all duration-300 uppercase tracking-wider">
+              Recevoir les actualités par email
             </Link>
           </div>
         </div>
