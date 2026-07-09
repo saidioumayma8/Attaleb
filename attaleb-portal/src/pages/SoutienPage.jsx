@@ -5,6 +5,7 @@ import soutienHero from '../assets/soutien-hero.png';
 import soutienCta from '../assets/soutien-cta.png';
 import officeTutoring from '../assets/office-tutoring.png';
 import classroomTeacher from '../assets/classroom-teacher.png';
+import { Helmet } from 'react-helmet-async';
 
 const soutienDatabase = {
   'lycee-marocain': {

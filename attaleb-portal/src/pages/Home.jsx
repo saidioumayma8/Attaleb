@@ -38,6 +38,8 @@ import INSEA_logo from '../assets/INSEA_logo.png';
 import LSE from '../assets/LSE.png';
 import NEOMA from '../assets/NEOMA.jpg';
 import { Helmet } from 'react-helmet-async';
+import campusImage from '../assets/campus.jpeg';
+import { Helmet } from 'react-helmet-async';
 
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
@@ -506,6 +508,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      
+          {/* Image de mise en avant pour illustrer le départ à l'étranger */}
+          <div className="w-full h-64 sm:h-96 rounded-3xl overflow-hidden shadow-sm">
+            <img 
+              src={campusImage} 
+              alt="Campus universitaire international" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+
 
       {/* ==========================================
           8. RESTRUCTURED CONTACT ZONE (TEXT OVER MAP)

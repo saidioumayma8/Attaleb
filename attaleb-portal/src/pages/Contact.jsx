@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, HelpCircle, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   const [formData, setFormData] = useState({

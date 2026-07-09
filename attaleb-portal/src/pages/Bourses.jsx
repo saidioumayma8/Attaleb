@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Globe, FileText, CheckCircle2, ArrowRight, Target, Clock, MapPin, Star, BookOpen, Users, Sparkles } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async';
 import fulbrightLogo from '../assets/Fulbright-bourse.png';
 import cheveningLogo from '../assets/cheveningLogo.png';
 import vanierLogo from '../assets/vanierLogo.jpg';

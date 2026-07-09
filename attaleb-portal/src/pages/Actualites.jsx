@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, BookOpen, Share2, Award, ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Actualites() {
   const location = useLocation();

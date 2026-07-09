@@ -9,6 +9,7 @@ import greLogo from '../assets/GRE.svg';
 import sesameLogo from '../assets/SESAME.png';
 import actLogo from '../assets/ACT.png';
 import tageMageLogo from '../assets/TageMage.png';
+import { Helmet } from 'react-helmet-async';
 
 const concoursDatabase = {
   'sat': {

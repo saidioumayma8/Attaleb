@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Award, BookOpen, Key, FileText, GraduationCap, Calendar, DollarSign } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function USADetail() {
   return (

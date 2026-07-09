@@ -10,6 +10,7 @@ import tcfLogo from '../assets/TCF.png';
 import deleLogo from '../assets/DELE.webp';
 import delfLogo from '../assets/DELF.png';
 import toeicLogo from '../assets/TOEIC.png';
+import { Helmet } from 'react-helmet-async';
 
 const languesDatabase = {
   'ielts': {

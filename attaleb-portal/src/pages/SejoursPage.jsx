@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Globe, GraduationCap, CheckCircle2, Plane, Home as HomeIcon, Star, Users, Phone, ArrowRight, Shield, BookOpen, Languages } from 'lucide-react';
 import ukFlag from '../assets/Flag_of_the_United_Kingdom_(3-5).svg.webp';
 import canadaFlag from '../assets/Flag-Canada.webp';
+import { Helmet } from 'react-helmet-async';
 
 export default function SejoursPage() {
   const formulas = [

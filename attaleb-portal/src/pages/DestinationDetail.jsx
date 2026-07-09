@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Globe, Award, BookOpen, CheckCircle2, GraduationCap, Calendar, FileText } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const detailsDatabase = {
   france: {

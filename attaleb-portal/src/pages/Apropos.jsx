@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, GraduationCap, Award, CheckCircle, School, Languages, Trophy, Banknote, Plane, Globe, MapPin, ArrowRight } from 'lucide-react';
 import missionImage from '../assets/mission.jpeg';
-import campusImage from '../assets/campus.jpeg';
+import { Helmet } from 'react-helmet-async';
 
 export default function Apropos() {
   const services = [
@@ -217,14 +217,6 @@ export default function Apropos() {
             </div>
           </div>
 
-          {/* Image de mise en avant pour illustrer le départ à l'étranger */}
-          <div className="w-full h-64 sm:h-96 rounded-3xl overflow-hidden shadow-sm">
-            <img 
-              src={campusImage} 
-              alt="Campus universitaire international" 
-              className="w-full h-full object-cover"
-            />
-          </div>
         </section>
 
 

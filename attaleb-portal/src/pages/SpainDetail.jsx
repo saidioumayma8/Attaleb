@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, BookOpen, CheckCircle2, GraduationCap, Calendar, FileText } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function SpainDetail() {
   return (
