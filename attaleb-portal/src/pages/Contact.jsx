@@ -239,7 +239,7 @@ export default function Contact() {
                 <Mail size={16} className="text-violet-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase">Support Émail</span>
-                  <a href="mailto:contact@attaleb.ma" className="hover:text-brand-gold font-bold">contact@attaleb.ma</a>
+                  <a href="mailto:medamineharifi@gmail.com" className="hover:text-brand-gold font-bold">medamineharifi@gmail.com</a>
                 </div>
               </div>
 

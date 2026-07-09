@@ -39,7 +39,6 @@ import LSE from '../assets/LSE.png';
 import NEOMA from '../assets/NEOMA.jpg';
 import { Helmet } from 'react-helmet-async';
 import campusImage from '../assets/campus.jpeg';
-import { Helmet } from 'react-helmet-async';
 
 const partnerLogos = [
   qmulLogo, uwlLogo, hofstraLogo, partnerImg1, partnerImg2, bsbLogo, 
