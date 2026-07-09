@@ -149,6 +149,11 @@ const soutienCards = [
 function SoutienLanding() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
+
+      <Helmet>
+            <title>Soutien Scolaire | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Découvrez notre programme de soutien scolaire personnalisé pour les étudiants marocains, adapté à tous les niveaux et systèmes éducatifs." />
+          </Helmet>
       {/* ─── HERO: Split Layout ─── */}
       <section className="relative bg-brand-blue overflow-hidden">
         {/* Decorative circles */}

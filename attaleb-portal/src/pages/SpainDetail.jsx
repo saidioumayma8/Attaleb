@@ -5,6 +5,11 @@ import { Award, BookOpen, CheckCircle2, GraduationCap, Calendar, FileText } from
 export default function SpainDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
+
+      <Helmet>
+            <title>Étudier en Espagne | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Tout savoir sur les études en Espagne : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       
       {/* 1. Header Banner */}
       <section 

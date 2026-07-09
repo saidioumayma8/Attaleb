@@ -16,6 +16,11 @@ export default function Apropos() {
 
   return (
     <div className="bg-gray-50 min-h-screen text-gray-800 font-sans">
+
+      <Helmet>
+            <title>À Propos de Attaleb</title>
+            <meta name="description" content="Découvrez notre histoire, notre mission et notre équipe dédiée à l'orientation scolaire et universitaire pour les étudiants marocains." />
+          </Helmet>
       
 {/* SECTION HERO / BANNIÈRE */}
 <section 

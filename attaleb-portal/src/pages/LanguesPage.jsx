@@ -231,6 +231,10 @@ function LanguesLanding() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
       
+      <Helmet>
+            <title>Concours de Langues | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Préparez vos certifications linguistiques avec Attaleb — IELTS, TOEFL, TOEIC, TCF, DELF, DELE — et ouvrez les portes des meilleures universités du monde." />
+          </Helmet>
       {/* Hero */}
       <section
         className="relative bg-cover bg-center bg-no-repeat py-24 px-4 text-center flex items-center justify-center min-h-[320px]"

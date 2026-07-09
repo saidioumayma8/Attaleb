@@ -6,6 +6,11 @@ export default function USADetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
       
+
+      <Helmet>
+            <title>Étudier aux États-Unis | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Tout savoir sur les études aux États-Unis : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       {/* 1. Header Banner */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-20 px-4 text-center flex items-center justify-center min-h-[280px]"

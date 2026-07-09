@@ -61,6 +61,11 @@ export default function SejoursPage() {
 
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
+
+      <Helmet>
+            <title>Séjours Linguistiques | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Découvrez nos séjours linguistiques à l'étranger : immersion culturelle, programmes d'études et accompagnement pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       {/* Hero Section */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-24 px-4 text-center flex items-center justify-center min-h-[340px]"

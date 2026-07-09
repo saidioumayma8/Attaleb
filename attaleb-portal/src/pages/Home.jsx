@@ -60,6 +60,10 @@ export default function Home() {
   return (
     <div className="w-full bg-white font-sans antialiased">
       
+      <Helmet>
+            <title>Étudier à l'étranger | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Découvrez nos 12 destinations d'études à l'étranger : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       {/* ==========================================
           1. HERO BANNER (WITH NEW BACKGROUND)
           ========================================== */}

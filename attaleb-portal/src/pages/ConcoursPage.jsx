@@ -302,6 +302,11 @@ function ConcoursLanding() {
 
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
+
+      <Helmet>
+            <title>Préparation Concours | Attaleb</title>
+            <meta name="description" content="Préparez-vous aux concours nationaux et internationaux avec notre programme de soutien scolaire personnalisé pour les étudiants marocains." />
+          </Helmet>
       {/* ═══════════ HERO ═══════════ */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-24 px-4 text-center flex items-center justify-center min-h-[320px]"

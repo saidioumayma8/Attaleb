@@ -185,6 +185,11 @@ export default function Actualites() {
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-800 font-sans pb-16">
+
+      <Helmet>
+            <title>Actualités | Attaleb</title>
+            <meta name="description" content="Retrouvez l'actualité de notre cabinet, nos communiqués officiels et nos parutions médiatiques." />
+          </Helmet>
       {/* HEADER SECTION */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-16 text-center flex items-center justify-center min-h-[250px] md:min-h-[300px]"

@@ -59,6 +59,10 @@ export default function Contact() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
       
+      <Helmet>
+            <title>Contactez Attaleb | Attaleb</title>
+            <meta name="description" content="Contactez Attaleb pour toute question concernant les études à l'étranger. Accompagnement personnalisé pour les étudiants marocains." />
+          </Helmet>
       {/* 1. Header Banner */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-16 px-4 text-center flex items-center justify-center"

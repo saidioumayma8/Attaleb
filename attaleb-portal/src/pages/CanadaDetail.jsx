@@ -6,9 +6,10 @@ export default function CanadaDetail() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
 
-      had lkhera man3erf ach ghandir m3ah gals mnfekh 
-      lya hn ab7al lwlya yakma s7abo ana sa7bto 
-      wayni 7ssen B3
+      <Helmet>
+            <title>Étudier au Canada | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Tout savoir sur les études au Canada : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       
       {/* 1. Header Banner */}
       <section 

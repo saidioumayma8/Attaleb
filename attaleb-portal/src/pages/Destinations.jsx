@@ -96,6 +96,10 @@ export default function Destinations() {
   return (
     <div className="w-full bg-white font-sans antialiased">
       
+      <Helmet>
+            <title>Étudier à l'étranger | Guide complet pour étudiants marocains | Attaleb</title>
+            <meta name="description" content="Découvrez nos 12 destinations d'études à l'étranger : universités, système LMD, équivalences et visa étudiant pour les étudiants marocains. Accompagnement Attaleb." />
+          </Helmet>
       {/* Top Header Banner */}
       <section 
         className="relative bg-cover bg-center bg-no-repeat py-20 px-4 text-center flex items-center justify-center min-h-[260px]"

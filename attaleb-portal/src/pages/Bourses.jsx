@@ -151,6 +151,11 @@ export default function Bourses() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
 
+      <Helmet>
+            <title>Bourses d'Études Internationales | Attaleb</title>
+              <meta name="description" content="Découvrez les meilleures bourses d'études internationales pour les étudiants marocains. Accompagnement personnalisé par Attaleb." />
+            </Helmet>
+
       {/* ─── HERO ─── */}
       <section className="relative bg-brand-blue overflow-hidden">
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-brand-gold/5 rounded-full" />

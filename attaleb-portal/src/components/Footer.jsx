@@ -31,7 +31,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-slate-400">
-            <li>Email: contact@attaleb.net</li>
+            <li>Email: medamineharifi@gmail.com</li>
             <li>Marrakech, Maroc</li>
           </ul>
 
