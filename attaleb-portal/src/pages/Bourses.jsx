@@ -151,10 +151,17 @@ export default function Bourses() {
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen antialiased">
 
-      <Helmet>
-            <title>Bourses d'Études Internationales | Attaleb</title>
-              <meta name="description" content="Découvrez les meilleures bourses d'études internationales pour les étudiants marocains. Accompagnement personnalisé par Attaleb." />
-            </Helmet>
+        <Helmet>
+          <title>Bourses d'Études Internationales | Attaleb</title>
+          <meta
+            name="description"
+            content="Découvrez les meilleures bourses d'études internationales pour les étudiants marocains."
+          />
+          <link
+            rel="canonical"
+            href="https://www.attaleb.net/bourses"
+          />
+        </Helmet>
 
       {/* ─── HERO ─── */}
       <section className="relative bg-brand-blue overflow-hidden">
