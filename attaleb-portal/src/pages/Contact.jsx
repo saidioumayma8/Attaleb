@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, HelpCircle, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, HelpCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
@@ -13,14 +13,16 @@ export default function Contact() {
     niveau: '',
     message: ''
   });
-  
-  const [submitted, setSubmitted] = useState(false);
 
+  const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
+    setError(false);
+
     try {
       const formPayload = new FormData();
       formPayload.append('_subject', 'Nouvelle demande de consultation - ' + formData.prenom + ' ' + formData.nom);
@@ -31,26 +33,27 @@ export default function Contact() {
       formPayload.append('Destination', formData.destination);
       formPayload.append('Niveau', formData.niveau);
       formPayload.append('Message', formData.message || 'Aucun message supplementaire');
+      formPayload.append('_replyto', formData.email);
+      formPayload.append('_captcha', 'false');
       formPayload.append('_template', 'table');
 
-      const response = await fetch('https://formsubmit.co/medamineharifi@gmail.com', {
+      const response = await fetch('https://formsubmit.co/oumaymasaidi908@gmail.com', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formPayload
+        headers: { Accept: 'application/json' },
+        body: formPayload,
       });
 
       if (response.ok) {
         setSubmitted(true);
+        setFormData({ nom: '', prenom: '', email: '', telephone: '', destination: '', niveau: '', message: '' });
       } else {
-        throw new Error('FormSubmit error');
+        setError(true);
       }
-    } catch (err) {
-      // Fallback: mailto
-      var body = 'Nom: ' + formData.nom + '%0D%0A' + 'Prenom: ' + formData.prenom + '%0D%0A' + 'Email: ' + formData.email + '%0D%0A' + 'Telephone: ' + formData.telephone + '%0D%0A' + 'Destination: ' + formData.destination + '%0D%0A' + 'Niveau: ' + formData.niveau + '%0D%0A' + 'Message: ' + formData.message;
-      window.location.href = 'mailto:medamineharifi@gmail.com?subject=Demande de consultation - ' + formData.prenom + ' ' + formData.nom + '&body=' + body;
-      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
     }
-    setSending(false);
   };
 
   const handleChange = (e) => {
@@ -59,16 +62,17 @@ export default function Contact() {
 
   return (
     <div className="w-full bg-slate-50 font-sans min-h-screen pb-16 antialiased">
-      
+
       <Helmet>
-            <title>Contactez Attaleb | Attaleb</title>
-            <meta name="description" content="Contactez Attaleb pour toute question concernant les études à l'étranger. Accompagnement personnalisé pour les étudiants marocains." />
-          </Helmet>
+        <title>Contactez Attaleb | Attaleb</title>
+        <meta name="description" content="Contactez Attaleb pour toute question concernant les études à l'étranger. Accompagnement personnalisé pour les étudiants marocains." />
+      </Helmet>
+
       {/* 1. Header Banner */}
-      <section 
+      <section
         className="relative bg-cover bg-center bg-no-repeat py-16 px-4 text-center flex items-center justify-center"
-        style={{ 
-          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.95), rgba(11, 38, 79, 0.85)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80')` 
+        style={{
+          backgroundImage: `linear-gradient(rgba(11, 38, 79, 0.95), rgba(11, 38, 79, 0.85)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80')`
         }}
       >
         <div className="max-w-2xl mx-auto space-y-2 relative z-10">
@@ -83,10 +87,10 @@ export default function Contact() {
 
       {/* 2. Section Principale */}
       <main className="max-w-5xl mx-auto px-4 mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+
         {/* Colonne de Gauche : Formulaire de Consultation (2/3 de l'espace) */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-100 p-6 md:p-8 space-y-6">
-          
+
           {/* Badge Consultation Gratuite */}
           <div className="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-200 p-4 rounded-xl flex items-start gap-3">
             <span className="text-2xl mt-0.5"></span>
@@ -110,7 +114,7 @@ export default function Contact() {
               <p className="text-xs text-slate-500 max-w-sm mx-auto font-medium">
                 Merci pour votre confiance. Un consultant spécialisé en orientation internationale va vous contacter par téléphone d'ici 24h à 48h.
               </p>
-              <button 
+              <button
                 onClick={() => setSubmitted(false)}
                 className="text-[11px] font-bold text-brand-blue underline hover:text-brand-gold pt-2"
               >
@@ -120,10 +124,24 @@ export default function Contact() {
           ) : (
             /* Formulaire React */
             <form onSubmit={handleSubmit} className="space-y-4">
+
+              {/* Bannière d'erreur */}
+              {error && (
+                <div className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 text-xs font-medium p-4 rounded-xl">
+                  <AlertCircle size={16} className="shrink-0 mt-0.5" />
+                  <span>
+                    L'envoi a échoué. Veuillez réessayer ou nous contacter directement à{' '}
+                    <a href="mailto:oumaymasaidi908@gmail.com" className="underline font-bold">
+                      oumaymasaidi908@gmail.com
+                    </a>.
+                  </span>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Nom *</label>
-                  <input 
+                  <input
                     type="text" required name="nom" value={formData.nom} onChange={handleChange}
                     placeholder="Votre nom"
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-medium"
@@ -131,7 +149,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Prénom *</label>
-                  <input 
+                  <input
                     type="text" required name="prenom" value={formData.prenom} onChange={handleChange}
                     placeholder="Votre prénom"
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-medium"
@@ -142,7 +160,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Adresse Email *</label>
-                  <input 
+                  <input
                     type="email" required name="email" value={formData.email} onChange={handleChange}
                     placeholder="exemple@mail.com"
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-medium"
@@ -150,7 +168,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Téléphone (WhatsApp) *</label>
-                  <input 
+                  <input
                     type="tel" required name="telephone" value={formData.telephone} onChange={handleChange}
                     placeholder="06 00 00 00 00"
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-medium"
@@ -161,7 +179,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Destination souhaitée *</label>
-                  <select 
+                  <select
                     required name="destination" value={formData.destination} onChange={handleChange}
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-bold text-slate-700"
                   >
@@ -177,7 +195,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Niveau d'études actuel *</label>
-                  <select 
+                  <select
                     required name="niveau" value={formData.niveau} onChange={handleChange}
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-bold text-slate-700"
                   >
@@ -192,14 +210,14 @@ export default function Contact() {
 
               <div className="space-y-1">
                 <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wide">Détails de votre projet ou questions</label>
-                <textarea 
+                <textarea
                   rows="4" name="message" value={formData.message} onChange={handleChange}
                   placeholder="Expliquez-nous brièvement votre parcours et ce que vous souhaitez étudier..."
                   className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue font-medium resize-none"
                 ></textarea>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 disabled={sending}
                 className="w-full bg-brand-blue hover:bg-blue-950 disabled:opacity-50 disabled:cursor-not-allowed text-white font-black text-xs uppercase tracking-wide py-3.5 px-6 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
@@ -216,7 +234,7 @@ export default function Contact() {
 
         {/* Colonne de Droite : Coordonnées Directes (1/3 de l'espace) */}
         <div className="lg:col-span-1 space-y-6">
-          
+
           {/* Card Info d'aide directe */}
           <div className="bg-brand-blue text-white p-6 rounded-2xl shadow-sm space-y-4">
             <h3 className="font-black text-sm uppercase tracking-wide text-brand-gold flex items-center gap-2">

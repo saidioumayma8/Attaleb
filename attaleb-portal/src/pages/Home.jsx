@@ -403,66 +403,35 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                category: "Presse",
-                date: "02 Juil 2026",
-                title: "Attaleb : un accompagnement 360° pour construire les parcours académiques de demain",
-                desc: "Découvrez notre vision de l'orientation et de l'accompagnement étudiant à l'ère digitale, parue dans le média national TelQuel.",
-                img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
-                link: "/actualites?article=telquel",
-                readTime: "5 min de lecture"
-              },
-              {
-                category: "Bourses",
-                date: "05 Juil 2026",
-                title: "Nouvelles bourses d'études au Canada pour l'année 2026-2027",
-                desc: "Découvrez les conditions d'éligibilité et les critères de sélection pour les nouvelles bourses d'excellence offertes par les universités partenaires canadiennes.",
-                img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80",
-                link: "/bourses",
-                readTime: "4 min de lecture"
-              },
-              {
-                category: "Concours",
-                date: "28 Juin 2026",
-                title: "Ouverture des inscriptions aux préparations médecine & ingénierie",
-                desc: "Les sessions intensives de préparation aux concours d'accès aux facultés de médecine (FMP) et aux écoles d'ingénieurs commencent bientôt. Inscrivez-vous dès maintenant.",
-                img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
-                link: "/concours",
-                readTime: "3 min de lecture"
-              }
-            ].map((news, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
-                <div className="relative h-48 overflow-hidden bg-slate-100">
-                  <img 
-                    src={news.img} 
-                    alt={news.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  />
-                  <div className="absolute top-4 left-4 bg-brand-gold text-white text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
-                    {news.category}
-                  </div>
-                </div>
-
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center justify-between text-[10px] text-slate-400 font-bold mb-3 uppercase tracking-wider">
-                    <span>{news.date}</span>
-                    <span>{news.readTime}</span>
-                  </div>
-                  <h3 className="text-base font-black text-brand-blue uppercase tracking-wide mb-3 leading-snug group-hover:text-brand-gold transition-colors duration-300 line-clamp-2">
-                    {news.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 font-light leading-relaxed mb-4 flex-1 line-clamp-3">
-                    {news.desc}
-                  </p>
-                  <Link to={news.link} className="inline-flex items-center gap-1.5 text-[11px] font-black text-brand-gold hover:text-brand-blue uppercase tracking-widest group/link transition-colors">
-                    Lire la suite 
-                    <ArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+          <div className="max-w-xl mx-auto">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+              <div className="relative h-48 overflow-hidden bg-slate-100">
+                <img
+                  src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80"
+                  alt="Attaleb TelQuel"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+                <div className="absolute top-4 left-4 bg-brand-gold text-white text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
+                  Presse
                 </div>
               </div>
-            ))}
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center justify-between text-[10px] text-slate-400 font-bold mb-3 uppercase tracking-wider">
+                  <span>02 Juil 2026</span>
+                  <span>5 min de lecture</span>
+                </div>
+                <h3 className="text-base font-black text-brand-blue uppercase tracking-wide mb-3 leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                  Attaleb : un accompagnement 360° pour construire les parcours académiques de demain
+                </h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4 flex-1">
+                  Découvrez notre vision de l'orientation et de l'accompagnement étudiant à l'ère digitale, parue dans le média national TelQuel.
+                </p>
+                <Link to="/actualites?article=telquel" className="inline-flex items-center gap-1.5 text-[11px] font-black text-brand-gold hover:text-brand-blue uppercase tracking-widest group/link transition-colors">
+                  Lire la suite
+                  <ArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
